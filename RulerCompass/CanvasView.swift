@@ -1,6 +1,9 @@
 import UIKit
-class LineSegmentBisectView: UIView {
+class CanvasView: UIView {
     override func draw(_ rect: CGRect) {
+        drawLineSegmentBisector()
+    }
+    func drawLineSegmentBisector() {
         horizontalLineSegment()
         circles()
         verticalLine()
@@ -14,11 +17,11 @@ class LineSegmentBisectView: UIView {
         lineSegment1.stroke()
     }
     func circles() {
-        let halfCircle1 = UIBezierPath(arcCenter: CGPoint(x: bounds.width / 2 - bounds.width / 4, y: bounds.height / 2), radius: bounds.width / 2, startAngle: CGFloat.pi / 2, endAngle: -CGFloat.pi / 2, clockwise: false)
+        let halfCircle1 = UIBezierPath(arcCenter: CGPoint(x: bounds.width / 2 - bounds.width / 4, y: bounds.height / 2), radius: bounds.width / 3, startAngle: CGFloat.pi / 2, endAngle: -CGFloat.pi / 2, clockwise: false)
         halfCircle1.lineWidth = 10
         #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1).setStroke()
         halfCircle1.stroke()
-        let halfCircle2 = UIBezierPath(arcCenter: CGPoint(x: bounds.width / 2 + bounds.width / 4, y: bounds.height / 2), radius: bounds.width / 2, startAngle: -CGFloat.pi / 2, endAngle: CGFloat.pi / 2, clockwise: false)
+        let halfCircle2 = UIBezierPath(arcCenter: CGPoint(x: bounds.width / 2 + bounds.width / 4, y: bounds.height / 2), radius: bounds.width / 3, startAngle: -CGFloat.pi / 2, endAngle: CGFloat.pi / 2, clockwise: false)
         halfCircle2.lineWidth = 10
         #colorLiteral(red: 0.3398539424, green: 0.6224563122, blue: 0.168690294, alpha: 1).setStroke()
         halfCircle2.stroke()
