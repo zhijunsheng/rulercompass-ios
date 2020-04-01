@@ -14,13 +14,27 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVb-jW-Ev0" customClass="CanvasView" customModule="RulerCompass" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="728" height="728"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qVb-jW-Ev0" secondAttribute="height" multiplier="1:1" id="Mwr-AR-GI6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qVb-jW-Ev0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="8pU-ZJ-Lmj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qVb-jW-Ev0" secondAttribute="trailing" constant="20" id="AtP-Nn-68B"/>
+                            <constraint firstItem="qVb-jW-Ev0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="d0L-6S-XNn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="123"/>
+            <point key="canvasLocation" x="132.8125" y="122.46093749999999"/>
         </scene>
     </scenes>
 </document>
