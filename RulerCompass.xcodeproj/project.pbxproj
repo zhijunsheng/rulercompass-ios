@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8252EA81243363FC000680D0 /* LineSegmentBisectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252EA80243363FC000680D0 /* LineSegmentBisectView.swift */; };
 		E760D27B243354D7006D76DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E760D27A243354D7006D76DB /* AppDelegate.swift */; };
 		E760D27D243354D7006D76DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E760D27C243354D7006D76DB /* SceneDelegate.swift */; };
 		E760D27F243354D7006D76DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E760D27E243354D7006D76DB /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8252EA80243363FC000680D0 /* LineSegmentBisectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSegmentBisectView.swift; sourceTree = "<group>"; };
 		E760D277243354D7006D76DB /* RulerCompass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RulerCompass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E760D27A243354D7006D76DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E760D27C243354D7006D76DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				E760D27A243354D7006D76DB /* AppDelegate.swift */,
 				E760D27C243354D7006D76DB /* SceneDelegate.swift */,
+				8252EA80243363FC000680D0 /* LineSegmentBisectView.swift */,
 				E760D27E243354D7006D76DB /* ViewController.swift */,
 				E760D280243354D7006D76DB /* Main.storyboard */,
 				E760D283243354DF006D76DB /* Assets.xcassets */,
@@ -202,6 +205,7 @@
 			files = (
 				E760D27F243354D7006D76DB /* ViewController.swift in Sources */,
 				E760D27B243354D7006D76DB /* AppDelegate.swift in Sources */,
+				8252EA81243363FC000680D0 /* LineSegmentBisectView.swift in Sources */,
 				E760D27D243354D7006D76DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
