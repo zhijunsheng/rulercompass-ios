@@ -2,8 +2,8 @@
 //  RulerCompassTests.swift
 //  RulerCompassTests
 //
-//  Created by daobao on 2020/3/31.
-//  Copyright © 2020 daobao. All rights reserved.
+//  Created by Grace Huang on 4/2/20.
+//  Copyright © 2020 Grace Huang. All rights reserved.
 //
 
 import XCTest

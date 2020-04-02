@@ -7,50 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A3F910FA243684A3001E6D5E /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F910F9243684A3001E6D5E /* CanvasView.swift */; };
-		E760D27B243354D7006D76DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E760D27A243354D7006D76DB /* AppDelegate.swift */; };
-		E760D27D243354D7006D76DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E760D27C243354D7006D76DB /* SceneDelegate.swift */; };
-		E760D27F243354D7006D76DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E760D27E243354D7006D76DB /* ViewController.swift */; };
-		E760D282243354D7006D76DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E760D280243354D7006D76DB /* Main.storyboard */; };
-		E760D284243354DF006D76DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E760D283243354DF006D76DB /* Assets.xcassets */; };
-		E760D287243354DF006D76DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E760D285243354DF006D76DB /* LaunchScreen.storyboard */; };
-		E760D292243354E0006D76DB /* RulerCompassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E760D291243354E0006D76DB /* RulerCompassTests.swift */; };
+		A3F9110824368953001E6D5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9110724368953001E6D5E /* AppDelegate.swift */; };
+		A3F9110A24368953001E6D5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9110924368953001E6D5E /* ViewController.swift */; };
+		A3F9110D24368953001E6D5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F9110B24368953001E6D5E /* Main.storyboard */; };
+		A3F9110F24368955001E6D5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F9110E24368955001E6D5E /* Assets.xcassets */; };
+		A3F9111224368955001E6D5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F9111024368955001E6D5E /* LaunchScreen.storyboard */; };
+		A3F9111D24368955001E6D5E /* RulerCompassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9111C24368955001E6D5E /* RulerCompassTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E760D28E243354E0006D76DB /* PBXContainerItemProxy */ = {
+		A3F9111924368955001E6D5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E760D26F243354D7006D76DB /* Project object */;
+			containerPortal = A3F910FC24368953001E6D5E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E760D276243354D7006D76DB;
+			remoteGlobalIDString = A3F9110324368953001E6D5E;
 			remoteInfo = RulerCompass;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A3F910F9243684A3001E6D5E /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
-		E760D277243354D7006D76DB /* RulerCompass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RulerCompass.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E760D27A243354D7006D76DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E760D27C243354D7006D76DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E760D27E243354D7006D76DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E760D281243354D7006D76DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E760D283243354DF006D76DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E760D286243354DF006D76DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E760D288243354DF006D76DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E760D28D243354E0006D76DB /* RulerCompassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RulerCompassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E760D291243354E0006D76DB /* RulerCompassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerCompassTests.swift; sourceTree = "<group>"; };
-		E760D293243354E0006D76DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3F9110424368953001E6D5E /* RulerCompass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RulerCompass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3F9110724368953001E6D5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A3F9110924368953001E6D5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A3F9110C24368953001E6D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A3F9110E24368955001E6D5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A3F9111124368955001E6D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A3F9111324368955001E6D5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3F9111824368955001E6D5E /* RulerCompassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RulerCompassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3F9111C24368955001E6D5E /* RulerCompassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerCompassTests.swift; sourceTree = "<group>"; };
+		A3F9111E24368955001E6D5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E760D274243354D7006D76DB /* Frameworks */ = {
+		A3F9110124368953001E6D5E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E760D28A243354E0006D76DB /* Frameworks */ = {
+		A3F9111524368955001E6D5E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,44 +56,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E760D26E243354D7006D76DB = {
+		A3F910FB24368953001E6D5E = {
 			isa = PBXGroup;
 			children = (
-				E760D279243354D7006D76DB /* RulerCompass */,
-				E760D290243354E0006D76DB /* RulerCompassTests */,
-				E760D278243354D7006D76DB /* Products */,
+				A3F9110624368953001E6D5E /* RulerCompass */,
+				A3F9111B24368955001E6D5E /* RulerCompassTests */,
+				A3F9110524368953001E6D5E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E760D278243354D7006D76DB /* Products */ = {
+		A3F9110524368953001E6D5E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E760D277243354D7006D76DB /* RulerCompass.app */,
-				E760D28D243354E0006D76DB /* RulerCompassTests.xctest */,
+				A3F9110424368953001E6D5E /* RulerCompass.app */,
+				A3F9111824368955001E6D5E /* RulerCompassTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E760D279243354D7006D76DB /* RulerCompass */ = {
+		A3F9110624368953001E6D5E /* RulerCompass */ = {
 			isa = PBXGroup;
 			children = (
-				A3F910F9243684A3001E6D5E /* CanvasView.swift */,
-				E760D27A243354D7006D76DB /* AppDelegate.swift */,
-				E760D27C243354D7006D76DB /* SceneDelegate.swift */,
-				E760D27E243354D7006D76DB /* ViewController.swift */,
-				E760D280243354D7006D76DB /* Main.storyboard */,
-				E760D283243354DF006D76DB /* Assets.xcassets */,
-				E760D285243354DF006D76DB /* LaunchScreen.storyboard */,
-				E760D288243354DF006D76DB /* Info.plist */,
+				A3F9110724368953001E6D5E /* AppDelegate.swift */,
+				A3F9110924368953001E6D5E /* ViewController.swift */,
+				A3F9110B24368953001E6D5E /* Main.storyboard */,
+				A3F9110E24368955001E6D5E /* Assets.xcassets */,
+				A3F9111024368955001E6D5E /* LaunchScreen.storyboard */,
+				A3F9111324368955001E6D5E /* Info.plist */,
 			);
 			path = RulerCompass;
 			sourceTree = "<group>";
 		};
-		E760D290243354E0006D76DB /* RulerCompassTests */ = {
+		A3F9111B24368955001E6D5E /* RulerCompassTests */ = {
 			isa = PBXGroup;
 			children = (
-				E760D291243354E0006D76DB /* RulerCompassTests.swift */,
-				E760D293243354E0006D76DB /* Info.plist */,
+				A3F9111C24368955001E6D5E /* RulerCompassTests.swift */,
+				A3F9111E24368955001E6D5E /* Info.plist */,
 			);
 			path = RulerCompassTests;
 			sourceTree = "<group>";
@@ -105,13 +99,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E760D276243354D7006D76DB /* RulerCompass */ = {
+		A3F9110324368953001E6D5E /* RulerCompass */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E760D296243354E0006D76DB /* Build configuration list for PBXNativeTarget "RulerCompass" */;
+			buildConfigurationList = A3F9112124368955001E6D5E /* Build configuration list for PBXNativeTarget "RulerCompass" */;
 			buildPhases = (
-				E760D273243354D7006D76DB /* Sources */,
-				E760D274243354D7006D76DB /* Frameworks */,
-				E760D275243354D7006D76DB /* Resources */,
+				A3F9110024368953001E6D5E /* Sources */,
+				A3F9110124368953001E6D5E /* Frameworks */,
+				A3F9110224368953001E6D5E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -119,47 +113,47 @@
 			);
 			name = RulerCompass;
 			productName = RulerCompass;
-			productReference = E760D277243354D7006D76DB /* RulerCompass.app */;
+			productReference = A3F9110424368953001E6D5E /* RulerCompass.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E760D28C243354E0006D76DB /* RulerCompassTests */ = {
+		A3F9111724368955001E6D5E /* RulerCompassTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E760D299243354E0006D76DB /* Build configuration list for PBXNativeTarget "RulerCompassTests" */;
+			buildConfigurationList = A3F9112424368955001E6D5E /* Build configuration list for PBXNativeTarget "RulerCompassTests" */;
 			buildPhases = (
-				E760D289243354E0006D76DB /* Sources */,
-				E760D28A243354E0006D76DB /* Frameworks */,
-				E760D28B243354E0006D76DB /* Resources */,
+				A3F9111424368955001E6D5E /* Sources */,
+				A3F9111524368955001E6D5E /* Frameworks */,
+				A3F9111624368955001E6D5E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E760D28F243354E0006D76DB /* PBXTargetDependency */,
+				A3F9111A24368955001E6D5E /* PBXTargetDependency */,
 			);
 			name = RulerCompassTests;
 			productName = RulerCompassTests;
-			productReference = E760D28D243354E0006D76DB /* RulerCompassTests.xctest */;
+			productReference = A3F9111824368955001E6D5E /* RulerCompassTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E760D26F243354D7006D76DB /* Project object */ = {
+		A3F910FC24368953001E6D5E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
-				ORGANIZATIONNAME = daobao;
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Grace Huang";
 				TargetAttributes = {
-					E760D276243354D7006D76DB = {
-						CreatedOnToolsVersion = 11.2;
+					A3F9110324368953001E6D5E = {
+						CreatedOnToolsVersion = 10.3;
 					};
-					E760D28C243354E0006D76DB = {
-						CreatedOnToolsVersion = 11.2;
-						TestTargetID = E760D276243354D7006D76DB;
+					A3F9111724368955001E6D5E = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = A3F9110324368953001E6D5E;
 					};
 				};
 			};
-			buildConfigurationList = E760D272243354D7006D76DB /* Build configuration list for PBXProject "RulerCompass" */;
+			buildConfigurationList = A3F910FF24368953001E6D5E /* Build configuration list for PBXProject "RulerCompass" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -167,29 +161,29 @@
 				en,
 				Base,
 			);
-			mainGroup = E760D26E243354D7006D76DB;
-			productRefGroup = E760D278243354D7006D76DB /* Products */;
+			mainGroup = A3F910FB24368953001E6D5E;
+			productRefGroup = A3F9110524368953001E6D5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E760D276243354D7006D76DB /* RulerCompass */,
-				E760D28C243354E0006D76DB /* RulerCompassTests */,
+				A3F9110324368953001E6D5E /* RulerCompass */,
+				A3F9111724368955001E6D5E /* RulerCompassTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E760D275243354D7006D76DB /* Resources */ = {
+		A3F9110224368953001E6D5E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E760D287243354DF006D76DB /* LaunchScreen.storyboard in Resources */,
-				E760D284243354DF006D76DB /* Assets.xcassets in Resources */,
-				E760D282243354D7006D76DB /* Main.storyboard in Resources */,
+				A3F9111224368955001E6D5E /* LaunchScreen.storyboard in Resources */,
+				A3F9110F24368955001E6D5E /* Assets.xcassets in Resources */,
+				A3F9110D24368953001E6D5E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E760D28B243354E0006D76DB /* Resources */ = {
+		A3F9111624368955001E6D5E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -199,48 +193,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E760D273243354D7006D76DB /* Sources */ = {
+		A3F9110024368953001E6D5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E760D27F243354D7006D76DB /* ViewController.swift in Sources */,
-				E760D27B243354D7006D76DB /* AppDelegate.swift in Sources */,
-				A3F910FA243684A3001E6D5E /* CanvasView.swift in Sources */,
-				E760D27D243354D7006D76DB /* SceneDelegate.swift in Sources */,
+				A3F9110A24368953001E6D5E /* ViewController.swift in Sources */,
+				A3F9110824368953001E6D5E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E760D289243354E0006D76DB /* Sources */ = {
+		A3F9111424368955001E6D5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E760D292243354E0006D76DB /* RulerCompassTests.swift in Sources */,
+				A3F9111D24368955001E6D5E /* RulerCompassTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E760D28F243354E0006D76DB /* PBXTargetDependency */ = {
+		A3F9111A24368955001E6D5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E760D276243354D7006D76DB /* RulerCompass */;
-			targetProxy = E760D28E243354E0006D76DB /* PBXContainerItemProxy */;
+			target = A3F9110324368953001E6D5E /* RulerCompass */;
+			targetProxy = A3F9111924368955001E6D5E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E760D280243354D7006D76DB /* Main.storyboard */ = {
+		A3F9110B24368953001E6D5E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E760D281243354D7006D76DB /* Base */,
+				A3F9110C24368953001E6D5E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		E760D285243354DF006D76DB /* LaunchScreen.storyboard */ = {
+		A3F9111024368955001E6D5E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E760D286243354DF006D76DB /* Base */,
+				A3F9111124368955001E6D5E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -248,7 +240,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E760D294243354E0006D76DB /* Debug */ = {
+		A3F9111F24368955001E6D5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,6 +272,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -298,7 +291,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -308,7 +301,7 @@
 			};
 			name = Debug;
 		};
-		E760D295243354E0006D76DB /* Release */ = {
+		A3F9112024368955001E6D5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -340,6 +333,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -352,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -362,57 +356,53 @@
 			};
 			name = Release;
 		};
-		E760D297243354E0006D76DB /* Debug */ = {
+		A3F9112224368955001E6D5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93CA9U5VXN;
 				INFOPLIST_FILE = RulerCompass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = rongronghuang.RulerCompass;
+				PRODUCT_BUNDLE_IDENTIFIER = grace.RulerCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		E760D298243354E0006D76DB /* Release */ = {
+		A3F9112324368955001E6D5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93CA9U5VXN;
 				INFOPLIST_FILE = RulerCompass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = rongronghuang.RulerCompass;
+				PRODUCT_BUNDLE_IDENTIFIER = grace.RulerCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		E760D29A243354E0006D76DB /* Debug */ = {
+		A3F9112524368955001E6D5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93CA9U5VXN;
 				INFOPLIST_FILE = RulerCompassTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = rongronghuang.RulerCompassTests;
+				PRODUCT_BUNDLE_IDENTIFIER = grace.RulerCompassTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -420,21 +410,19 @@
 			};
 			name = Debug;
 		};
-		E760D29B243354E0006D76DB /* Release */ = {
+		A3F9112624368955001E6D5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93CA9U5VXN;
 				INFOPLIST_FILE = RulerCompassTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = rongronghuang.RulerCompassTests;
+				PRODUCT_BUNDLE_IDENTIFIER = grace.RulerCompassTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -445,34 +433,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E760D272243354D7006D76DB /* Build configuration list for PBXProject "RulerCompass" */ = {
+		A3F910FF24368953001E6D5E /* Build configuration list for PBXProject "RulerCompass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E760D294243354E0006D76DB /* Debug */,
-				E760D295243354E0006D76DB /* Release */,
+				A3F9111F24368955001E6D5E /* Debug */,
+				A3F9112024368955001E6D5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E760D296243354E0006D76DB /* Build configuration list for PBXNativeTarget "RulerCompass" */ = {
+		A3F9112124368955001E6D5E /* Build configuration list for PBXNativeTarget "RulerCompass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E760D297243354E0006D76DB /* Debug */,
-				E760D298243354E0006D76DB /* Release */,
+				A3F9112224368955001E6D5E /* Debug */,
+				A3F9112324368955001E6D5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E760D299243354E0006D76DB /* Build configuration list for PBXNativeTarget "RulerCompassTests" */ = {
+		A3F9112424368955001E6D5E /* Build configuration list for PBXNativeTarget "RulerCompassTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E760D29A243354E0006D76DB /* Debug */,
-				E760D29B243354E0006D76DB /* Release */,
+				A3F9112524368955001E6D5E /* Debug */,
+				A3F9112624368955001E6D5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E760D26F243354D7006D76DB /* Project object */;
+	rootObject = A3F910FC24368953001E6D5E /* Project object */;
 }
