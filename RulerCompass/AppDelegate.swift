@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  RulerCompass
 //
-//  Created by daobao on 2020/3/31.
-//  Copyright © 2020 daobao. All rights reserved.
+//  Created by Donald Sheng on 2020-04-03.
+//  Copyright © 2020 Gold Thumb Inc. All rights reserved.
 //
 
 import UIKit
