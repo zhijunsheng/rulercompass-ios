@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var paperView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,4 +19,3 @@ class ViewController: UIViewController {
 
 
 }
-
