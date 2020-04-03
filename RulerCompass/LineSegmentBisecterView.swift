@@ -25,6 +25,11 @@ class LineSegmentBisecterView: UIView {
         
         lineSegmentPath.stroke()
         
+        let pencil = UIBezierPath()
+        pencil.move(to: CGPoint(x: 350, y: 100))
+        pencil.addLine(to: CGPoint(x: 350, y: 700))
+        pencil.stroke()
+        
         let compassArc1 = UIBezierPath(arcCenter: CGPoint(x: 200, y: 500), radius: 200, startAngle: -CGFloat.pi / 2, endAngle: CGFloat.pi / 2, clockwise: true)
         #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1).setStroke()
         compassArc1.stroke()
