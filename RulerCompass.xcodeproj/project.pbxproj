@@ -14,6 +14,7 @@
 		07736A0F2437459C00E1C7E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07736A0E2437459C00E1C7E8 /* Assets.xcassets */; };
 		07736A122437459C00E1C7E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07736A102437459C00E1C7E8 /* LaunchScreen.storyboard */; };
 		07736A1D2437459D00E1C7E8 /* RulerCompassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07736A1C2437459D00E1C7E8 /* RulerCompassTests.swift */; };
+		07736A2824374AC200E1C7E8 /* EuclideanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07736A2724374AC200E1C7E8 /* EuclideanView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		07736A182437459D00E1C7E8 /* RulerCompassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RulerCompassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07736A1C2437459D00E1C7E8 /* RulerCompassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerCompassTests.swift; sourceTree = "<group>"; };
 		07736A1E2437459D00E1C7E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07736A2724374AC200E1C7E8 /* EuclideanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuclideanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				07736A052437459800E1C7E8 /* AppDelegate.swift */,
 				07736A072437459800E1C7E8 /* SceneDelegate.swift */,
 				07736A092437459800E1C7E8 /* ViewController.swift */,
+				07736A2724374AC200E1C7E8 /* EuclideanView.swift */,
 				07736A0B2437459800E1C7E8 /* Main.storyboard */,
 				07736A0E2437459C00E1C7E8 /* Assets.xcassets */,
 				07736A102437459C00E1C7E8 /* LaunchScreen.storyboard */,
@@ -203,6 +206,7 @@
 				07736A0A2437459800E1C7E8 /* ViewController.swift in Sources */,
 				07736A062437459800E1C7E8 /* AppDelegate.swift in Sources */,
 				07736A082437459800E1C7E8 /* SceneDelegate.swift in Sources */,
+				07736A2824374AC200E1C7E8 /* EuclideanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
