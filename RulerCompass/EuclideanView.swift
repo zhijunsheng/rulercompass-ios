@@ -14,7 +14,39 @@ class EuclideanView: UIView {
 //        lineSegmentBisector()
 //        angleBisector()
 //        perpendicular()
+//        perpendicular2()
+        parallel()
+    }
+    
+    func parallel() {
         perpendicular2()
+        
+        let compassPath1 = UIBezierPath()
+        compassPath1.addArc(withCenter: CGPoint(x: 400, y: 200), radius: 100, startAngle: -0.6 * CGFloat.pi, endAngle: -0.4 * CGFloat.pi, clockwise: true)
+        UIColor.blue.setStroke()
+        compassPath1.stroke()
+        
+        let compassPath2 = UIBezierPath()
+        compassPath2.addArc(withCenter: CGPoint(x: 400, y: 200), radius: 100, startAngle: 0.4 * CGFloat.pi, endAngle: 0.6 * CGFloat.pi, clockwise: true)
+        UIColor.blue.setStroke()
+        compassPath2.stroke()
+        
+        let compassPath3 = UIBezierPath()
+        compassPath3.addArc(withCenter: CGPoint(x: 400, y: 100), radius: 300, startAngle: 0.8 * CGFloat.pi, endAngle: CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1).setStroke()
+        compassPath3.stroke()
+        
+        let compassPath4 = UIBezierPath()
+        compassPath4.addArc(withCenter: CGPoint(x: 400, y: 300), radius: 300, startAngle: 1.0 * CGFloat.pi, endAngle: 1.2 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1).setStroke()
+        compassPath4.stroke()
+        
+        let parallelPath = UIBezierPath()
+        parallelPath.move(to: CGPoint(x: 50, y: 200))
+        parallelPath.addLine(to: CGPoint(x: 700, y: 200))
+        parallelPath.lineWidth = 3
+        #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1).setStroke()
+        parallelPath.stroke()
     }
     
     func perpendicular2() {
