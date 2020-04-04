@@ -19,6 +19,7 @@ class CanvasView: UIView {
         // first end
         pencil.move(to: CGPoint(x: 200, y: 280))
         pencil.addLine(to: CGPoint(x: 200, y: 320))
+        pencil.stroke()
        
         /*
          x1 = 200
@@ -47,17 +48,22 @@ class CanvasView: UIView {
         
         let arc1 = UIBezierPath(arcCenter: CGPoint(x: 200, y: 300), radius: 180, startAngle: CGFloat.pi * 1.5, endAngle: 0.3 * CGFloat.pi, clockwise: true)
         arc1.lineWidth = 3
-        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setStroke()
+        #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1).setStroke()
         arc1.stroke()
         
         let arc2 = UIBezierPath(arcCenter: CGPoint(x: 500, y: 300), radius: 180, startAngle: CGFloat.pi / 1.6, endAngle: CGFloat.pi * 1.3, clockwise: true)
         arc2.lineWidth = 3
-        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setStroke()
+        #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1).setStroke()
         arc2.stroke()
         
-        pencil.move(to: CGPoint(x: 350, y: 100))
-        pencil.addLine(to: CGPoint(x: 350, y: 500))
-        pencil.stroke()
+        
+        let bisector = UIBezierPath()
+        bisector.move(to: CGPoint(x: 350, y: 100))
+        bisector.addLine(to: CGPoint(x: 350, y: 500))
+        #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).setStroke()
+        
+        bisector.lineWidth = 3
+        bisector.stroke()
 
     }
 
