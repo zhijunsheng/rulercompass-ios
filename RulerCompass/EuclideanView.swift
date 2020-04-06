@@ -15,7 +15,203 @@ class EuclideanView: UIView {
 //        angleBisector()
 //        perpendicular()
 //        perpendicular2()
-        parallel()
+//        parallel()
+//        regularTriangle()
+//        triangle()
+//        circleThroughTwoPoints()
+//        circleThroughThreePoints()
+//        pythagoreanTriples()
+        squareRootOfTwo()
+    }
+    
+    func squareRootOfTwo() {
+        horizontalLineSegment(fromX: 100, toX: 250, y: 100)
+        "1".draw(in: CGRect(x: 175, y: 80, width: 20, height: 20))
+        perpendicular()
+        
+        UIColor.lightGray.setStroke()
+        UIBezierPath(arcCenter: CGPoint(x: 400, y: 350), radius: 150, startAngle: -1.1 * CGFloat.pi, endAngle: -0.4 * CGFloat.pi, clockwise: true).stroke()
+        
+        let solution = UIBezierPath()
+        solution.move(to: CGPoint(x: 400, y: 200))
+        solution.addLine(to: CGPoint(x: 250, y: 350))
+        UIColor.red.setStroke()
+        solution.lineWidth = 3
+        solution.stroke()
+        
+        "√2".draw(in: CGRect(x: 310, y: 260, width: 20, height: 20))
+        "1".draw(in: CGRect(x: 410, y: 270, width: 20, height: 20))
+        "1".draw(in: CGRect(x: 320, y: 360, width: 20, height: 20))
+    }
+    
+    func pythagoreanTriples() {
+        for i in 0..<3 {
+            horizontalLineSegment(fromX: 100 + 50 * CGFloat(i), toX: 150 + 50 * CGFloat(i), y: 100)
+        }
+        
+        for i in 0..<4 {
+            horizontalLineSegment(fromX: 100 + 50 * CGFloat(i), toX: 150 + 50 * CGFloat(i), y: 150)
+        }
+        
+        for i in 0..<5 {
+            horizontalLineSegment(fromX: 100 + 50 * CGFloat(i), toX: 150 + 50 * CGFloat(i), y: 200)
+        }
+        
+        let triangle = UIBezierPath()
+        triangle.move(to: CGPoint(x: 300, y: 600))
+        triangle.addLine(to: CGPoint(x: 500, y: 600))
+        triangle.addLine(to: CGPoint(x: 300, y: 450))
+        triangle.close()
+        UIColor.red.setStroke()
+        triangle.stroke()
+        
+        UIColor.lightGray.setStroke()
+        UIBezierPath(arcCenter: CGPoint(x: 300, y: 600), radius: 150, startAngle: -0.6 * CGFloat.pi, endAngle: -0.4 * CGFloat.pi, clockwise: true).stroke()
+        UIBezierPath(arcCenter: CGPoint(x: 500, y: 600), radius: 250, startAngle: -0.9 * CGFloat.pi, endAngle: -0.7 * CGFloat.pi, clockwise: true).stroke()
+    }
+    
+    func circleThroughThreePoints() {
+        drawPointAt(x: 200, y: 200)
+        drawPointAt(x: 400, y: 200)
+        drawPointAt(x: 500, y: 300)
+        
+        UIColor.brown.setStroke()
+        UIBezierPath(arcCenter: CGPoint(x: 200, y: 200), radius: 150, startAngle: -0.5 * CGFloat.pi, endAngle: 0.5 * CGFloat.pi, clockwise: true).stroke()
+        UIBezierPath(arcCenter: CGPoint(x: 400, y: 200), radius: 150, startAngle: -0.5 * CGFloat.pi, endAngle: 0.5 * CGFloat.pi, clockwise: false).stroke()
+        
+        let line1 = UIBezierPath()
+        line1.move(to: CGPoint(x: 300, y: 50))
+        line1.addLine(to: CGPoint(x: 300, y: 500))
+        UIColor.blue.setStroke()
+        line1.stroke()
+        
+        UIColor.purple.setStroke()
+        UIBezierPath(arcCenter: CGPoint(x: 400, y: 200), radius: 90, startAngle: -0.25 * CGFloat.pi, endAngle: 0.5 * CGFloat.pi, clockwise: true).stroke()
+        UIBezierPath(arcCenter: CGPoint(x: 500, y: 300), radius: 90, startAngle: -0.25 * CGFloat.pi, endAngle: 0.9 * CGFloat.pi, clockwise: false).stroke()
+        
+        let line2 = UIBezierPath()
+        line2.move(to: CGPoint(x: 500, y: 200))
+        line2.addLine(to: CGPoint(x: 200, y: 500))
+        UIColor.green.setStroke()
+        line2.stroke()
+        
+        let radius: CGFloat = sqrt(200 * 200 + 100 * 100)
+        UIColor.red.setStroke()
+        UIBezierPath(arcCenter: CGPoint(x: 300, y: 400), radius: radius, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).stroke()
+    }
+    
+    func circleThroughTwoPoints() {
+        drawPointAt(x: 200, y: 500)
+        drawPointAt(x: 500, y: 500)
+        
+        let compassPath1 = UIBezierPath()
+        compassPath1.addArc(withCenter: CGPoint(x: 200, y: 500), radius: 250, startAngle: -0.5 * CGFloat.pi, endAngle: -0.25 * CGFloat.pi, clockwise: true)
+        UIColor.brown.setStroke()
+        compassPath1.stroke()
+        
+        let compassPath2 = UIBezierPath()
+        compassPath2.addArc(withCenter: CGPoint(x: 500, y: 500), radius: 250, startAngle: -0.5 * CGFloat.pi, endAngle: -0.75 * CGFloat.pi, clockwise: false)
+        UIColor.brown.setStroke()
+        compassPath2.stroke()
+        
+        let circleCenterY: CGFloat = 500 - sqrt(250 * 250 - 150 * 150)
+        let circle = UIBezierPath()
+        circle.addArc(withCenter: CGPoint(x: 350, y: circleCenterY), radius: 250, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        UIColor.red.setStroke()
+        circle.stroke()
+    }
+    
+    func drawPointAt(x: CGFloat, y: CGFloat) {
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: x - 5, y: y - 5))
+        path.addLine(to: CGPoint(x: x + 5, y: y + 5))
+        path.move(to: CGPoint(x: x - 5, y: y + 5))
+        path.addLine(to: CGPoint(x: x + 5, y: y - 5))
+        path.stroke()
+    }
+    
+    func triangle() {
+        horizontalLineSegment(fromX: 100, toX: 300, y: 100)
+        horizontalLineSegment(fromX: 100, toX: 350, y: 150)
+        horizontalLineSegment(fromX: 100, toX: 400, y: 200)
+        
+        let trianglePath = UIBezierPath()
+        trianglePath.move(to: CGPoint(x: 200, y: 600))
+        trianglePath.addLine(to: CGPoint(x: 500, y: 600))
+        
+        let compassPath = UIBezierPath()
+        compassPath.addArc(withCenter: CGPoint(x: 200, y: 600), radius: 200, startAngle: -0.5 * CGFloat.pi, endAngle: -0.25 * CGFloat.pi, clockwise: true)
+        
+        compassPath.move(to: CGPoint(x: 500, y: 350))
+
+        compassPath.addArc(withCenter: CGPoint(x: 500, y: 600), radius: 250, startAngle: -0.5 * CGFloat.pi, endAngle: -0.9 * CGFloat.pi, clockwise: false)
+        
+        UIColor.green.setStroke()
+        compassPath.stroke()
+        
+        let a: Double = 250
+        let b: Double = 200
+        let c: Double = 300
+        let cosLeftAngle = (b * b + c * c - a * a) / (2 * b * c)
+        let leftAngle = acos(cosLeftAngle)
+        let triangleHeight = CGFloat(b * sin(leftAngle))
+        let x = 200 + CGFloat(b * cosLeftAngle)
+        trianglePath.addLine(to: CGPoint(x: x, y: 600 - triangleHeight))
+        trianglePath.close()
+        
+        UIColor.red.setStroke()
+        trianglePath.stroke()
+    }
+    
+    func horizontalLineSegment(fromX: CGFloat, toX: CGFloat, y: CGFloat) {
+        let lineSegmentPath = UIBezierPath()
+        
+        lineSegmentPath.move(to: CGPoint(x: fromX, y: y))
+        lineSegmentPath.addLine(to: CGPoint(x: toX, y: y))
+        
+        lineSegmentPath.move(to: CGPoint(x: fromX, y: y - 10))
+        lineSegmentPath.addLine(to: CGPoint(x: fromX, y: y + 10))
+        
+        lineSegmentPath.move(to: CGPoint(x: toX, y: y - 10))
+        lineSegmentPath.addLine(to: CGPoint(x: toX, y: y + 10))
+        
+        lineSegmentPath.stroke()
+    }
+    
+    func regularTriangle() {
+        let lineSegmentPath = UIBezierPath()
+        
+        lineSegmentPath.move(to: CGPoint(x: 100, y: 100))
+        lineSegmentPath.addLine(to: CGPoint(x: 300, y: 100))
+        
+        lineSegmentPath.move(to: CGPoint(x: 100, y: 100 - 10))
+        lineSegmentPath.addLine(to: CGPoint(x: 100, y: 100 + 10))
+        
+        lineSegmentPath.move(to: CGPoint(x: 300, y: 100 - 10))
+        lineSegmentPath.addLine(to: CGPoint(x: 300, y: 100 + 10))
+        
+        lineSegmentPath.stroke()
+        
+        let trianglePath = UIBezierPath()
+        trianglePath.move(to: CGPoint(x: 250, y: 500))
+        trianglePath.addLine(to: CGPoint(x: 250 + 200, y: 500))
+
+        
+        let compassPath = UIBezierPath()
+        compassPath.addArc(withCenter: CGPoint(x: 250, y: 500), radius: 200, startAngle: -0.5 * CGFloat.pi, endAngle: -0.25 * CGFloat.pi, clockwise: true)
+        
+        compassPath.move(to: CGPoint(x: 450, y: 300))
+        
+        compassPath.addArc(withCenter: CGPoint(x: 450, y: 500), radius: 200, startAngle: -0.5 * CGFloat.pi, endAngle: -0.75 * CGFloat.pi, clockwise: false)
+        UIColor.green.setStroke()
+        
+        compassPath.stroke()
+        
+        trianglePath.addLine(to: CGPoint(x: (250 + 450)/2, y: 500 - 200 * sqrt(3)/2))
+        trianglePath.close()
+        
+        UIColor.red.setStroke()
+        trianglePath.stroke()
     }
     
     func parallel() {
