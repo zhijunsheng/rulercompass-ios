@@ -12,31 +12,53 @@ class CanvasView: UIView {
 
 
     override func draw(_ rect: CGRect) {
+//        drawLineBisector()
+        drawAngleBisector()
+
+    }
+    func drawAngleBisector() {
+        let line = UIBezierPath()
+        line.move(to: CGPoint(x: 200, y: 300))
+        line.addLine(to: CGPoint(x: 400, y: 200))
+        
+        line.move(to: CGPoint(x: 200, y: 300))
+        line.addLine(to: CGPoint(x: 400, y: 300))
+        line.stroke()
+    
+        let arc = UIBezierPath(arcCenter: CGPoint(x: 200, y: 300), radius: 130, startAngle: CGFloat.pi * 0.2, endAngle: -CGFloat.pi * 0.4, clockwise: false)
+        #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1).setStroke()
+        arc.stroke()
+        
+        let arc1 = UIBezierPath(arcCenter: CGPoint(x: 317, y: 243), radius: 100, startAngle: CGFloat.pi * 0.1, endAngle: -CGFloat.pi * 0.2, clockwise: false)
+        #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1).setStroke()
+        arc1.stroke()
+
+        drawCrosshair(x: 200, y: 500)
+        drawCrosshair(x: 300, y: 100)
+        drawCrosshair(x: 40, y: 500)
+    }
+
+    func drawCrosshair(x: CGFloat, y: CGFloat) {
+
+        let cross = UIBezierPath()
+        cross.move(to: CGPoint(x: x, y: y - 80))
+        cross.addLine(to: CGPoint(x: x, y: y + 80))
+        
+        cross.move(to: CGPoint(x: x - 80, y: y))
+        cross.addLine(to: CGPoint(x: x + 80, y: y))
+        #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1).setStroke()
+        cross.stroke()
+    }
+    
+    func drawLineBisector() {
         let pencil = UIBezierPath()
         pencil.move(to: CGPoint(x: 200, y: 300))
         pencil.addLine(to: CGPoint(x: 500, y: 300))
-       
+        
         // first end
-        pencil.move(to: CGPoint(x: 200, y: 280))
-        pencil.addLine(to: CGPoint(x: 200, y: 320))
+        pencil.move(to: CGPoint(x: 40, y: 280))
+        pencil.addLine(to: CGPoint(x: 500, y: 320))
         pencil.stroke()
-       
-        /*
-         x1 = 200
-         x2 = 500
-         x' = 200 + 300/2
-            = 200 + 150
-            = 350
-         x' = x1 + (x2 - x1) * 0.5
-            = x1 + x2 * 0.5 - x1 * 0.5
-            = x1 * 0.5 + x2 * 0.5
-            = (x1 + x2) * 0.5
-            = (x1 + x2) / 2
-            = (200 + 500) / 2
-            = 700 / 2
-            = 350
-         length of the line = 300
-         */
         
         // second end
         pencil.move(to: CGPoint(x: 500, y: 280))
@@ -56,7 +78,6 @@ class CanvasView: UIView {
         #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1).setStroke()
         arc2.stroke()
         
-        
         let bisector = UIBezierPath()
         bisector.move(to: CGPoint(x: 350, y: 100))
         bisector.addLine(to: CGPoint(x: 350, y: 500))
@@ -64,7 +85,6 @@ class CanvasView: UIView {
         
         bisector.lineWidth = 3
         bisector.stroke()
-
     }
 
 
