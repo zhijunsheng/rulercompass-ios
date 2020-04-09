@@ -9,10 +9,16 @@
 import UIKit
 
 class CanvasView: UIView {
+    
+    var flag: GeometricProblem = GeometricProblem.angleBisector
+    
     override func draw(_ rect: CGRect) {
-//        drawLineSegmentBisector()
-        drawAngleBisector()
-        drawCross(x: 532, y: 287)
+        switch flag {
+        case .lineBisector:
+            drawLineSegmentBisector()
+        case .angleBisector:
+            drawAngleBisector()
+        }
     }
     
     func drawCross(x: CGFloat, y: CGFloat) {

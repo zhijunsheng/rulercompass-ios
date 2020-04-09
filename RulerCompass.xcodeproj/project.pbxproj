@@ -14,6 +14,7 @@
 		A3F9111224368955001E6D5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F9111024368955001E6D5E /* LaunchScreen.storyboard */; };
 		A3F9111D24368955001E6D5E /* RulerCompassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9111C24368955001E6D5E /* RulerCompassTests.swift */; };
 		A3F9112824368A27001E6D5E /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9112724368A27001E6D5E /* CanvasView.swift */; };
+		A3F9112C243FC54C001E6D5E /* GeometricProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9112B243FC54C001E6D5E /* GeometricProblem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		A3F9111C24368955001E6D5E /* RulerCompassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerCompassTests.swift; sourceTree = "<group>"; };
 		A3F9111E24368955001E6D5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3F9112724368A27001E6D5E /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		A3F9112B243FC54C001E6D5E /* GeometricProblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometricProblem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				A3F9112724368A27001E6D5E /* CanvasView.swift */,
 				A3F9110724368953001E6D5E /* AppDelegate.swift */,
 				A3F9110924368953001E6D5E /* ViewController.swift */,
+				A3F9112B243FC54C001E6D5E /* GeometricProblem.swift */,
 				A3F9110B24368953001E6D5E /* Main.storyboard */,
 				A3F9110E24368955001E6D5E /* Assets.xcassets */,
 				A3F9111024368955001E6D5E /* LaunchScreen.storyboard */,
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3F9110A24368953001E6D5E /* ViewController.swift in Sources */,
+				A3F9112C243FC54C001E6D5E /* GeometricProblem.swift in Sources */,
 				A3F9110824368953001E6D5E /* AppDelegate.swift in Sources */,
 				A3F9112824368A27001E6D5E /* CanvasView.swift in Sources */,
 			);
