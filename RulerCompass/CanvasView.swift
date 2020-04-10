@@ -9,10 +9,16 @@
 import UIKit
 
 class CanvasView: UIView {
-
-    override func draw(_ rect: CGRect) {
+    var code = 0
     
-        drawTriangleFrom3GivenLineSegments()
+    override func draw(_ rect: CGRect) {
+        if code == 1 {
+            drawAngle()
+        }
+        
+        if code == 2 {
+            drawTriangleFrom3GivenLineSegments()
+        }
         //drawAngle()
         //drawLineSegment()
     }
@@ -76,7 +82,6 @@ class CanvasView: UIView {
         pencil2.lineWidth = 3
         #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1).setStroke()
         pencil2.stroke()
-          drawCrossHair(x: 5, y: 250)
     }
    
     func drawCrossHair(x: CGFloat, y: CGFloat) {
@@ -84,12 +89,12 @@ class CanvasView: UIView {
         let pencil3 = UIBezierPath()
         pencil3.move(to: CGPoint(x: x, y: y - 50))
         pencil3.addLine(to: CGPoint(x: x, y: y + 50))
-        
+
         pencil3.move(to: CGPoint(x: x - 50, y: y))
         pencil3.addLine(to: CGPoint(x: x + 50, y: y))
-        
+
         #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1).setStroke()
-        
+
         pencil3.stroke()
     }
     
