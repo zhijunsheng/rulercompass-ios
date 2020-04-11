@@ -40,7 +40,7 @@ class CanvasView: UIView {
         let answer = UIBezierPath()
         answer.move(to: CGPoint(x: 120, y: bounds.height / 2))
         answer.addLine(to: CGPoint(x: 697, y: 250))
-        #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1).setStroke()
+        #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1).setStroke()
         answer.lineWidth = 6
         answer.stroke()
         
