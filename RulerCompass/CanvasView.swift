@@ -10,12 +10,16 @@ import UIKit
 
 class CanvasView: UIView {
 
-
+    var flag = -1
+    
     override func draw(_ rect: CGRect) {
-//        drawLineBisector()
-        drawAngleBisector()
-
+        if flag == 1 {
+            drawAngleBisector()
+        } else if flag == 2 {
+            drawLineBisector()
+        }
     }
+    
     func drawAngleBisector() {
         let line = UIBezierPath()
         line.move(to: CGPoint(x: 200, y: 300))
@@ -56,10 +60,8 @@ class CanvasView: UIView {
         #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).setStroke()
         cross.stroke()
     }
-    
 
     func drawCrosshair(x: CGFloat, y: CGFloat) {
-
         let cross = UIBezierPath()
         cross.move(to: CGPoint(x: x, y: y - 30))
         cross.addLine(to: CGPoint(x: x, y: y + 30))
@@ -68,8 +70,6 @@ class CanvasView: UIView {
         cross.addLine(to: CGPoint(x: x + 30, y: y))
         #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1).setStroke()
         cross.stroke()
-    
-        
     }
     
     func drawLineBisector() {
@@ -78,8 +78,8 @@ class CanvasView: UIView {
         pencil.addLine(to: CGPoint(x: 500, y: 300))
         
         // first end
-        pencil.move(to: CGPoint(x: 40, y: 280))
-        pencil.addLine(to: CGPoint(x: 500, y: 320))
+        pencil.move(to: CGPoint(x: 200, y: 280))
+        pencil.addLine(to: CGPoint(x: 200, y: 320))
         pencil.stroke()
         
         // second end
@@ -108,9 +108,4 @@ class CanvasView: UIView {
         bisector.lineWidth = 3
         bisector.stroke()
     }
-
-
 }
-
-
-
