@@ -10,14 +10,37 @@ import UIKit
 
 class CanvasView: UIView {
 
-    var flag = -1
+    var flag = 3
     
     override func draw(_ rect: CGRect) {
         if flag == 1 {
             drawAngleBisector()
         } else if flag == 2 {
             drawLineBisector()
+        } else if flag == 3 {
+            drawTriangle()
         }
+    }
+    
+    func drawTriangle() {
+        let line = UIBezierPath()
+        line.move(to: CGPoint(x: 150, y: 150))
+        line.addLine(to: CGPoint(x: 300, y: 150))
+        
+        line.move(to: CGPoint(x: 150, y: 220))
+        line.addLine(to: CGPoint(x: 380, y: 220))
+        
+        line.move(to: CGPoint(x: 150, y: 290))
+        line.addLine(to: CGPoint(x: 440, y: 290))
+        
+        line.move(to: CGPoint(x: 300, y: 600))
+        line.addLine(to: CGPoint(x: 450, y: 600))
+        
+        let guideline = UIBezierPath(arcCenter: CGPoint(x: 450, y: 600), radius: 100, startAngle: CGFloat.pi * 1.4, endAngle: CGFloat.pi , clockwise: false)
+        guideline.stroke()
+        
+        line.lineWidth = 3
+        line.stroke()
     }
     
     func drawAngleBisector() {
@@ -108,4 +131,5 @@ class CanvasView: UIView {
         bisector.lineWidth = 3
         bisector.stroke()
     }
+    
 }
