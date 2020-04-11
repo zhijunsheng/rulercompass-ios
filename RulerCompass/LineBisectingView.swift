@@ -12,9 +12,39 @@ class LineBisectingView: UIView {
     
     override func draw(_ rect: CGRect) {
         //        lineBisecting()
-        angleBisecting()
-        
+        //        angleBisecting()
+        drawingTriangle()
     }
+    func drawingTriangle() {
+        let pencil = UIBezierPath()
+        pencil.move(to: CGPoint(x: 70, y: 100))
+        pencil.addLine(to: CGPoint(x: 270, y: 100))
+        
+        pencil.move(to: CGPoint(x: 70, y: 120))
+        pencil.addLine(to: CGPoint(x: 300, y: 120))
+        
+        pencil.move(to: CGPoint(x: 70, y: 140))
+        pencil.addLine(to: CGPoint(x: 330, y: 140))
+        
+        pencil.move(to: CGPoint(x: 300, y: 600))
+        pencil.addLine(to: CGPoint(x: 560, y: 600))
+
+        let halfCircle2 = UIBezierPath(arcCenter: CGPoint(x: 300, y: 600), radius: 230, startAngle:  1.6 * CGFloat.pi, endAngle: 1.8 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0.6177716851, green: 0.9856142402, blue: 0.7465093136, alpha: 1).setStroke()
+        halfCircle2.lineWidth = 5
+        halfCircle2.stroke()
+        
+        let halfCircle3 = UIBezierPath(arcCenter: CGPoint(x: 560, y: 600), radius: 200, startAngle:  1.3 * CGFloat.pi, endAngle: 1.5 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1).setStroke()
+        halfCircle3.lineWidth = 5
+        halfCircle3.stroke()
+        
+        pencil.move(to: CGPoint(x: 300, y: 600))
+        pencil.addLine(to: CGPoint(x: 455, y: 430))
+        pencil.addLine(to: CGPoint(x: 560, y: 600))
+        pencil.stroke()
+    }
+    
     func angleBisecting() {
         let pencil = UIBezierPath()
         //         angle
@@ -47,7 +77,7 @@ class LineBisectingView: UIView {
         #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1).setStroke()
         halfCircle3.lineWidth = 5
         halfCircle3.stroke()
-      
+        
         drawCross(originX: 375, originY: 147)
         
         
