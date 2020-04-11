@@ -1,11 +1,18 @@
 import UIKit
 
 class CanvasView: UIView {
-
+    var flag: Int = 584034
+    
     override func draw(_ rect: CGRect) {
-        challenge3()
-        //challenge2()
-        //challenge1()
+        if flag == 1 {
+            challenge1()
+        } else if flag == 2 {
+            challenge2()
+        } else if flag == 3 {
+            challenge3()
+        } else {
+            
+        }
     }
     
     func challenge3() {
