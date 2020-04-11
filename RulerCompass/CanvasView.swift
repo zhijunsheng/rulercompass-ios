@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LineBisectingView: UIView {
+class CanvasView: UIView {
     
     override func draw(_ rect: CGRect) {
         //        lineBisecting()
