@@ -3,8 +3,50 @@ import UIKit
 class CanvasView: UIView {
 
     override func draw(_ rect: CGRect) {
-        challenge2()
+        challenge3()
+        //challenge2()
         //challenge1()
+    }
+    
+    func challenge3() {
+        let rulerLegend = UIBezierPath()
+        rulerLegend.move(to: CGPoint(x: 150, y:150))
+        rulerLegend.addLine(to: CGPoint(x: 450, y: 150))
+        rulerLegend.lineWidth = 5
+        rulerLegend.stroke()
+        
+        let rulerPath = UIBezierPath()
+        rulerPath.move(to: CGPoint(x: 0, y: bounds.height - 50))
+        rulerPath.addLine(to: CGPoint(x: bounds.width, y: bounds.height - 50))
+        rulerPath.lineWidth = 5
+        rulerPath.stroke()
+        
+        rulerPath.move(to: CGPoint(x: 150, y:150))
+        rulerPath.addLine(to: CGPoint(x: 150, y: bounds.height - 50))
+        rulerPath.lineWidth = 0.5
+        rulerPath.stroke()
+        
+        rulerPath.move(to: CGPoint(x: 450, y:150))
+        rulerPath.addLine(to: CGPoint(x: 450, y: bounds.height - 50))
+        rulerPath.lineWidth = 0.5
+        rulerPath.stroke()
+        
+        let compassPath1 = UIBezierPath(arcCenter: CGPoint(x: 150, y: bounds.height - 50), radius: 300, startAngle: 0, endAngle: -0.5 * CGFloat.pi, clockwise: false)
+        compassPath1.lineWidth = 5
+        compassPath1.stroke()
+        
+        let compassPath2 = UIBezierPath(arcCenter: CGPoint(x: 450, y: bounds.height - 50), radius: 300, startAngle: -CGFloat.pi, endAngle: -0.5 * CGFloat.pi, clockwise: true)
+        compassPath2.lineWidth = 5
+        compassPath2.stroke()
+        
+        let rulerPath2 = UIBezierPath()
+        rulerPath2.move(to: CGPoint(x: 150, y: bounds.height - 50))
+        rulerPath2.addLine(to: CGPoint(x: 300, y: 423))
+        rulerPath2.addLine(to: CGPoint(x: 450, y: bounds.height - 50))
+        rulerPath2.close()
+        rulerPath2.lineWidth = 5
+        #colorLiteral(red: 0.5704585314, green: 0.5704723597, blue: 0.5704649091, alpha: 1).setStroke()
+        rulerPath2.stroke()
     }
     
     func challenge2() {
