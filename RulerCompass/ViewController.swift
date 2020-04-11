@@ -8,6 +8,10 @@ class ViewController: UIViewController {
         
     }
 
-
+    @IBAction func showAngleBisector(_ sender: Any) {
+    }
+    
+    @IBAction func showLineBisector(_ sender: Any) {
+    }
 }
 

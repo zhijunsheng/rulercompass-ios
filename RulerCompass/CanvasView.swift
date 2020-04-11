@@ -24,7 +24,7 @@ class CanvasView: UIView {
         line.move(to: CGPoint(x: 200, y: 300))
         line.addLine(to: CGPoint(x: 400, y: 300))
         line.stroke()
-    
+
         let arc = UIBezierPath(arcCenter: CGPoint(x: 200, y: 300), radius: 130, startAngle: CGFloat.pi * 0.2, endAngle: -CGFloat.pi * 0.4, clockwise: false)
         #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1).setStroke()
         arc.stroke()
@@ -32,22 +32,44 @@ class CanvasView: UIView {
         let arc1 = UIBezierPath(arcCenter: CGPoint(x: 317, y: 243), radius: 100, startAngle: CGFloat.pi * 0.1, endAngle: -CGFloat.pi * 0.2, clockwise: false)
         #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1).setStroke()
         arc1.stroke()
+        
+        let arc2 = UIBezierPath(arcCenter: CGPoint(x: 330, y: 300), radius: 100, startAngle: CGFloat.pi * 0.1, endAngle: -CGFloat.pi * 0.2, clockwise: false)
+        arc2.stroke()
+        
+        let line1 = UIBezierPath()
+        line1.move(to: CGPoint(x: 200, y: 300))
+        line1.addLine(to: CGPoint(x: 420, y: 249))
+        #colorLiteral(red: 0.6871029735, green: 0.03761260584, blue: 1, alpha: 1).setStroke()
+        line1.stroke()
 
-        drawCrosshair(x: 200, y: 500)
-        drawCrosshair(x: 300, y: 100)
-        drawCrosshair(x: 40, y: 500)
+//        drawCrosshair(x: 317, y: 243)
+        
+        let x = 400
+        let y = 500
+        
+        let cross = UIBezierPath()
+        cross.move(to: CGPoint(x: x, y: y - 75))
+        cross.addLine(to: CGPoint(x: x, y: y + 75))
+        
+        cross.move(to: CGPoint(x: x - 75, y: y))
+        cross.addLine(to: CGPoint(x: x + 75, y: y))
+        #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).setStroke()
+        cross.stroke()
     }
+    
 
     func drawCrosshair(x: CGFloat, y: CGFloat) {
 
         let cross = UIBezierPath()
-        cross.move(to: CGPoint(x: x, y: y - 80))
-        cross.addLine(to: CGPoint(x: x, y: y + 80))
+        cross.move(to: CGPoint(x: x, y: y - 30))
+        cross.addLine(to: CGPoint(x: x, y: y + 30))
         
-        cross.move(to: CGPoint(x: x - 80, y: y))
-        cross.addLine(to: CGPoint(x: x + 80, y: y))
+        cross.move(to: CGPoint(x: x - 30, y: y))
+        cross.addLine(to: CGPoint(x: x + 30, y: y))
         #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1).setStroke()
         cross.stroke()
+    
+        
     }
     
     func drawLineBisector() {
