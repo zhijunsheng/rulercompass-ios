@@ -9,11 +9,22 @@
 import UIKit
 
 class CanvasView: UIView {
+    var flag = -1
     
     override func draw(_ rect: CGRect) {
-        //        lineBisecting()
-        //        angleBisecting()
-        drawingTriangle()
+        
+        if flag == 1 {
+            lineBisecting()
+        }
+        if flag == 2{
+            angleBisecting()
+        }
+        if flag == 3 {
+            drawingTriangle() 
+        }
+//                lineBisecting()
+//        angleBisecting()
+//        drawingTriangle()
     }
     func drawingTriangle() {
         let pencil = UIBezierPath()
