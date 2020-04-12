@@ -19,51 +19,54 @@ class CanvasView: UIView {
         if code == 2 {
             drawTriangleFrom3GivenLineSegments()
         }
-        //drawAngle()
-        //drawLineSegment()
+        
+        if code == 3 {
+            drawLineSegment()
+        }
     }
+    
     func drawTriangleFrom3GivenLineSegments() {
-        let pencil1 = UIBezierPath()
+        let straightlines = UIBezierPath()
                 
-        pencil1.move(to: CGPoint(x: 100, y: 100))
-        pencil1.addLine(to: CGPoint(x: 212, y: 100))
+        straightlines.move(to: CGPoint(x: 100, y: 100))
+        straightlines.addLine(to: CGPoint(x: 212, y: 100))
         
-        pencil1.move(to: CGPoint(x: 100, y: 150))
-        pencil1.addLine(to: CGPoint(x: 250, y: 150))
+        straightlines.move(to: CGPoint(x: 100, y: 150))
+        straightlines.addLine(to: CGPoint(x: 250, y: 150))
         
-        pencil1.move(to: CGPoint(x: 100, y: 200))
-        pencil1.addLine(to: CGPoint(x: 300, y: 200))
+        straightlines.move(to: CGPoint(x: 100, y: 200))
+        straightlines.addLine(to: CGPoint(x: 300, y: 200))
         
-        pencil1.move(to: CGPoint(x: 400, y: 400))
-        pencil1.addLine(to: CGPoint(x: 600, y: 400))
+        straightlines.move(to: CGPoint(x: 400, y: 400))
+        straightlines.addLine(to: CGPoint(x: 600, y: 400))
         
-        let pencil2 = UIBezierPath(arcCenter: CGPoint(x: 400, y: 400), radius: 112, startAngle: CGFloat.pi * 1.6, endAngle: CGFloat.pi * 1.9, clockwise: true)
+        let arc1 = UIBezierPath(arcCenter: CGPoint(x: 400, y: 400), radius: 112, startAngle: CGFloat.pi * 1.6, endAngle: CGFloat.pi * 1.9, clockwise: true)
 
-        let pencil3 = UIBezierPath(arcCenter: CGPoint(x: 600, y: 400), radius: 150, startAngle: CGFloat.pi * 1.3, endAngle: CGFloat.pi * 1.11, clockwise: false)
-            pencil2.stroke()
-            pencil3.stroke()
+        let arc2 = UIBezierPath(arcCenter: CGPoint(x: 600, y: 400), radius: 150, startAngle: CGFloat.pi * 1.3, endAngle: CGFloat.pi * 1.11, clockwise: false)
+            arc1.stroke()
+            arc2.stroke()
 
-        pencil1.move(to: CGPoint(x: 400, y: 400))
-        pencil1.addLine(to: CGPoint(x: 475, y: 315))
+        straightlines.move(to: CGPoint(x: 400, y: 400))
+        straightlines.addLine(to: CGPoint(x: 475, y: 315))
         
-        pencil1.move(to: CGPoint(x: 475, y: 316))
-        pencil1.addLine(to: CGPoint(x: 600, y: 400))
+        straightlines.move(to: CGPoint(x: 475, y: 316))
+        straightlines.addLine(to: CGPoint(x: 600, y: 400))
         
-        pencil1.stroke()
+        straightlines.stroke()
     }
     
     func drawAngle() {
         
-        let pencil = UIBezierPath()
+        let angles = UIBezierPath()
 
-        pencil.move(to: CGPoint(x: 300, y: 400))
-        pencil.addLine(to: CGPoint(x: 400, y: 200))
+        angles.move(to: CGPoint(x: 300, y: 400))
+        angles.addLine(to: CGPoint(x: 400, y: 200))
 
-        pencil.move(to: CGPoint(x: 300, y: 400))
-        pencil.addLine(to: CGPoint(x: 500, y: 400))
+        angles.move(to: CGPoint(x: 300, y: 400))
+        angles.addLine(to: CGPoint(x: 500, y: 400))
 
-        pencil.lineWidth = 3
-        pencil.stroke()
+        angles.lineWidth = 3
+        angles.stroke()
         
         let arc = UIBezierPath(arcCenter: CGPoint(x: 300, y: 400), radius: 150, startAngle: CGFloat.pi * 0.25, endAngle: -CGFloat.pi *  0.5, clockwise: false)
         #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1).setStroke()
@@ -75,42 +78,42 @@ class CanvasView: UIView {
         let arc3 = UIBezierPath(arcCenter: CGPoint(x: 375, y: 275), radius: 150, startAngle: CGFloat.pi * 1.9, endAngle: CGFloat.pi * 0.06, clockwise: true)
         arc3.stroke()
                
-        let pencil2 = UIBezierPath()
+        let bisector = UIBezierPath()
         
-        pencil2.move(to: CGPoint(x: 300, y: 400))
-        pencil2.addLine(to: CGPoint(x: 550, y: 255))
-        pencil2.lineWidth = 3
+        bisector.move(to: CGPoint(x: 300, y: 400))
+        bisector.addLine(to: CGPoint(x: 550, y: 255))
+        bisector.lineWidth = 3
         #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1).setStroke()
-        pencil2.stroke()
+        bisector.stroke()
     }
    
     func drawCrossHair(x: CGFloat, y: CGFloat) {
                 
-        let pencil = UIBezierPath()
-        pencil.move(to: CGPoint(x: x, y: y - 50))
-        pencil.addLine(to: CGPoint(x: x, y: y + 50))
+        let crosshair = UIBezierPath()
+        crosshair.move(to: CGPoint(x: x, y: y - 50))
+        crosshair.addLine(to: CGPoint(x: x, y: y + 50))
 
-        pencil.move(to: CGPoint(x: x - 50, y: y))
-        pencil.addLine(to: CGPoint(x: x + 50, y: y))
+        crosshair.move(to: CGPoint(x: x - 50, y: y))
+        crosshair.addLine(to: CGPoint(x: x + 50, y: y))
 
         #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1).setStroke()
 
-        pencil.stroke()
+        crosshair.stroke()
     }
     
     func drawLineSegment() {
          let lineSegmentPath = UIBezierPath()
         lineSegmentPath.move(to: CGPoint(x: 200, y: 400))
         lineSegmentPath.addLine(to: CGPoint(x: 500, y: 400))
-        
+
         lineSegmentPath.move(to: CGPoint(x: 200, y: 375))
         lineSegmentPath.addLine(to: CGPoint(x: 200, y: 425))
-        
+
         lineSegmentPath.move(to: CGPoint(x: 500, y: 375))
         lineSegmentPath.addLine(to: CGPoint(x: 500, y: 425))
-        
+
         lineSegmentPath.lineWidth = 3
-        
+
         lineSegmentPath.stroke()
         
         let pencil = UIBezierPath()
@@ -121,10 +124,10 @@ class CanvasView: UIView {
         let compassArc1 = UIBezierPath(arcCenter: CGPoint(x: 200, y: 400), radius: 200, startAngle: -CGFloat.pi / 2, endAngle: CGFloat.pi / 2, clockwise: true)
         #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1).setStroke()
         compassArc1.stroke()
-        
+
         let comapssArc2 = UIBezierPath(arcCenter: CGPoint(x: 500, y: 400), radius: 200, startAngle: -CGFloat.pi / 2, endAngle: CGFloat.pi / 2, clockwise: false)
         #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1).setStroke()
-        comapssArc2.stroke()
-            
+        comapssArc2.stroke()        
     }
+    
 }

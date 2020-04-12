@@ -41,10 +41,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odw-4u-NEu">
-                                <rect key="frame" x="20" y="908" width="178" height="60"/>
+                                <rect key="frame" x="20" y="916" width="350" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Cross Hair"/>
+                                <state key="normal" title="Bisect Line Segment"/>
+                                <connections>
+                                    <action selector="bisectLineSegment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1GK-Ht-ng3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
