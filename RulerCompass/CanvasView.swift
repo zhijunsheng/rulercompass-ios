@@ -23,37 +23,37 @@ class CanvasView: UIView {
         //drawLineSegment()
     }
     func drawTriangleFrom3GivenLineSegments() {
+        let pencil1 = UIBezierPath()
+                
+        pencil1.move(to: CGPoint(x: 100, y: 100))
+        pencil1.addLine(to: CGPoint(x: 212, y: 100))
         
-        let pencil4 = UIBezierPath(arcCenter: CGPoint(x: 400, y: 400), radius: 112, startAngle: CGFloat.pi * 1.6, endAngle: CGFloat.pi * 1.9, clockwise: true)
+        pencil1.move(to: CGPoint(x: 100, y: 150))
+        pencil1.addLine(to: CGPoint(x: 250, y: 150))
         
-        let pencil5 = UIBezierPath(arcCenter: CGPoint(x: 600, y: 400), radius: 150, startAngle: CGFloat.pi * 1.3, endAngle: CGFloat.pi * 1.11, clockwise: false)
+        pencil1.move(to: CGPoint(x: 100, y: 200))
+        pencil1.addLine(to: CGPoint(x: 300, y: 200))
         
-        // the length is 100
-        pencil4.move(to: CGPoint(x: 100, y: 100))
-        pencil4.addLine(to: CGPoint(x: 212, y: 100))
+        pencil1.move(to: CGPoint(x: 400, y: 400))
+        pencil1.addLine(to: CGPoint(x: 600, y: 400))
         
-        pencil4.move(to: CGPoint(x: 100, y: 150))
-        pencil4.addLine(to: CGPoint(x: 250, y: 150))
+        let pencil2 = UIBezierPath(arcCenter: CGPoint(x: 400, y: 400), radius: 112, startAngle: CGFloat.pi * 1.6, endAngle: CGFloat.pi * 1.9, clockwise: true)
+
+        let pencil3 = UIBezierPath(arcCenter: CGPoint(x: 600, y: 400), radius: 150, startAngle: CGFloat.pi * 1.3, endAngle: CGFloat.pi * 1.11, clockwise: false)
+            pencil2.stroke()
+            pencil3.stroke()
+
+        pencil1.move(to: CGPoint(x: 400, y: 400))
+        pencil1.addLine(to: CGPoint(x: 475, y: 315))
         
-        pencil4.move(to: CGPoint(x: 100, y: 200))
-        pencil4.addLine(to: CGPoint(x: 300, y: 200))
+        pencil1.move(to: CGPoint(x: 475, y: 316))
+        pencil1.addLine(to: CGPoint(x: 600, y: 400))
         
-        pencil4.move(to: CGPoint(x: 400, y: 400))
-        pencil4.addLine(to: CGPoint(x: 600, y: 400))
-        
-        pencil4.move(to: CGPoint(x: 400, y: 400))
-        pencil4.addLine(to: CGPoint(x: 490, y: 300))
-        
-        pencil4.move(to: CGPoint(x: 450, y: 300))
-        pencil4.addLine(to: CGPoint(x: 600, y: 400))
-        
-        pencil4.stroke()
-        pencil5.stroke()
-        
+        pencil1.stroke()
     }
+    
     func drawAngle() {
         
-        // angle
         let pencil = UIBezierPath()
 
         pencil.move(to: CGPoint(x: 300, y: 400))
@@ -86,16 +86,16 @@ class CanvasView: UIView {
    
     func drawCrossHair(x: CGFloat, y: CGFloat) {
                 
-        let pencil3 = UIBezierPath()
-        pencil3.move(to: CGPoint(x: x, y: y - 50))
-        pencil3.addLine(to: CGPoint(x: x, y: y + 50))
+        let pencil = UIBezierPath()
+        pencil.move(to: CGPoint(x: x, y: y - 50))
+        pencil.addLine(to: CGPoint(x: x, y: y + 50))
 
-        pencil3.move(to: CGPoint(x: x - 50, y: y))
-        pencil3.addLine(to: CGPoint(x: x + 50, y: y))
+        pencil.move(to: CGPoint(x: x - 50, y: y))
+        pencil.addLine(to: CGPoint(x: x + 50, y: y))
 
         #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1).setStroke()
 
-        pencil3.stroke()
+        pencil.stroke()
     }
     
     func drawLineSegment() {
