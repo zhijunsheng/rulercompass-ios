@@ -11,6 +11,9 @@ import UIKit
 class PaperView: UIView {
     override func draw(_ rect: CGRect) {
         lineSegmentBisector()
+        angleBisector()
+        rightTriangleInSemiCircle()
+        threeLinesThatMakeATriangle()
     }
     
     func lineSegmentBisector() {
@@ -30,14 +33,66 @@ class PaperView: UIView {
     func angleBisector() {
         let rulerLine = UIBezierPath()
         let compassLine = UIBezierPath()
-        rulerLine.move(to: CGPoint(x: 200, y: bounds.height / 2))
-        rulerLine.addLine(to: CGPoint(x: bounds.width - 200, y: bounds.height / 2))
+        let compassLine1 = UIBezierPath()
+        let compassLine2 = UIBezierPath()
+        rulerLine.move(to: CGPoint(x: bounds.width - 200, y: bounds.height - 200))
+        rulerLine.addLine(to: CGPoint(x: 200, y: bounds.height - 200))
+        rulerLine.addLine(to: CGPoint(x: 200, y: 200))
+        compassLine.addArc(withCenter: CGPoint(x: 200, y: bounds.height - 200), radius: 150, startAngle: CGFloat.pi * 1.48, endAngle: CGFloat.pi * 0.02, clockwise: true)
+        compassLine1.addArc(withCenter: CGPoint(x: 350, y: bounds.height - 200), radius: 200, startAngle: CGFloat.pi * 1.45, endAngle: CGFloat.pi * 1.6, clockwise: true)
+        compassLine2.addArc(withCenter: CGPoint(x: 200, y: bounds.height - 350), radius: 200, startAngle: CGFloat.pi * 1.9, endAngle: CGFloat.pi * 0.05, clockwise: true)
+        rulerLine.move(to: CGPoint(x: bounds.width - 100, y: 100))
+        rulerLine.addLine(to: CGPoint(x: 100, y: bounds.height - 100))
+        rulerLine.stroke()
+        compassLine.stroke()
+        compassLine1.stroke()
+        compassLine2.stroke()
     }
-    //nixjaf-xyXdub-muvto8
-//eakcu5-o26eus-cis74y
-//75errt-f85e7y-5t7yru
-//hvgu35-5348yt-e45y9f  Real One --> nixjaf-xyXdub-muvto8
-//93458w-vy5gt3-4etyrj
-//gn8365-85h845-frghm4
-    //nixjaf-xyXdub-muvto8
+    
+    func rightTriangleInSemiCircle() {
+        let rulerLine = UIBezierPath()
+        let compassLine = UIBezierPath()
+        rulerLine.move(to: CGPoint(x: 150, y: bounds.height - 225))
+        rulerLine.addLine(to: CGPoint(x: bounds.width - 150, y: bounds.height - 225))
+        compassLine.addArc(withCenter: CGPoint(x: bounds.width / 2, y: bounds.height - 225), radius: bounds.width / 2 - 150, startAngle: CGFloat.pi, endAngle: 0, clockwise: true)
+        rulerLine.move(to: CGPoint(x: 150, y: bounds.height - 225))
+        rulerLine.addLine(to: CGPoint(x: bounds.width - 275, y: bounds.height - 420))
+        rulerLine.addLine(to: CGPoint(x: bounds.width - 150, y: bounds.height - 225))
+        rulerLine.move(to: CGPoint(x: bounds.width - 275, y: bounds.height - 420))
+        rulerLine.addLine(to: CGPoint(x: bounds.width / 2, y: bounds.height - 225))
+        "r".draw(in: CGRect(x: bounds.width * 21 / 40, y: bounds.height - 325, width: 50, height: 50))
+        "r".draw(in: CGRect(x: bounds.width * 6 / 15, y: bounds.height - 250, width: 50, height: 50))
+        "r".draw(in: CGRect(x: bounds.width * 5 / 8, y: bounds.height - 250, width: 50, height: 50))
+        rulerLine.move(to: CGPoint(x: 225, y: bounds.height - 220))
+        rulerLine.addLine(to: CGPoint(x: 225, y: bounds.height - 230))
+        rulerLine.move(to: CGPoint(x: bounds.width - 250, y: bounds.height - 220))
+        rulerLine.addLine(to: CGPoint(x: bounds.width - 250, y: bounds.height - 230))
+        rulerLine.move(to: CGPoint(x: bounds.width * 22 / 40, y: bounds.height - 320))
+        rulerLine.addLine(to: CGPoint(x: bounds.width * 91 / 160, y: bounds.height - 317))
+        rulerLine.stroke()
+        compassLine.stroke()
+    }
+    
+    func threeLinesThatMakeATriangle() {
+        let rulerLine = UIBezierPath()
+        let compassLine = UIBezierPath()
+        let compassLine1 = UIBezierPath()
+        rulerLine.move(to: CGPoint(x: 50, y: 50))
+        rulerLine.addLine(to: CGPoint(x: 356, y: 50))
+        rulerLine.move(to: CGPoint(x: 50, y: 75))
+        rulerLine.addLine(to: CGPoint(x: bounds.width - 350, y: 75))
+        rulerLine.move(to: CGPoint(x: 50, y: 100))
+        rulerLine.addLine(to: CGPoint(x: 393, y: 100))
+        rulerLine.move(to: CGPoint(x: 200, y: bounds.height - 225))
+        rulerLine.addLine(to: CGPoint(x: bounds.width - 200, y: bounds.height - 225))
+        rulerLine.move(to: CGPoint(x: 200, y: bounds.height - 225))
+        rulerLine.addLine(to: CGPoint(x: bounds.width * 11 / 20, y: 225))
+        rulerLine.move(to: CGPoint(x: bounds.width * 11 / 20, y: 225))
+        rulerLine.addLine(to: CGPoint(x: bounds.width - 200, y: bounds.height - 225))
+        compassLine.addArc(withCenter: CGPoint(x: 200, y: bounds.height - 225), radius: 343, startAngle: CGFloat.pi * 1.675, endAngle: CGFloat.pi * 1.73, clockwise: true)
+        compassLine1.addArc(withCenter: CGPoint(x: bounds.width - 200, y: bounds.height - 225), radius: 306 , startAngle: CGFloat.pi * 1.33, endAngle: CGFloat.pi * 1.39, clockwise: true)
+        rulerLine.stroke()
+        compassLine.stroke()
+        compassLine1.stroke()
+    }
 }
