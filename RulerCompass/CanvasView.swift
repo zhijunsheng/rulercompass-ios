@@ -10,7 +10,7 @@ import UIKit
 
 class CanvasView: UIView {
 
-    var flag = -1
+    var flag = 3
     
     override func draw(_ rect: CGRect) {
         if flag == 1 {
@@ -25,16 +25,29 @@ class CanvasView: UIView {
     func drawTriangle() {
         let line = UIBezierPath()
         line.move(to: CGPoint(x: 150, y: 150))
-        // line length 150
         line.addLine(to: CGPoint(x: 300, y: 150))
         
+        line.move(to: CGPoint(x: 150, y: 140))
+        line.addLine(to: CGPoint(x: 150, y: 160))
+        line.move(to: CGPoint(x: 300, y: 140))
+        line.addLine(to: CGPoint(x: 300, y: 160))
+        
         line.move(to: CGPoint(x: 150, y: 220))
-        // line length 230
         line.addLine(to: CGPoint(x: 380, y: 220))
         
+        line.move(to: CGPoint(x: 150, y: 210))
+        line.addLine(to: CGPoint(x: 150, y: 230))
+        line.move(to: CGPoint(x: 380, y: 210))
+        line.addLine(to: CGPoint(x: 380, y: 230))
+        
         line.move(to: CGPoint(x: 150, y: 290))
-        // line length 290
         line.addLine(to: CGPoint(x: 440, y: 290))
+        
+        line.move(to: CGPoint(x: 150, y: 280))
+        line.addLine(to: CGPoint(x: 150, y: 300))
+        
+        line.move(to: CGPoint(x: 440, y: 280))
+        line.addLine(to: CGPoint(x: 440, y: 300))
         
         // bottom line
         line.move(to: CGPoint(x: 300, y: 600))
