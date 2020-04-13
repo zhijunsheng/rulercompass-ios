@@ -23,6 +23,13 @@
                                     <constraint firstAttribute="width" secondItem="4df-CP-TRM" secondAttribute="height" multiplier="1:1" id="KAz-yX-pEO"/>
                                 </constraints>
                             </view>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="1" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="Cpi-t6-txo">
+                                <rect key="frame" x="18" y="858" width="732" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchSolution:" destination="BYZ-38-t0r" eventType="valueChanged" id="BMS-n3-sb8"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.6483304794520548" green="0.4220622859589041" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>

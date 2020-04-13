@@ -9,11 +9,21 @@
 import UIKit
 
 class PaperView: UIView {
+    var pageNumber = 1
+    
     override func draw(_ rect: CGRect) {
-        lineSegmentBisector()
-        angleBisector()
-        rightTriangleInSemiCircle()
-        threeLinesThatMakeATriangle()
+        switch pageNumber {
+        case 1:
+            lineSegmentBisector()
+        case 2:
+            angleBisector()
+        case 3:
+            rightTriangleInSemiCircle()
+        case 4:
+            threeLinesThatMakeATriangle()
+        default:
+            break
+        }
     }
     
     func lineSegmentBisector() {
