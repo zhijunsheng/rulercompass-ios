@@ -9,9 +9,13 @@
 import UIKit
 
 class CanvasView: UIView {
+    var flag = -847
     override func draw(_ rect: CGRect) {
-//        drawLineSegmentBisector()
-        drawAngleBisector()
+        if flag == 1 {
+            drawAngleBisector()
+        } else if flag == 2 {
+            drawLineSegmentBisector()
+        }
     }
     
     func drawAngleBisector() {

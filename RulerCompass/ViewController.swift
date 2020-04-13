@@ -10,11 +10,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func angleBisector(_ sender: Any) {
-        canvasView.drawAngleBisector()
+        canvasView.flag = 1
+        canvasView.setNeedsDisplay()
     }
     
     @IBAction func lineSegmentBisector(_ sender: Any) {
-        canvasView.drawLineSegmentBisector()
+        canvasView.flag = 2
+        canvasView.setNeedsDisplay()
     }
 }
 
