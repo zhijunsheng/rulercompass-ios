@@ -18,6 +18,98 @@ class CanvasView: UIView {
             drawLineSegmentBisector()
         case .angleBisector:
             drawAngleBisector()
+        case .coordinatePlane:
+            drawCoordinatePlane()
+        case .triangleGivenSides:
+            drawTriangleGivenSides()
+        }
+    }
+    
+    func drawTriangleGivenSides() {
+        let ruler = UIBezierPath()
+        let compass = UIBezierPath()
+        // line 1 150, line 2 225, line 3 300
+        ruler.move(to: CGPoint(x: 60, y: 45))
+        ruler.addLine(to: CGPoint(x: 210, y: 45))
+        
+        ruler.move(to: CGPoint(x: 60, y: 90))
+        ruler.addLine(to: CGPoint(x: 285, y: 90))
+        
+        ruler.move(to: CGPoint(x: 60, y: 135))
+        ruler.addLine(to: CGPoint(x: 360, y: 135))
+        
+        ruler.lineWidth = 3
+        ruler.stroke()
+        
+        // point 1
+        ruler.move(to: CGPoint(x: 210, y: 480))
+        ruler.addLine(to: CGPoint(x: 210, y: 490))
+        ruler.move(to: CGPoint(x: 205, y: 485))
+        ruler.addLine(to: CGPoint(x: 215, y: 485))
+        
+        ruler.lineWidth = 1.5
+        ruler.stroke()
+        
+        
+        compass.addArc(withCenter: CGPoint(x: 210, y: 485), radius: 300, startAngle: 0.1 * CGFloat.pi, endAngle: -0.1 * CGFloat.pi, clockwise: false)
+        
+        // point 2
+        ruler.move(to: CGPoint(x: 510, y: 480))
+        ruler.addLine(to: CGPoint(x: 510, y: 490))
+        ruler.move(to: CGPoint(x: 505, y: 485))
+        ruler.addLine(to: CGPoint(x: 515, y: 485))
+        
+        ruler.stroke()
+        
+        compass.move(to: CGPoint(x: 380, y: 304))
+        compass.addArc(withCenter: CGPoint(x: 510, y: 485), radius: 225, startAngle: -0.7 * CGFloat.pi, endAngle: -0.9 * CGFloat.pi, clockwise: false)
+        
+        compass.move(to: CGPoint(x: 345, y: 410))
+        compass.addArc(withCenter: CGPoint(x: 210, y: 480), radius: 150, startAngle: -0.15 * CGFloat.pi, endAngle: -0.35 * CGFloat.pi, clockwise: false)
+        
+        #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()
+        compass.stroke()
+        
+        // point 3
+//        drawCross(x: 315, y: 372)
+        ruler.move(to: CGPoint(x: 315, y: 367))
+        ruler.addLine(to: CGPoint(x: 315, y: 377))
+        ruler.move(to: CGPoint(x: 310, y: 372))
+        ruler.addLine(to: CGPoint(x: 320, y: 372))
+        
+        ruler.move(to: CGPoint(x: 210, y: 485))
+        ruler.addLine(to: CGPoint(x: 510, y: 485))
+        ruler.addLine(to: CGPoint(x: 315, y: 372))
+        ruler.addLine(to: CGPoint(x: 210, y: 485))
+
+        #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1).setStroke()
+        ruler.stroke()
+    }
+    
+    
+    func drawCoordinatePlane() {
+        let ruler = UIBezierPath()
+
+        ruler.move(to: CGPoint(x: 350, y: 0))
+        ruler.addLine(to: CGPoint(x: 350, y: 700))
+        
+        ruler.move(to: CGPoint(x: 0, y: 350))
+        ruler.addLine(to: CGPoint(x: 700, y: 350))
+
+        ruler.lineWidth = 3
+        ruler.stroke()
+        
+        
+        for i in 0..<35 {
+            ruler.move(to: CGPoint(x: 20 * i + 10, y: 0))
+            ruler.addLine(to: CGPoint(x: 20 * i + 10, y: 700))
+            
+            ruler.move(to: CGPoint(x: 0, y: 20 * i + 10))
+            ruler.addLine(to: CGPoint(x: 700, y: 20 * i + 10))
+
+            
+            ruler.lineWidth = 0.05
+            ruler.stroke()
         }
     }
     

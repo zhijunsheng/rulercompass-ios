@@ -11,4 +11,6 @@ import Foundation
 enum GeometricProblem {
     case lineBisector
     case angleBisector
+    case coordinatePlane
+    case triangleGivenSides
 }

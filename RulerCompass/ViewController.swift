@@ -25,5 +25,16 @@ class ViewController: UIViewController {
         canvasView.flag = .angleBisector
         canvasView.setNeedsDisplay()
     }
+    
+    @IBAction func coordinatePlane(_ sender: Any) {
+        canvasView.flag = .coordinatePlane
+        canvasView.setNeedsDisplay()
+    }
+    
+    @IBAction func triangleGivenSides(_ sender: Any) {
+        canvasView.flag = .triangleGivenSides
+        canvasView.setNeedsDisplay()
+    }
+    
 }
 
