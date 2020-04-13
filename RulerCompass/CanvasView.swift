@@ -10,7 +10,7 @@ import UIKit
 
 class CanvasView: UIView {
 
-    var flag = 3
+    var flag = -1
     
     override func draw(_ rect: CGRect) {
         if flag == 1 {
@@ -25,20 +25,33 @@ class CanvasView: UIView {
     func drawTriangle() {
         let line = UIBezierPath()
         line.move(to: CGPoint(x: 150, y: 150))
+        // line length 150
         line.addLine(to: CGPoint(x: 300, y: 150))
         
         line.move(to: CGPoint(x: 150, y: 220))
+        // line length 230
         line.addLine(to: CGPoint(x: 380, y: 220))
         
         line.move(to: CGPoint(x: 150, y: 290))
+        // line length 290
         line.addLine(to: CGPoint(x: 440, y: 290))
         
+        // bottom line
         line.move(to: CGPoint(x: 300, y: 600))
-        line.addLine(to: CGPoint(x: 450, y: 600))
+        line.addLine(to: CGPoint(x: 590, y: 600))
         
-        let guideline = UIBezierPath(arcCenter: CGPoint(x: 450, y: 600), radius: 100, startAngle: CGFloat.pi * 1.4, endAngle: CGFloat.pi , clockwise: false)
+        let guideline = UIBezierPath(arcCenter: CGPoint(x: 590, y: 600), radius: 230, startAngle: CGFloat.pi * 1.4, endAngle: CGFloat.pi * 1.1, clockwise: false)
         guideline.stroke()
         
+        let guideline1 = UIBezierPath(arcCenter: CGPoint(x: 300, y: 600), radius: 150, startAngle: CGFloat.pi * 1.4, endAngle: -CGFloat.pi * 0.1, clockwise: true)
+        guideline1.stroke()
+        
+        line.move(to: CGPoint(x: 300, y: 600))
+        line.addLine(to: CGPoint(x: 393, y: 484))
+        
+        line.move(to: CGPoint(x: 590, y: 600))
+        line.addLine(to: CGPoint(x: 393, y: 484))
+      
         line.lineWidth = 3
         line.stroke()
     }
@@ -53,7 +66,7 @@ class CanvasView: UIView {
         line.stroke()
 
         let arc = UIBezierPath(arcCenter: CGPoint(x: 200, y: 300), radius: 130, startAngle: CGFloat.pi * 0.2, endAngle: -CGFloat.pi * 0.4, clockwise: false)
-        #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1).setStroke()
+        #colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1).setStroke()
         arc.stroke()
         
         let arc1 = UIBezierPath(arcCenter: CGPoint(x: 317, y: 243), radius: 100, startAngle: CGFloat.pi * 0.1, endAngle: -CGFloat.pi * 0.2, clockwise: false)
@@ -68,20 +81,6 @@ class CanvasView: UIView {
         line1.addLine(to: CGPoint(x: 420, y: 249))
         #colorLiteral(red: 0.6871029735, green: 0.03761260584, blue: 1, alpha: 1).setStroke()
         line1.stroke()
-
-//        drawCrosshair(x: 317, y: 243)
-        
-        let x = 400
-        let y = 500
-        
-        let cross = UIBezierPath()
-        cross.move(to: CGPoint(x: x, y: y - 75))
-        cross.addLine(to: CGPoint(x: x, y: y + 75))
-        
-        cross.move(to: CGPoint(x: x - 75, y: y))
-        cross.addLine(to: CGPoint(x: x + 75, y: y))
-        #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).setStroke()
-        cross.stroke()
     }
 
     func drawCrosshair(x: CGFloat, y: CGFloat) {
