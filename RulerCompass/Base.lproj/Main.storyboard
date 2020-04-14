@@ -17,6 +17,15 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVb-jW-Ev0" customClass="CanvasView" customModule="RulerCompass" customModuleProvider="target">
                                 <rect key="frame" x="20" y="20" width="728" height="728"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gr-54-DpL">
+                                        <rect key="frame" x="8" y="8" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qVb-jW-Ev0" secondAttribute="height" multiplier="1:1" id="Mwr-AR-GI6"/>
@@ -66,6 +75,7 @@
                     </view>
                     <connections>
                         <outlet property="canvasView" destination="qVb-jW-Ev0" id="Sg6-FF-5EH"/>
+                        <outlet property="infoLabel" destination="4Gr-54-DpL" id="BhN-fH-4yj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
