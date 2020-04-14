@@ -23,6 +23,10 @@ class CanvasView: UIView {
         if code == 3 {
             drawLineSegment()
         }
+        
+        if code == 4 {
+            makePerpendicularLine()
+        }
     }
     
     func drawTriangleFrom3GivenLineSegments() {
@@ -96,7 +100,7 @@ class CanvasView: UIView {
         crosshair.move(to: CGPoint(x: x - 50, y: y))
         crosshair.addLine(to: CGPoint(x: x + 50, y: y))
 
-        #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1).setStroke()
+        #colorLiteral(red: 0.3176470697, green: 0.07450980693, blue: 0.02745098062, alpha: 1).setStroke()
 
         crosshair.stroke()
     }
@@ -128,6 +132,33 @@ class CanvasView: UIView {
         let comapssArc2 = UIBezierPath(arcCenter: CGPoint(x: 500, y: 400), radius: 200, startAngle: -CGFloat.pi / 2, endAngle: CGFloat.pi / 2, clockwise: false)
         #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1).setStroke()
         comapssArc2.stroke()        
+    }
+    
+    func makePerpendicularLine() {
+        let pencil = UIBezierPath()
+        
+        pencil.move(to: CGPoint(x: 200, y: 300))
+        pencil.addLine(to: CGPoint(x: 600, y: 300))
+        
+        pencil.move(to: CGPoint(x: 413.5, y: 290))
+        pencil.addLine(to: CGPoint(x: 413.5, y: 310))
+        
+        let pencil2 = UIBezierPath(arcCenter: CGPoint(x: 413.5, y: 300), radius: 137.5, startAngle: CGFloat.pi * 1.5, endAngle: CGFloat.pi * 3.5, clockwise: true)
+        pencil2.stroke()
+        
+        let pencil3 = UIBezierPath(arcCenter: CGPoint(x: 275, y: 300), radius: 150, startAngle: CGFloat.pi * 1.6, endAngle: CGFloat.pi * 0.25, clockwise: true)
+        pencil3.stroke()
+
+        let pencil4 = UIBezierPath(arcCenter: CGPoint(x: 550, y: 300), radius: 150, startAngle: CGFloat.pi * 1.4, endAngle: CGFloat.pi * 0.7, clockwise: false)
+        #colorLiteral(red: 0.3176470697, green: 0.07450980693, blue: 0.02745098062, alpha: 1).setStroke()
+        pencil4.stroke()
+        
+        pencil.move(to: CGPoint(x: 412, y: 150))
+        pencil.addLine(to: CGPoint(x: 412, y: 500))
+        
+        pencil.stroke()
+
+        
     }
     
 }

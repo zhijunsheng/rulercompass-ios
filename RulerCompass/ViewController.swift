@@ -21,5 +21,9 @@ class ViewController: UIViewController {
         canvasView.code = 3
         canvasView.setNeedsDisplay()
     }
+    @IBAction func perpendicularLine(_ sender: Any) {
+        canvasView.code = 4
+        canvasView.setNeedsDisplay()
+    }
     
 }
