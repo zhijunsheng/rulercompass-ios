@@ -1,8 +1,14 @@
 import UIKit
 class CanvasView: UIView {
+    var drawFlag = -23
     override func draw(_ rect: CGRect) {
-//        drawLineSegmentBisector()
-        drawAngleBisector()
+        if drawFlag == 1 {
+            drawLineSegmentBisector()
+        } else if drawFlag == 2 {
+            drawAngleBisector()
+        } else if drawFlag == 3 {
+            triangle()
+        }
     }
     func drawLineSegmentBisector() {
         horizontalLineSegment()
@@ -95,4 +101,40 @@ class CanvasView: UIView {
         chst.stroke()
         chso.stroke()
     }
+    
+    
+    
+    func triangle() {
+        lineSegments()
+        circles3()
+        answer3()
+    }
+    func lineSegments() {
+        let lineSegments1 = UIBezierPath()
+        lineSegments1.move(to: CGPoint(x: 344, y: 83))
+        lineSegments1.addLine(to: CGPoint(x: 344, y: 343))
+        lineSegments1.addLine(to: CGPoint(x: 244, y: 343))
+        lineSegments1.addLine(to: CGPoint(x: 244, y: 583))
+        lineSegments1.lineWidth = 10
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setStroke()
+        lineSegments1.stroke()
+    }
+    func circles3() {
+        let circle1 = UIBezierPath(arcCenter: CGPoint(x: 244, y: 343), radius: 240, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        let circle2 = UIBezierPath(arcCenter: CGPoint(x: 344, y: 343), radius: 260, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        circle1.lineWidth = 10
+        circle2.lineWidth = 10
+        #colorLiteral(red: 0.3398539424, green: 0.6224563122, blue: 0.168690294, alpha: 1).setStroke()
+        circle1.stroke()
+        circle2.stroke()
+    }
+    func answer3() {
+        let aline = UIBezierPath()
+        aline.move(to: CGPoint(x: 244, y: 583))
+        aline.addLine(to: CGPoint(x: 344, y: 343))
+        aline.lineWidth = 10
+        #colorLiteral(red: 0.745601356, green: 0.2564220428, blue: 0.6603657603, alpha: 1).setStroke()
+        aline.stroke()
+    }
+    // 240，100，260
 }
