@@ -64,6 +64,15 @@
                                     <action selector="showChallengeThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U8G-je-Sd9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fG5-af-Yct">
+                                <rect key="frame" x="404" y="756" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="40"/>
+                                <state key="normal" title="4"/>
+                                <connections>
+                                    <action selector="showChallengeFour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jaj-dm-FJp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

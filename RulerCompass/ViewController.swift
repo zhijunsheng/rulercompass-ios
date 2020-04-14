@@ -26,5 +26,10 @@ class ViewController: UIViewController {
         canvasView.flag = 3
         canvasView.setNeedsDisplay()
     }
+    
+    @IBAction func showChallengeFour(_ sender: Any) {
+        canvasView.flag = 4
+        canvasView.setNeedsDisplay()
+    }
 }
 
