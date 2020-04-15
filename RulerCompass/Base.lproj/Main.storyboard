@@ -45,6 +45,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="128"/>
                                 <state key="normal" title="🔴"/>
+                                <connections>
+                                    <action selector="angleBisector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9fA-Eu-WnY"/>
+                                    <action selector="triangle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jiy-xb-FPZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

@@ -21,5 +21,9 @@ class ViewController: UIViewController {
         canvasView.setNeedsDisplay()
     }
     
+    @IBAction func triangle(_ sender: Any) {
+        canvasView.flag = 3
+        canvasView.setNeedsDisplay()
+    }
 }
 
