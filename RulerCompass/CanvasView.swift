@@ -12,7 +12,42 @@ class CanvasView: UIView {
             challenge3()
         } else if flag == 4 {
             challenge4()
+        } else if flag == 5 {
+            challenge5()
+        } else {
+            
         }
+    }
+    
+    func challenge5() {
+        let rulerPath = UIBezierPath()
+        rulerPath.move(to: CGPoint(x: 0, y: bounds.height - 50))
+        rulerPath.addLine(to: CGPoint(x: bounds.width, y: bounds.height - 50))
+        rulerPath.lineWidth = 5
+        
+        let compassPath = UIBezierPath(arcCenter: CGPoint(x: bounds.width - 350, y: bounds.height - 50), radius: 100, startAngle: 0, endAngle: CGFloat.pi, clockwise: false)
+        compassPath.lineWidth = 5
+        compassPath.stroke()
+        rulerPath.stroke()
+        
+        let compassPath2 = UIBezierPath(arcCenter: CGPoint(x: bounds.width - 350, y: bounds.height - 50), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1).setFill()
+        compassPath2.fill()
+        
+        let compassPath3 = UIBezierPath(arcCenter: CGPoint(x: bounds.width - 250, y: bounds.height - 50), radius: 200, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        compassPath3.lineWidth = 5
+        compassPath3.stroke()
+        
+        let compassPath4 = UIBezierPath(arcCenter: CGPoint(x: bounds.width - 450, y: bounds.height - 50), radius: 200, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        compassPath4.lineWidth = 5
+        compassPath4.stroke()
+        
+        let rulerPath2 = UIBezierPath()
+        rulerPath2.move(to: CGPoint(x: bounds.width - 350, y: bounds.height))
+        rulerPath2.addLine(to: CGPoint(x: bounds.width - 350, y: 0))
+        rulerPath2.lineWidth = 5
+        #colorLiteral(red: 0.5700142, green: 0.5676102312, blue: 0.5688944777, alpha: 1).setStroke()
+        rulerPath2.stroke()
     }
     
     func challenge4() {

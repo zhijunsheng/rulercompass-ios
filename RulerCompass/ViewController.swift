@@ -28,7 +28,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showChallengeFour(_ sender: Any) {
+        infoLabel.text = "use 3 line segments to make 1 triangle"
         canvasView.flag = 4
+        canvasView.setNeedsDisplay()
+    }
+    
+    @IBAction func showChallengeFive(_ sender: Any) {
+        infoLabel.text = "make 1 perpendicular line"
+        canvasView.flag = 5
         canvasView.setNeedsDisplay()
     }
 }
