@@ -10,7 +10,7 @@ import UIKit
 
 class CanvasView: UIView {
 
-    var flag = 3
+    var flag = -1
     
     override func draw(_ rect: CGRect) {
         if flag == 1 {
@@ -19,7 +19,40 @@ class CanvasView: UIView {
             drawLineBisector()
         } else if flag == 3 {
             drawTriangle()
+        } else if flag == 4 {
+            drawPerpendicular()
         }
+    }
+    
+    func drawPerpendicular() {
+        let line = UIBezierPath()
+        line.move(to: CGPoint(x: 300, y: 400))
+        line.addLine(to: CGPoint(x: 590, y: 400))
+        line.stroke()
+        
+        let point = UIBezierPath(arcCenter: CGPoint(x: 470, y: 400), radius: 5, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).setFill()
+        point.fill()
+        
+        let circle = UIBezierPath(arcCenter: CGPoint(x: 470, y: 400), radius: 80, startAngle: -CGFloat.pi * 0.2, endAngle: CGFloat.pi * 0.2, clockwise: true)
+        circle.stroke()
+        
+        let circle1 = UIBezierPath(arcCenter: CGPoint(x: 470, y: 400), radius: 80, startAngle: CGFloat.pi * 0.8, endAngle: CGFloat.pi * 1.2, clockwise: true)
+        circle1.stroke()
+
+        let arc1 = UIBezierPath(arcCenter: CGPoint(x: 550, y: 400), radius: 150, startAngle: -CGFloat.pi * 0.6, endAngle: CGFloat.pi * 1.2, clockwise: false)
+        #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1).setStroke()
+        arc1.stroke()
+
+        let arc2 = UIBezierPath(arcCenter: CGPoint(x: 390, y: 400), radius: 150, startAngle: CGFloat.pi * 1.6, endAngle: -CGFloat.pi * 0.2, clockwise: true)
+        arc2.stroke()
+
+        let bisector = UIBezierPath()
+        bisector.move(to: CGPoint(x: 470, y: 200))
+        bisector.addLine(to: CGPoint(x: 470, y: 500))
+        bisector.lineWidth = 2
+        #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1).setStroke()
+        bisector.stroke()
     }
     
     func drawTriangle() {
