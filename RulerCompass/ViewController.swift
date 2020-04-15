@@ -4,11 +4,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var canvasView: CanvasView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
 
+    
     @IBAction func angleBisector(_ sender: Any) {
         canvasView.flag = 1
         canvasView.setNeedsDisplay()
@@ -18,5 +20,6 @@ class ViewController: UIViewController {
         canvasView.flag = 2
         canvasView.setNeedsDisplay()
     }
+    
 }
 
