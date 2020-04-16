@@ -10,7 +10,7 @@ import UIKit
 
 class CanvasView: UIView {
     
-    var flag: GeometricProblem = GeometricProblem.angleBisector
+    var flag: GeometricProblem = GeometricProblem.linePointBisector
     
     override func draw(_ rect: CGRect) {
         switch flag {
@@ -22,7 +22,46 @@ class CanvasView: UIView {
             drawCoordinatePlane()
         case .triangleGivenSides:
             drawTriangleGivenSides()
+        case .linePointBisector:
+            drawLinePointBisector()
         }
+    }
+    
+    func drawLinePointBisector() {
+        let ruler = UIBezierPath()
+        let compass = UIBezierPath()
+        let answer = UIBezierPath()
+        let points = UIBezierPath()
+        ruler.move(to: CGPoint(x: 120, y: 400))
+        ruler.addLine(to: CGPoint(x: 600, y: 400))
+        
+        ruler.move(to: CGPoint(x: 350, y: 390))
+        ruler.addLine(to: CGPoint(x: 370, y: 410))
+        
+        ruler.move(to: CGPoint(x: 370, y: 390))
+        ruler.addLine(to: CGPoint(x: 350, y: 410))
+        
+        ruler.lineWidth = 3
+        ruler.stroke()
+
+        points.addArc(withCenter: CGPoint(x: 360, y: 400), radius: 120, startAngle: -0.1 * CGFloat.pi, endAngle: 1.1 * CGFloat.pi, clockwise: true)
+        
+        points.stroke()
+        
+        compass.addArc(withCenter: CGPoint(x: 240, y: 400), radius: 300, startAngle: -0.3 * CGFloat.pi, endAngle: -0.4 * CGFloat.pi, clockwise: false)
+
+        compass.move(to: CGPoint(x: 388, y: 116))
+        compass.addArc(withCenter: CGPoint(x: 480, y: 400), radius: 300, startAngle: -0.6 * CGFloat.pi, endAngle: -0.7 * CGFloat.pi, clockwise: false)
+
+        #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1).setStroke()
+        compass.stroke()
+
+        answer.move(to: CGPoint(x: 360, y: 110))
+        answer.addLine(to: CGPoint(x: 360, y: 420))
+
+        #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()
+        answer.lineWidth = 2
+        answer.stroke()
     }
     
     func drawTriangleGivenSides() {

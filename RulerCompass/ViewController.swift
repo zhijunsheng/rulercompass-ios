@@ -36,5 +36,12 @@ class ViewController: UIViewController {
         canvasView.setNeedsDisplay()
     }
     
+    @IBAction func linePontBisector(_ sender: Any) {
+        canvasView.flag = .linePointBisector
+        canvasView.setNeedsDisplay()
+    }
+    
+    
+    
 }
 
