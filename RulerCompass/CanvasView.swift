@@ -9,7 +9,7 @@
 import UIKit
 
 class CanvasView: UIView {
-    var code = 0
+    var code = 5
     
     override func draw(_ rect: CGRect) {
         if code == 1 {
@@ -25,7 +25,12 @@ class CanvasView: UIView {
         }
         
         if code == 4 {
-            makePerpendicularLine()
+            makePerpendicularLine1()
+        }
+        
+        if code == 5 {
+            makePerpendicularLine2()
+            
         }
     }
     
@@ -134,7 +139,7 @@ class CanvasView: UIView {
         comapssArc2.stroke()        
     }
     
-    func makePerpendicularLine() {
+    func makePerpendicularLine1() {
         let pencil = UIBezierPath()
         
         pencil.move(to: CGPoint(x: 200, y: 300))
@@ -157,7 +162,36 @@ class CanvasView: UIView {
         pencil.addLine(to: CGPoint(x: 412, y: 500))
         
         pencil.stroke()
+    }
+    
+    func makePerpendicularLine2() {
+    
+        let circle = UIBezierPath(arcCenter: CGPoint(x: 300, y: 275), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setFill()
+        circle.fill()
+        
+        let pencil = UIBezierPath()
+        pencil.move(to: CGPoint(x: 100, y: 350))
+        pencil.addLine(to: CGPoint(x: 500, y: 350))
+        pencil.stroke()
+        
+        let compassPoint1 = UIBezierPath(arcCenter: CGPoint(x: 225, y: 350), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1).setFill()
+        compassPoint1.fill()
+        
+        let compassPoint2 = UIBezierPath(arcCenter: CGPoint(x: 400, y: 350), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1).setFill()
+        compassPoint2.fill()
+        
+        let arc1 = UIBezierPath(arcCenter: CGPoint(x: 225, y: 350), radius: 107, startAngle: CGFloat.pi * 1.6, endAngle: CGFloat.pi * 0.4, clockwise: true)
+        arc1.stroke()
 
+        let arc2 = UIBezierPath(arcCenter: CGPoint(x: 400, y: 350), radius: 125, startAngle: CGFloat.pi * 1.4, endAngle: CGFloat.pi * 0.6, clockwise: false)
+        arc2.stroke()
+
+        pencil.move(to: CGPoint(x: 300, y: 200))
+        pencil.addLine(to: CGPoint(x: 300, y: 500))
+        pencil.stroke()
         
     }
     

@@ -22,40 +22,49 @@
                                     <constraint firstAttribute="width" secondItem="Syo-xP-aYQ" secondAttribute="height" multiplier="1:1" id="nTJ-2h-3zu"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOy-zQ-ScX">
-                                <rect key="frame" x="20" y="765" width="247" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Angle Bisector"/>
-                                <connections>
-                                    <action selector="angleBisector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iHW-Ww-5uh"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vh3-Sn-K2y">
-                                <rect key="frame" x="20" y="824" width="504" height="60"/>
+                                <rect key="frame" x="20" y="812" width="381" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Triangle From 3 Line Segmets"/>
                                 <connections>
                                     <action selector="triangleFrom3LineSegments:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tOL-wl-D2e"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odw-4u-NEu">
-                                <rect key="frame" x="20" y="881" width="350" height="60"/>
+                                <rect key="frame" x="20" y="860" width="264" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Bisect Line Segment"/>
                                 <connections>
                                     <action selector="bisectLineSegment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1GK-Ht-ng3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wf8-rI-QxF">
-                                <rect key="frame" x="20" y="935" width="317" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ps7-oc-FTh">
+                                <rect key="frame" x="20" y="972" width="256" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Perpendicular Line"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Perpendicular Line2"/>
                                 <connections>
-                                    <action selector="perpendicularLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mfj-JY-I5I"/>
+                                    <action selector="perpendicularLine2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CA7-mE-eB8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wf8-rI-QxF">
+                                <rect key="frame" x="20" y="916" width="252" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Perpendicular Line1"/>
+                                <connections>
+                                    <action selector="perpendicularLine1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mfj-JY-I5I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOy-zQ-ScX">
+                                <rect key="frame" x="20" y="764" width="187" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Angle Bisector"/>
+                                <connections>
+                                    <action selector="angleBisector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iHW-Ww-5uh"/>
                                 </connections>
                             </button>
                         </subviews>
