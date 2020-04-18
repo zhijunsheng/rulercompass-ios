@@ -10,7 +10,7 @@ import UIKit
 
 class CanvasView: UIView {
 
-    var flag = -1
+    var flag = 5
     
     override func draw(_ rect: CGRect) {
         if flag == 1 {
@@ -21,7 +21,49 @@ class CanvasView: UIView {
             drawTriangle()
         } else if flag == 4 {
             drawPerpendicular()
+        } else if flag == 5 {
+           drawPerpendicular2()
         }
+    }
+    
+    func drawPerpendicular2() {
+        let line = UIBezierPath()
+        line.move(to: CGPoint(x: 0, y: 400))
+        line.addLine(to: CGPoint(x: bounds.width, y: 400))
+        line.lineWidth = 3
+        line.stroke()
+        
+        // first dot
+        let dot = UIBezierPath(arcCenter: CGPoint(x: 300, y: 300), radius: 5, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setFill()
+        dot.fill()
+        
+        let bar = UIBezierPath()
+        bar.move(to: CGPoint(x: 170, y: 370))
+        bar.addLine(to: CGPoint(x: 170, y: 430))
+        
+        bar.move(to: CGPoint(x: 500, y: 370))
+        bar.addLine(to: CGPoint(x: 500, y: 430))
+        bar.lineWidth = 2
+        bar.stroke()
+        
+        let arc = UIBezierPath(arcCenter: CGPoint(x: 170, y: 400), radius: 164, startAngle: -CGFloat.pi * 0.4, endAngle: -CGFloat.pi * 0.1, clockwise: true)
+        arc.stroke()
+        
+        let arc1 = UIBezierPath(arcCenter: CGPoint(x: 500, y: 400), radius: 223, startAngle: CGFloat.pi * 1.06, endAngle: -CGFloat.pi * 0.7, clockwise: true)
+        arc1.stroke()
+        
+        let arc2 = UIBezierPath(arcCenter: CGPoint(x: 170, y: 400), radius: 164, startAngle: CGFloat.pi * 0.1, endAngle: CGFloat.pi * 0.4, clockwise: true)
+        arc2.stroke()
+        
+        let arc3 = UIBezierPath(arcCenter: CGPoint(x: 500, y: 400), radius: 223, startAngle: CGFloat.pi * 0.93, endAngle: CGFloat.pi * 0.7, clockwise: false)
+        arc3.stroke()
+        
+        let bisector = UIBezierPath()
+        bisector.move(to: CGPoint(x: 300, y: 200))
+        bisector.addLine(to: CGPoint(x: 300, y: 600))
+        #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1).setStroke()
+        bisector.stroke()
     }
     
     func drawPerpendicular() {

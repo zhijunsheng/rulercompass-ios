@@ -28,5 +28,10 @@ class ViewController: UIViewController {
         canvasView.flag = 4
         canvasView.setNeedsDisplay()
     }
+    
+    @IBAction func showPerpendicular2(_ sender: Any) {
+        canvasView.flag = 5
+        canvasView.setNeedsDisplay()
+    }
 }
 
