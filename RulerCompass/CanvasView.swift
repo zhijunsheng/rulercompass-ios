@@ -8,7 +8,10 @@ class CanvasView: UIView {
             drawAngleBisector()
         } else if drawFlag == 3 {
             triangle()
+        } else if drawFlag == 4 {
+            rightAngle()
         }
+        
     }
     func drawLineSegmentBisector() {
         horizontalLineSegment()
@@ -54,7 +57,7 @@ class CanvasView: UIView {
     
     func drawAngleBisector() {
         angle()
-        circle()
+        circle1()
         circles2()
         answer2()
     }
@@ -66,7 +69,7 @@ class CanvasView: UIView {
         angle1.lineWidth = 10
         angle1.stroke()
     }
-    func circle() {
+    func circle1() {
         let halfCircle3 = UIBezierPath(arcCenter: CGPoint(x: bounds.width * 0.25, y: bounds.height * 0.75), radius: bounds.width * 0.25, startAngle: 0.125 * CGFloat.pi, endAngle: CGFloat.pi * 1.375,  clockwise: false)
         halfCircle3.lineWidth = 10
         #colorLiteral(red: 0.3398539424, green: 0.6224563122, blue: 0.168690294, alpha: 1).setStroke()
@@ -120,21 +123,58 @@ class CanvasView: UIView {
         lineSegments1.stroke()
     }
     func circles3() {
-        let circle1 = UIBezierPath(arcCenter: CGPoint(x: 244, y: 343), radius: 240, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
-        let circle2 = UIBezierPath(arcCenter: CGPoint(x: 344, y: 343), radius: 260, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
-        circle1.lineWidth = 10
-        circle2.lineWidth = 10
+        let c1 = UIBezierPath(arcCenter: CGPoint(x: 244, y: 343), radius: 240, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        let c2 = UIBezierPath(arcCenter: CGPoint(x: 344, y: 343), radius: 260, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        c1.lineWidth = 10
+        c2.lineWidth = 10
         #colorLiteral(red: 0.3398539424, green: 0.6224563122, blue: 0.168690294, alpha: 1).setStroke()
-        circle1.stroke()
-        circle2.stroke()
+        c1.stroke()
+        c2.stroke()
     }
     func answer3() {
-        let aline = UIBezierPath()
-        aline.move(to: CGPoint(x: 244, y: 583))
-        aline.addLine(to: CGPoint(x: 344, y: 343))
-        aline.lineWidth = 10
+        let aLine = UIBezierPath()
+        aLine.move(to: CGPoint(x: 244, y: 583))
+        aLine.addLine(to: CGPoint(x: 344, y: 343))
+        aLine.lineWidth = 10
         #colorLiteral(red: 0.745601356, green: 0.2564220428, blue: 0.6603657603, alpha: 1).setStroke()
-        aline.stroke()
+        aLine.stroke()
     }
-    // 240，100，260
+    
+    
+    
+    
+    func rightAngle() {
+        horizontalLineSegment()
+        point1()
+        circles4()
+        answer4()
+    }
+    func point1() {
+        let p1 = UIBezierPath(arcCenter: CGPoint(x: 482, y: bounds.height / 2), radius: 10, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        p1.lineWidth = 10
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setStroke()
+        p1.stroke()
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setFill()
+        p1.fill()
+    }
+    func circles4() {
+        let c3 = UIBezierPath(arcCenter: CGPoint(x: 482, y: bounds.height * 0.5), radius: bounds.width * 0.75 - 482, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        let c4 = UIBezierPath(arcCenter: CGPoint(x: bounds.width * 0.75, y: bounds.height * 0.5), radius: (bounds.width * 0.75 - 482) * 2, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        let c5 = UIBezierPath(arcCenter: CGPoint(x: bounds.width * 0.75 - (bounds.width * 0.75 - 482) * 2, y: bounds.height * 0.5), radius: (bounds.width * 0.75 - 482) * 2, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        c3.lineWidth = 10
+        c4.lineWidth = 10
+        c5.lineWidth = 10
+        #colorLiteral(red: 0.3398539424, green: 0.6224563122, blue: 0.168690294, alpha: 1).setStroke()
+        c3.stroke()
+        c4.stroke()
+        c5.stroke()
+    }
+    func answer4() {
+        let aLine = UIBezierPath()
+        aLine.move(to: CGPoint(x: 482, y: 0))
+        aLine.addLine(to: CGPoint(x: 482, y: bounds.height))
+        aLine.lineWidth = 10
+        #colorLiteral(red: 0.7342812419, green: 0.2369629443, blue: 0.6376581788, alpha: 1).setStroke()
+        aLine.stroke()
+    }
 }

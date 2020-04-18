@@ -18,6 +18,10 @@ class ViewController: UIViewController {
         canvasView.drawFlag = 3
         canvasView.setNeedsDisplay()
     }
+    @IBAction func perpendicular(_ sender: Any) {
+        canvasView.drawFlag = 4
+        canvasView.setNeedsDisplay()
+    }
     
 
 }
