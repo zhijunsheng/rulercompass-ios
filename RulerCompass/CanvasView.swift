@@ -10,7 +10,7 @@ import UIKit
 
 class CanvasView: UIView {
 
-    var flag = 5
+    var flag = 6
     
     override func draw(_ rect: CGRect) {
         if flag == 1 {
@@ -22,9 +22,30 @@ class CanvasView: UIView {
         } else if flag == 4 {
             drawPerpendicular()
         } else if flag == 5 {
-           drawPerpendicular2()
+            drawPerpendicular2()
+        } else if flag == 6 {
+            drawCircleThroughPoints()
         }
     }
+    
+    func drawCircleThroughPoints() {
+        let point1 = UIBezierPath(arcCenter: CGPoint(x: 500, y: 400), radius: 8, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        point1.fill()
+        
+        let point2 = UIBezierPath(arcCenter: CGPoint(x: 300, y: 400), radius: 8, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        point2.fill()
+        
+        let arc = UIBezierPath(arcCenter: CGPoint(x: 500, y: 400), radius: 150, startAngle: -CGFloat.pi * 0.5, endAngle: CGFloat.pi * 1.1, clockwise: false)
+        arc.stroke()
+        
+        let arc1 = UIBezierPath(arcCenter: CGPoint(x: 300, y: 400), radius: 150, startAngle: -CGFloat.pi * 0.5, endAngle: -CGFloat.pi * 0.1, clockwise: true)
+        arc1.stroke()
+        
+        let circle = UIBezierPath(arcCenter: CGPoint(x: 400, y: 288), radius: 150, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1).setStroke()
+        circle.stroke()
+    }
+    
     
     func drawPerpendicular2() {
         let line = UIBezierPath()

@@ -33,5 +33,10 @@ class ViewController: UIViewController {
         canvasView.flag = 5
         canvasView.setNeedsDisplay()
     }
+    
+    @IBAction func showCircle(_ sender: Any) {
+        canvasView.flag = 6
+        canvasView.setNeedsDisplay()
+    }
 }
 
