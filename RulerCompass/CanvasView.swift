@@ -12,7 +12,7 @@ class CanvasView: UIView {
     var flag = -1
     
     override func draw(_ rect: CGRect) {
-        
+
         if flag == 1 {
             lineBisecting()
         }
@@ -20,12 +20,40 @@ class CanvasView: UIView {
             angleBisecting()
         }
         if flag == 3 {
-            drawingTriangle() 
+            drawingTriangle()
         }
-//                lineBisecting()
-//        angleBisecting()
-//        drawingTriangle()
+        if flag == 5 {
+            drawingPerpendicularLines()
+        }
     }
+    
+    func drawingPerpendicularLines(){
+        let pencil = UIBezierPath()
+        pencil.move(to: CGPoint(x: 200, y: 300))
+        pencil.addLine(to: CGPoint(x: 660, y: 300))
+
+        let halfCircle2 = UIBezierPath(arcCenter: CGPoint(x: 430, y: 300), radius: 2, startAngle:  0 * CGFloat.pi, endAngle: 2 * CGFloat.pi, clockwise: true)
+        halfCircle2.lineWidth = 5
+        halfCircle2.stroke()
+
+        let halfCircle3 = UIBezierPath(arcCenter: CGPoint(x: 430, y: 280), radius: 200, startAngle:  -1 * CGFloat.pi, endAngle: 0 * CGFloat.pi, clockwise: false)
+        halfCircle3.lineWidth = 5
+        halfCircle3.stroke()
+
+        let halfCircle4 = UIBezierPath(arcCenter: CGPoint(x: 235, y: 280), radius: 240, startAngle:  0.1 * CGFloat.pi, endAngle: 0.3 * CGFloat.pi, clockwise: true)
+        halfCircle4.lineWidth = 5
+        halfCircle4.stroke()
+        
+        let halfCircle5 = UIBezierPath(arcCenter: CGPoint(x: 637, y: 300), radius: 240, startAngle:  0.9 * CGFloat.pi, endAngle: 0.7 * CGFloat.pi, clockwise: false)
+        halfCircle5.lineWidth = 5
+        halfCircle5.stroke()
+        
+        pencil.move(to: CGPoint(x: 430, y: 100))
+        pencil.addLine(to: CGPoint(x: 430, y: 500))
+        
+        pencil.stroke()
+    }
+    
     func drawingTriangle() {
         let pencil = UIBezierPath()
         pencil.move(to: CGPoint(x: 70, y: 100))
@@ -39,7 +67,7 @@ class CanvasView: UIView {
         
         pencil.move(to: CGPoint(x: 300, y: 600))
         pencil.addLine(to: CGPoint(x: 560, y: 600))
-
+        
         let halfCircle2 = UIBezierPath(arcCenter: CGPoint(x: 300, y: 600), radius: 230, startAngle:  1.6 * CGFloat.pi, endAngle: 1.8 * CGFloat.pi, clockwise: true)
         #colorLiteral(red: 0.6177716851, green: 0.9856142402, blue: 0.7465093136, alpha: 1).setStroke()
         halfCircle2.lineWidth = 5

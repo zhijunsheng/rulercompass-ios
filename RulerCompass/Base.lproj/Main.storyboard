@@ -41,12 +41,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoF-lN-3x4">
-                                <rect key="frame" x="229" y="876" width="203" height="128"/>
+                                <rect key="frame" x="78" y="876" width="203" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="DrawingTriangle"/>
                                 <connections>
                                     <action selector="drawingTriangle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hQy-4v-1wu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFb-xR-STg">
+                                <rect key="frame" x="374" y="889" width="237" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="PerpendicularBisector"/>
+                                <connections>
+                                    <action selector="perpendiculLines:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ELq-wQ-KFa"/>
                                 </connections>
                             </button>
                         </subviews>
