@@ -14,9 +14,29 @@ class CanvasView: UIView {
             challenge4()
         } else if flag == 5 {
             challenge5()
+        } else if flag == 6 {
+            challenge6()
         } else {
             
         }
+    }
+    
+    func challenge6() {
+        let rulerLengend = UIBezierPath()
+        rulerLengend.move(to: CGPoint(x: 450, y: 450))
+        rulerLengend.addLine(to: CGPoint(x: 550, y: 550))
+        rulerLengend.lineWidth = 5
+        
+        rulerLengend.move(to: CGPoint(x: 450, y: 550))
+        rulerLengend.addLine(to: CGPoint(x: 550, y: 450))
+        rulerLengend.lineWidth = 5
+        rulerLengend.stroke()
+
+        let rulerPath = UIBezierPath()
+        rulerPath.move(to: CGPoint(x: 0, y: bounds.height - 50))
+        rulerPath.addLine(to: CGPoint(x: bounds.width, y: bounds.height - 50))
+        rulerPath.lineWidth = 5
+        rulerPath.stroke()
     }
     
     func challenge5() {

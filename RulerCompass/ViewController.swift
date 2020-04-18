@@ -34,9 +34,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showChallengeFive(_ sender: Any) {
-        infoLabel.text = "make 1 perpendicular line"
+        infoLabel.text = "make 1 perpendicular line (inside)"
         canvasView.flag = 5
         canvasView.setNeedsDisplay()
     }
+    
+    @IBAction func showChallengeSix(_ sender: Any) {
+        infoLabel.text = "make l perpendicular line (outside)"
+        canvasView.flag = 6
+        canvasView.setNeedsDisplay()
+    }
+    
 }
 
