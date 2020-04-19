@@ -58,6 +58,15 @@
                                     <action selector="perpendicularLine1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mfj-JY-I5I"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fV-UH-6Ka">
+                                <rect key="frame" x="458" y="770" width="92" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Parallel"/>
+                                <connections>
+                                    <action selector="parallelLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZjC-DO-PBu"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOy-zQ-ScX">
                                 <rect key="frame" x="20" y="764" width="187" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

@@ -8,25 +8,32 @@ class ViewController: UIViewController {
     }
     
     @IBAction func angleBisector(_ sender: Any) {
-        canvasView.code = 1
+        canvasView.problemIndex = 1
         canvasView.setNeedsDisplay()
     }
     
     @IBAction func triangleFrom3LineSegments(_ sender: Any) {
-        canvasView.code = 2
+        canvasView.problemIndex = 2
         canvasView.setNeedsDisplay()
     }
     
     @IBAction func bisectLineSegment(_ sender: Any) {
-        canvasView.code = 3
+        canvasView.problemIndex = 3
         canvasView.setNeedsDisplay()
     }
+    
     @IBAction func perpendicularLine1(_ sender: Any) {
-        canvasView.code = 4
+        canvasView.problemIndex = 4
         canvasView.setNeedsDisplay()
     }
+    
     @IBAction func perpendicularLine2(_ sender: Any) {
-        canvasView.code = 5
+        canvasView.problemIndex = 5
+        canvasView.setNeedsDisplay()
+    }
+    
+    @IBAction func parallelLine(_ sender: Any) {
+        canvasView.problemIndex = 6
         canvasView.setNeedsDisplay()
     }
     

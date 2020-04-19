@@ -9,28 +9,31 @@
 import UIKit
 
 class CanvasView: UIView {
-    var code = 5
+    var problemIndex = 0
     
     override func draw(_ rect: CGRect) {
-        if code == 1 {
+        if problemIndex == 1 {
             drawAngle()
         }
         
-        if code == 2 {
+        if problemIndex == 2 {
             drawTriangleFrom3GivenLineSegments()
         }
         
-        if code == 3 {
+        if problemIndex == 3 {
             drawLineSegment()
         }
         
-        if code == 4 {
+        if problemIndex == 4 {
             makePerpendicularLine1()
         }
         
-        if code == 5 {
+        if problemIndex == 5 {
             makePerpendicularLine2()
-            
+        }
+        
+        if problemIndex == 6 {
+            drawParallelLines()
         }
     }
     
@@ -195,4 +198,78 @@ class CanvasView: UIView {
         
     }
     
+    func drawParallelLines() {
+        let pencil = UIBezierPath()
+        
+        //horizontal line1
+        pencil.move(to: CGPoint(x: 100, y: 400))
+        pencil.addLine(to: CGPoint(x: 700, y: 400))
+
+        //draw the x
+        pencil.move(to: CGPoint(x: 320, y: 250))
+        pencil.addLine(to: CGPoint(x: 380, y: 300))
+
+        pencil.move(to: CGPoint(x: 380, y: 250))
+        pencil.addLine(to: CGPoint(x: 330, y: 300))
+
+        pencil.lineWidth = 3
+        pencil.stroke()
+
+        //compass point 1
+        let pencil1 = UIBezierPath(arcCenter: CGPoint(x: 280, y: 400), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1).setFill()
+        pencil1.fill()
+
+        //compass point 2
+        let pencil2 = UIBezierPath(arcCenter: CGPoint(x: 425, y: 400), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1).setFill()
+        pencil2.fill()
+
+        //arc 1
+        let pencil4 = UIBezierPath(arcCenter: CGPoint(x: 280, y: 400), radius: 142.5, startAngle: CGFloat.pi * 1.6, endAngle: CGFloat.pi * 1.8, clockwise: true)
+        #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1).setStroke()
+        pencil4.stroke()
+
+        //arc 2
+        let pencil5 = UIBezierPath(arcCenter: CGPoint(x: 425, y: 400), radius: 142.5, startAngle: CGFloat.pi * 1.4, endAngle: CGFloat.pi * 1.2, clockwise: false)
+        pencil5.stroke()
+
+        //arc 3
+        let pencil6 = UIBezierPath(arcCenter: CGPoint(x: 280, y: 400), radius: 142.5, startAngle: CGFloat.pi * 0.2, endAngle: CGFloat.pi * 0.4, clockwise: true)
+        #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1).setStroke()
+        pencil6.stroke()
+
+        //arc 4
+        let pencil7 = UIBezierPath(arcCenter: CGPoint(x: 425, y: 400), radius: 142.5, startAngle: CGFloat.pi * 0.8, endAngle: CGFloat.pi * 0.6, clockwise: false)
+        pencil7.stroke()
+
+        //vertical line
+        let pencil8 = UIBezierPath()
+        pencil8.move(to: CGPoint(x: 352.5, y: 200))
+        pencil8.addLine(to: CGPoint(x: 352.5, y: 700))
+        #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1).setStroke()
+        pencil8.stroke()
+        
+        //compass point 3
+        let pencil3 = UIBezierPath(arcCenter: CGPoint(x: 550, y: 400), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1).setFill()
+        pencil3.fill()
+        
+        //arc5
+        let pencil9 = UIBezierPath(arcCenter: CGPoint(x: 550, y: 400), radius: 123, startAngle: CGFloat.pi * 1.4, endAngle: CGFloat.pi * 1.6, clockwise: true)
+        pencil9.stroke()
+
+        //arc6
+        let pencil10 = UIBezierPath(arcCenter: CGPoint(x: 352.5, y: 277), radius: 197.5, startAngle: CGFloat.pi * 1.9, endAngle: CGFloat.pi * 0.1, clockwise: true)
+        pencil10.stroke()
+
+        //horizontal line2
+        let pencil11 = UIBezierPath()
+
+        pencil11.move(to: CGPoint(x: 100, y: 277))
+        pencil11.addLine(to: CGPoint(x: 700, y: 277))
+        #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1).setStroke()
+        pencil11.lineWidth = 3
+        pencil11.stroke()
+    }
 }
