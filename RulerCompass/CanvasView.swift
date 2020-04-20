@@ -10,7 +10,7 @@ import UIKit
 
 class CanvasView: UIView {
     
-    var flag: GeometricProblem = GeometricProblem.linePointBisector
+    var flag: GeometricProblem = GeometricProblem.threePointCircle
     
     override func draw(_ rect: CGRect) {
         switch flag {
@@ -24,7 +24,70 @@ class CanvasView: UIView {
             drawTriangleGivenSides()
         case .linePointBisector:
             drawLinePointBisector()
+        case .threePointCircle:
+            drawThreePointCircle()
         }
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let firstTouch = touches.first!
+        let fingerLocation = firstTouch.location(in: self)
+        
+        print(fingerLocation)
+    }
+    func drawThreePointCircle() {
+        let problem = UIBezierPath()
+        let ruler = UIBezierPath()
+        let compass = UIBezierPath()
+        let compasstwo = UIBezierPath()
+        let answer = UIBezierPath()
+        
+        problem.addArc(withCenter: CGPoint(x: 240, y: 340), radius: 4, startAngle: 3 * CGFloat.pi, endAngle: CGFloat.pi, clockwise: false)
+        
+        problem.move(to: CGPoint(x: 420, y: 460))
+        problem.addArc(withCenter: CGPoint(x: 420, y: 460), radius: 4, startAngle: 3 * CGFloat.pi, endAngle: CGFloat.pi, clockwise: false)
+        
+        problem.move(to: CGPoint(x: 480, y: 320))
+        problem.addArc(withCenter: CGPoint(x: 480, y: 320), radius: 4, startAngle: 3 * CGFloat.pi, endAngle: CGFloat.pi, clockwise: false)
+        
+        problem.fill()
+        
+        ruler.move(to: CGPoint(x: 240, y: 340))
+        ruler.addLine(to: CGPoint(x: 420, y: 460))
+
+        ruler.move(to: CGPoint(x: 420, y: 460))
+        ruler.addLine(to: CGPoint(x: 480, y: 320))
+        
+        #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()
+        ruler.stroke()
+
+        compass.addArc(withCenter: CGPoint(x: 240, y: 340), radius: 135, startAngle: -0.1 * CGFloat.pi, endAngle: 0.5 * CGFloat.pi, clockwise: true)
+
+        compass.move(to: CGPoint(x: 420, y: 325))
+        compass.addArc(withCenter: CGPoint(x: 420, y: 460), radius: 135, startAngle: -0.5 * CGFloat.pi, endAngle: 0.8 * CGFloat.pi, clockwise: false)
+
+        compass.stroke()
+
+        ruler.move(to: CGPoint(x: 378, y: 330))
+        ruler.addLine(to: CGPoint(x: 285, y: 470))
+
+        ruler.stroke()
+
+        compasstwo.addArc(withCenter: CGPoint(x: 420, y: 460), radius: 110, startAngle: -0.68 * CGFloat.pi, endAngle: -0.04 * CGFloat.pi, clockwise: true)
+
+        compasstwo.move(to: CGPoint(x: 570, y: 388))
+        compasstwo.addArc(withCenter: CGPoint(x: 480, y: 320), radius: 110, startAngle: 0.2 * CGFloat.pi, endAngle: 0.89 * CGFloat.pi, clockwise: true)
+
+        compasstwo.stroke()
+
+        ruler.move(to: CGPoint(x: 310, y: 333))
+        ruler.addLine(to: CGPoint(x: 550, y: 433))
+
+        ruler.stroke()
+        
+        answer.addArc(withCenter: CGPoint(x: 363, y: 352), radius: 123, startAngle: 2 * CGFloat.pi, endAngle: 0, clockwise: false)
+        
+        #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1).setStroke()
+        answer.stroke()
     }
     
     func drawLinePointBisector() {

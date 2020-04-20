@@ -14,4 +14,5 @@ enum GeometricProblem {
     case coordinatePlane
     case triangleGivenSides
     case linePointBisector
+    case threePointCircle
 }

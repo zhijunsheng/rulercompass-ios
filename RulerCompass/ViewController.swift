@@ -41,6 +41,10 @@ class ViewController: UIViewController {
         canvasView.setNeedsDisplay()
     }
     
+    @IBAction func threePointCircle(_ sender: Any) {
+        canvasView.flag = .threePointCircle
+        canvasView.setNeedsDisplay()
+    }
     
     
 }
