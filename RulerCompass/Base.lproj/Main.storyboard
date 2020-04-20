@@ -31,6 +31,25 @@
                                     <action selector="angleBisector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s3X-dV-YUv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9B-S4-Thl">
+                                <rect key="frame" x="167" y="839" width="222" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="128"/>
+                                <state key="normal" title="🔴"/>
+                                <connections>
+                                    <action selector="angleBisector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9fA-Eu-WnY"/>
+                                    <action selector="triangle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jiy-xb-FPZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7p-TV-XjN">
+                                <rect key="frame" x="356" y="839" width="245" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="128"/>
+                                <state key="normal" title="🔵"/>
+                                <connections>
+                                    <action selector="perpendicular:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4XR-bj-KK9"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vin-jT-6dA">
                                 <rect key="frame" x="609" y="839" width="139" height="165"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -38,16 +57,6 @@
                                 <state key="normal" title="⚪️"/>
                                 <connections>
                                     <action selector="lineSegmentBisector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mgO-hw-JEs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9B-S4-Thl">
-                                <rect key="frame" x="312" y="839" width="145" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="128"/>
-                                <state key="normal" title="🔴"/>
-                                <connections>
-                                    <action selector="angleBisector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9fA-Eu-WnY"/>
-                                    <action selector="triangle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jiy-xb-FPZ"/>
                                 </connections>
                             </button>
                         </subviews>

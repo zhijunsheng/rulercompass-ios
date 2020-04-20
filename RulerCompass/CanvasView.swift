@@ -17,8 +17,9 @@ class CanvasView: UIView {
             drawLineSegmentBisector()
         } else if flag == 3 {
             triangle()
+        } else if flag == 4 {
+            perpendicular()
         }
-        
     }
     
     func drawAngleBisector() {
@@ -99,13 +100,28 @@ class CanvasView: UIView {
     
     func triangle() {
         let pencil = UIBezierPath()
+        
         pencil.move(to: CGPoint(x: 130 , y: 600))
         pencil.addLine(to: CGPoint(x: 500, y: 600))
-        
         pencil.move(to: CGPoint(x: 130, y: 578))
         pencil.addLine(to: CGPoint(x: 130, y: 622))
         pencil.move(to: CGPoint(x: 500, y: 578))
         pencil.addLine(to: CGPoint(x: 500, y: 622))
+        
+        pencil.move(to: CGPoint(x: 130, y: 650))
+        pencil.addLine(to: CGPoint(x: 590, y: 650))
+        pencil.move(to: CGPoint(x: 130, y: 628))
+        pencil.addLine(to: CGPoint(x: 130, y: 672))
+        pencil.move(to: CGPoint(x: 590, y: 628))
+        pencil.addLine(to: CGPoint(x: 590, y: 672))
+        
+        pencil.move(to: CGPoint(x: 130, y: 700))
+        pencil.addLine(to: CGPoint(x: 680, y: 700))
+        pencil.move(to: CGPoint(x: 130, y: 678))
+        pencil.addLine(to: CGPoint(x: 130, y: 722))
+        pencil.move(to: CGPoint(x: 680, y: 678))
+        pencil.addLine(to: CGPoint(x: 680, y: 722))
+        
         pencil.stroke()
         
         let pen = UIBezierPath()
@@ -113,18 +129,49 @@ class CanvasView: UIView {
         pen.addLine(to: CGPoint(x: 500, y: 500))
         pen.stroke()
         
-        let pen1 = UIBezierPath(arcCenter: CGPoint(x: 130 , y: 500), radius: 370, startAngle: -0.5 * CGFloat.pi, endAngle: -0.1 * CGFloat.pi, clockwise: true)
-        pen1.stroke()
-        let pen2 = UIBezierPath(arcCenter: CGPoint(x: 500 , y: 500), radius: 370, startAngle: -0.5 * CGFloat.pi, endAngle: -0.9 * CGFloat.pi, clockwise: false)
+        let pen1 = UIBezierPath(arcCenter: CGPoint(x: 130 , y: 500), radius: 460, startAngle: -0.5 * CGFloat.pi, endAngle: -0.1 * CGFloat.pi, clockwise: true)
+         pen1.stroke()
+        let pen2 = UIBezierPath(arcCenter: CGPoint(x: 500 , y: 500), radius: 540, startAngle: -0.5 * CGFloat.pi, endAngle: -0.9 * CGFloat.pi, clockwise: false)
         pen2.stroke()
-        
+        crosshair(x: 208, y: 47)
         let answer = UIBezierPath()
-        answer.move(to: CGPoint(x: 315, y: 180))
+        answer.move(to: CGPoint(x: 208, y: 47))
         answer.addLine(to: CGPoint(x: 500, y: 500))
         
-        answer.move(to: CGPoint(x: 315, y: 180))
+        answer.move(to: CGPoint(x: 208, y: 47))
         answer.addLine(to: CGPoint(x: 130, y: 500))
         answer.stroke()
+    }
+    
+    // I II  III IV V VI VII VIII IX X XI XII XIII
+    
+    func perpendicular() {
+        let pencil = UIBezierPath()
+        pencil.move(to: CGPoint(x: 82, y: 202))
+        pencil.addLine(to: CGPoint(x: 682, y: 202))
+        pencil.lineWidth = 5
+        pencil.stroke()
+    
+        let pe = UIBezierPath(arcCenter: CGPoint(x: 382, y: 202), radius:6, startAngle: 0 * CGFloat.pi, endAngle: 2 * CGFloat.pi, clockwise: false)
+        pe.fill()
+        pe.stroke()
+        
+        let pem = UIBezierPath(arcCenter: CGPoint(x: 382, y: 202), radius:100, startAngle: -0.9 * CGFloat.pi, endAngle: -0.1 * CGFloat.pi, clockwise: false)
+        pem.stroke()
+        
+        let pem1 = UIBezierPath(arcCenter: CGPoint(x: 282, y: 202), radius:230, startAngle: 0.5 * CGFloat.pi, endAngle: 0.2 * CGFloat.pi, clockwise: false)
+        pem1.stroke()
+        
+        let pem2 = UIBezierPath(arcCenter: CGPoint(x: 482, y: 202), radius:230, startAngle: 0.5 * CGFloat.pi, endAngle: 0.8 * CGFloat.pi, clockwise: true)
+        pem2.stroke()
+        
+        let answer = UIBezierPath()
+        answer.move(to: CGPoint(x: 382, y: 102))
+        answer.addLine(to: CGPoint(x: 382, y: 610))
+        #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1).setStroke()
+        answer.lineWidth = 5
+        answer.stroke()
+        
     }
     
  }
