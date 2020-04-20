@@ -13,11 +13,19 @@ class ViewController: UIViewController {
         canvasView.setNeedsDisplay()
     }
     
-    
     @IBAction func angleBisector(_ sender: UIButton) {
         canvasView.figureIndex = 1
         canvasView.setNeedsDisplay()
     }
     
+    @IBAction func triangleBisector(_ sender: UIButton) {
+        canvasView.figureIndex = 2
+        canvasView.setNeedsDisplay()
+    }
+    
+    @IBAction func perpendicularleBisector(_ sender: UIButton) {
+        canvasView.figureIndex = 3
+        canvasView.setNeedsDisplay()
+    }
 }
 
