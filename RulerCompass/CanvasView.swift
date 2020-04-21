@@ -35,6 +35,10 @@ class CanvasView: UIView {
         if problemIndex == 6 {
             drawParallelLines()
         }
+        
+        if problemIndex == 7 {
+            drawPortionOfALine()
+        }
     }
     
     func drawTriangleFrom3GivenLineSegments() {
@@ -271,5 +275,77 @@ class CanvasView: UIView {
         #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1).setStroke()
         pencil11.lineWidth = 3
         pencil11.stroke()
+    }
+    
+    func drawPortionOfALine() {
+        let pencil = UIBezierPath()
+    
+        pencil.move(to: CGPoint(x: 100, y: 400))
+        pencil.addLine(to: CGPoint(x: 600, y: 400))
+        pencil.stroke()
+        
+        let pencil2 = UIBezierPath(arcCenter: CGPoint(x: 100, y: 400), radius: 300, startAngle: CGFloat.pi * 1.7, endAngle: CGFloat.pi * 1.9, clockwise: true)
+        pencil2.stroke()
+        
+        let pencil3 = UIBezierPath(arcCenter: CGPoint(x: 600, y: 400), radius: 300, startAngle: CGFloat.pi * 1.3, endAngle: CGFloat.pi * 1.1, clockwise: false)
+        pencil3.stroke()
+        
+        let pencil4 = UIBezierPath(arcCenter: CGPoint(x: 100, y: 400), radius: 300, startAngle: CGFloat.pi * 0.1, endAngle: CGFloat.pi * 0.3, clockwise: true)
+        pencil4.stroke()
+        
+        let pencil5 = UIBezierPath(arcCenter: CGPoint(x: 600, y: 400), radius: 300, startAngle: CGFloat.pi * 0.7, endAngle: CGFloat.pi * 0.9, clockwise: true)
+        pencil5.stroke()
+        
+        let pencil6 = UIBezierPath()
+        
+        pencil6.move(to: CGPoint(x: 350, y: 50))
+        pencil6.addLine(to: CGPoint(x: 350, y: 600))
+        pencil6.stroke()
+        
+        let pencil7 = UIBezierPath(arcCenter: CGPoint(x: 350, y: 400), radius: 150, startAngle: CGFloat.pi * 1.7, endAngle: CGFloat.pi * 1.9, clockwise: true)
+        
+        pencil7.stroke()
+        
+        let pencil8 = UIBezierPath(arcCenter: CGPoint(x: 600, y: 400), radius: 150, startAngle: CGFloat.pi * 1.3, endAngle: CGFloat.pi * 1.1, clockwise: false)
+        
+        pencil8.stroke()
+        
+        let pencil9 = UIBezierPath(arcCenter: CGPoint(x: 350, y: 400), radius: 150, startAngle: CGFloat.pi * 0.1, endAngle: CGFloat.pi * 0.3, clockwise: true)
+        
+        pencil9.stroke()
+        
+        let pencil10 = UIBezierPath(arcCenter: CGPoint(x: 600, y: 400), radius: 150, startAngle: CGFloat.pi * 0.9, endAngle: CGFloat.pi * 0.7, clockwise: false)
+        
+        pencil10.stroke()
+        
+        let pencil11 = UIBezierPath()
+        
+        pencil11.move(to: CGPoint(x: 475, y: 200))
+        pencil11.addLine(to: CGPoint(x: 475, y: 600))
+        
+        pencil11.stroke()
+        
+        let pencil12 = UIBezierPath(arcCenter: CGPoint(x: 475, y: 400), radius: 75, startAngle: CGFloat.pi * 1.7, endAngle: CGFloat.pi * 1.9, clockwise: true)
+        
+        pencil12.stroke()
+        
+        let pencil13 = UIBezierPath(arcCenter: CGPoint(x: 600, y: 400), radius: 75, startAngle: CGFloat.pi * 1.3, endAngle: CGFloat.pi * 1.1, clockwise: false)
+        
+        pencil13.stroke()
+        
+        let pencil14 = UIBezierPath(arcCenter: CGPoint(x: 475, y: 400), radius: 75, startAngle: CGFloat.pi * 0.1, endAngle: CGFloat.pi * 0.3, clockwise: true)
+        
+        pencil14.stroke()
+        
+        let pencil15 = UIBezierPath(arcCenter: CGPoint(x: 600, y: 400), radius: 75, startAngle: CGFloat.pi * 0.9, endAngle: CGFloat.pi * 0.7, clockwise: false)
+        
+        pencil15.stroke()
+        
+        let pencil16 = UIBezierPath()
+        
+        pencil16.move(to: CGPoint(x: 537.5, y: 300))
+        pencil16.addLine(to: CGPoint(x: 537.5, y: 550))
+        
+        pencil16.stroke()
     }
 }

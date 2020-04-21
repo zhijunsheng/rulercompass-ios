@@ -36,5 +36,9 @@ class ViewController: UIViewController {
         canvasView.problemIndex = 6
         canvasView.setNeedsDisplay()
     }
+    @IBAction func portionOfALine(_ sender: Any) {
+        canvasView.problemIndex = 7
+        canvasView.setNeedsDisplay()
+    }
     
 }
