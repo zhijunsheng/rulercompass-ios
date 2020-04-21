@@ -23,9 +23,17 @@ class ViewController: UIViewController {
         canvasView.setNeedsDisplay()
     }
     
-    @IBAction func perpendiculLines(_ sender: Any) {
+    @IBAction func perpendicularLines(_ sender: Any) {
         canvasView.flag = 5
         canvasView.setNeedsDisplay()
     }
+
+    @IBAction func perpendicularLines2(_ sender: Any) {
+        canvasView.flag = 6
+        canvasView.setNeedsDisplay()
+    }
+    
+
 }
+
 

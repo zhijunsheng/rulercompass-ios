@@ -23,7 +23,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvZ-b1-Tg7">
-                                <rect key="frame" x="78" y="753" width="189" height="131"/>
+                                <rect key="frame" x="20" y="753" width="189" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="LineBisector"/>
@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKs-Dc-eXh">
-                                <rect key="frame" x="399" y="756" width="186" height="128"/>
+                                <rect key="frame" x="217" y="756" width="186" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="AngleBisector"/>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoF-lN-3x4">
-                                <rect key="frame" x="78" y="876" width="203" height="128"/>
+                                <rect key="frame" x="20" y="863" width="203" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="DrawingTriangle"/>
@@ -50,12 +50,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFb-xR-STg">
-                                <rect key="frame" x="374" y="889" width="237" height="103"/>
+                                <rect key="frame" x="231" y="876" width="237" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="PerpendicularBisector"/>
+                                <state key="normal" title="Perpendicular"/>
                                 <connections>
-                                    <action selector="perpendiculLines:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ELq-wQ-KFa"/>
+                                    <action selector="perpendicularLines:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ELq-wQ-KFa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFz-vQ-qCk">
+                                <rect key="frame" x="411" y="780" width="252" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Perpendicular2"/>
+                                <connections>
+                                    <action selector="perpendicularLines2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tAK-PP-cYT"/>
                                 </connections>
                             </button>
                         </subviews>
