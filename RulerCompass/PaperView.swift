@@ -21,6 +21,8 @@ class PaperView: UIView {
             rightTriangleInSemiCircle()
         case 4:
             threeLinesThatMakeATriangle()
+        case 5:
+            perpendicularFromRandomPointOutsideOfLineToTheLine()
         default:
             break
         }
@@ -104,5 +106,28 @@ class PaperView: UIView {
         rulerLine.stroke()
         compassLine.stroke()
         compassLine1.stroke()
+    }
+    
+    func perpendicularFromRandomPointOutsideOfLineToTheLine() {
+        let rulerLine = UIBezierPath()
+        let compassLine = UIBezierPath()
+        let compassLine1 = UIBezierPath()
+        let compassLine2 = UIBezierPath()
+        
+        rulerLine.move(to: CGPoint(x: 100, y: bounds.height / 2))
+        rulerLine.addLine(to: CGPoint(x: bounds.width - 100, y: bounds.height / 2))
+        compassLine.addArc(withCenter: CGPoint(x: 200, y: bounds.height / 2), radius: bounds.width - 400, startAngle: -(CGFloat.pi / 2), endAngle: CGFloat.pi / 2, clockwise: true)
+        compassLine1.addArc(withCenter: CGPoint(x: bounds.width - 200, y: bounds.height / 2), radius: bounds.width - 400, startAngle: CGFloat.pi / 2, endAngle: -(CGFloat.pi / 2), clockwise: true)
+        compassLine2.addArc(withCenter: CGPoint(x: bounds.width / 2, y: bounds.height / 4), radius: 245, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        compassLine.stroke()
+        compassLine1.stroke()
+        compassLine2.stroke()
+        rulerLine.move(to: CGPoint(x: bounds.width / 2 - 10, y: bounds.height / 4 - 10))
+        rulerLine.addLine(to: CGPoint(x: bounds.width / 2 + 10, y: bounds.height / 4 + 10))
+        rulerLine.move(to: CGPoint(x: bounds.width / 2 - 10, y: bounds.height / 4 + 10))
+        rulerLine.addLine(to: CGPoint(x: bounds.width / 2 + 10, y: bounds.height / 4 - 10))
+        rulerLine.move(to: CGPoint(x: bounds.width / 2, y: 50))
+        rulerLine.addLine(to: CGPoint(x: bounds.width / 2, y: bounds.height - 50))
+        rulerLine.stroke()
     }
 }

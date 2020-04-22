@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="width" secondItem="4df-CP-TRM" secondAttribute="height" multiplier="1:1" id="KAz-yX-pEO"/>
                                 </constraints>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="1" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="Cpi-t6-txo">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Cpi-t6-txo">
                                 <rect key="frame" x="18" y="858" width="732" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
