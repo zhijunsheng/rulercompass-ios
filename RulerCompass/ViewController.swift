@@ -38,5 +38,10 @@ class ViewController: UIViewController {
         canvasView.flag = 6
         canvasView.setNeedsDisplay()
     }
+
+    @IBAction func showParallel(_ sender: Any) {
+        canvasView.flag = 7
+        canvasView.setNeedsDisplay()
+    }
 }
 

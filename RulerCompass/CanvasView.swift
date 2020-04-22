@@ -10,7 +10,7 @@ import UIKit
 
 class CanvasView: UIView {
 
-    var flag = 6
+    var flag = 7
     
     override func draw(_ rect: CGRect) {
         if flag == 1 {
@@ -25,9 +25,69 @@ class CanvasView: UIView {
             drawPerpendicular2()
         } else if flag == 6 {
             drawCircleThroughPoints()
+        } else if flag == 7 {
+            drawParallel()
         }
     }
     
+    func drawParallel() {
+        let point = UIBezierPath(arcCenter: CGPoint(x: 300, y: 300), radius: 5, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        point.fill()
+        
+        let line1 = UIBezierPath()
+        line1.move(to: CGPoint(x: 100, y: 400))
+        line1.addLine(to: CGPoint(x: 550, y: 400))
+        line1.lineWidth = 2
+        line1.stroke()
+        
+        let cutoff = UIBezierPath(arcCenter: CGPoint(x: 300, y: 300), radius: 190, startAngle: CGFloat.pi * 0.9, endAngle: CGFloat.pi * 0.1, clockwise: false)
+        #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()
+        cutoff.stroke()
+        
+        let arc = UIBezierPath(arcCenter: CGPoint(x: 463, y: 400), radius: 300, startAngle: CGFloat.pi * 0.9, endAngle: CGFloat.pi * 0.6, clockwise: false)
+        #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).setStroke()
+        arc.stroke()
+        
+        let arc1 = UIBezierPath(arcCenter: CGPoint(x: 137, y: 400), radius: 300, startAngle: CGFloat.pi * 0.2, endAngle: CGFloat.pi * 0.5, clockwise: true)
+        arc1.stroke()
+
+        let length = UIBezierPath()
+        length.move(to: CGPoint(x: 300, y: 210))
+        length.addLine(to: CGPoint(x: 300, y: 700))
+        #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1).setStroke()
+        length.stroke()
+        
+        let arc2 = UIBezierPath(arcCenter: CGPoint(x: 463, y: 400), radius: 160, startAngle: -CGFloat.pi * 0.5, endAngle: CGFloat.pi * 1.2, clockwise: false)
+        #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1).setStroke()
+        arc2.stroke()
+        
+        let arc3 = UIBezierPath(arcCenter: CGPoint(x: 300, y: 400), radius: 160, startAngle: -CGFloat.pi * 0.4, endAngle: -CGFloat.pi * 0.2, clockwise: true)
+        arc3.stroke()
+        
+        let arc4 = UIBezierPath(arcCenter: CGPoint(x: 463, y: 400), radius: 160, startAngle: CGFloat.pi * 0.8, endAngle: CGFloat.pi * 0.5, clockwise: false)
+        arc4.stroke()
+        
+        let arc5 = UIBezierPath(arcCenter: CGPoint(x: 300, y: 400), radius: 160, startAngle: CGFloat.pi * 0.2, endAngle: CGFloat.pi * 0.5, clockwise: true)
+        arc5.stroke()
+        
+        let cutoff1 = UIBezierPath()
+        cutoff1.move(to: CGPoint(x: 383, y: 200))
+        cutoff1.addLine(to: CGPoint(x: 383, y: 600))
+        #colorLiteral(red: 1, green: 0.8092852235, blue: 0, alpha: 1).setStroke()
+        cutoff1.stroke()
+        
+        let dot = UIBezierPath(arcCenter: CGPoint(x: 383, y: 300), radius: 5, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setFill()
+        dot.fill()
+        
+        let parallel = UIBezierPath()
+        parallel.move(to: CGPoint(x: 100, y: 300))
+        parallel.addLine(to: CGPoint(x: 500, y: 300))
+        parallel.lineWidth = 3
+        #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1).setStroke()
+        parallel.stroke()
+    }
+
     func drawCircleThroughPoints() {
         let point1 = UIBezierPath(arcCenter: CGPoint(x: 500, y: 400), radius: 8, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         point1.fill()
@@ -44,6 +104,7 @@ class CanvasView: UIView {
         let circle = UIBezierPath(arcCenter: CGPoint(x: 400, y: 288), radius: 150, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1).setStroke()
         circle.stroke()
+        
     }
     
     
