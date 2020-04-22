@@ -1,7 +1,7 @@
 import UIKit
 
 class CanvasView: UIView {
-    var flag: Int = 584034
+    var flag: Int = 6
     
     override func draw(_ rect: CGRect) {
         if flag == 1 {
@@ -22,21 +22,63 @@ class CanvasView: UIView {
     }
     
     func challenge6() {
+        
+
+        let rulerPath = UIBezierPath()
+        
+       
+        
+        let compassPath = UIBezierPath(arcCenter: CGPoint(x: 500, y: 500), radius: 250, startAngle: 0.2 * CGFloat.pi, endAngle: 0.8 * CGFloat.pi, clockwise: true)
+        compassPath.stroke()
+        
+        
+        rulerPath.move(to: CGPoint(x: 500, y: 500))
+        rulerPath.addLine(to: CGPoint(x: bounds.width - 50, y: bounds.height - 50))
+        
+        rulerPath.move(to: CGPoint(x: 500, y: 500))
+        rulerPath.addLine(to: CGPoint(x: bounds.width - 404, y: bounds.height - 50))
+        rulerPath.stroke()
+        
+        let compassPath1 = UIBezierPath(arcCenter: CGPoint(x: bounds.width - 404, y: bounds.height - 50), radius: 500, startAngle: -0.3 * CGFloat.pi, endAngle:  -0.5 * CGFloat.pi, clockwise: false)
+        compassPath1.stroke()
+        
+        let compassPath2 = UIBezierPath(arcCenter: CGPoint(x: bounds.width - 50, y: bounds.height - 50), radius: 500, startAngle: -0.5 * CGFloat.pi, endAngle: -0.7 * CGFloat.pi, clockwise: false)
+        compassPath2.stroke()
+        
+        
+        
+        
+        
         let rulerLengend = UIBezierPath()
+        rulerLengend.move(to: CGPoint(x: 0, y: bounds.height - 50))
+        rulerLengend.addLine(to: CGPoint(x: bounds.width, y: bounds.height - 50))
+        
         rulerLengend.move(to: CGPoint(x: 450, y: 450))
         rulerLengend.addLine(to: CGPoint(x: 550, y: 550))
-        rulerLengend.lineWidth = 5
+        
         
         rulerLengend.move(to: CGPoint(x: 450, y: 550))
         rulerLengend.addLine(to: CGPoint(x: 550, y: 450))
         rulerLengend.lineWidth = 5
+        #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1).setStroke()
         rulerLengend.stroke()
-
-        let rulerPath = UIBezierPath()
-        rulerPath.move(to: CGPoint(x: 0, y: bounds.height - 50))
-        rulerPath.addLine(to: CGPoint(x: bounds.width, y: bounds.height - 50))
-        rulerPath.lineWidth = 5
-        rulerPath.stroke()
+        
+        let rulerPath2 = UIBezierPath()
+        rulerPath2.move(to: CGPoint(x: 500, y: 0))
+        rulerPath2.addLine(to: CGPoint(x: 500, y: bounds.height))
+        rulerPath2.lineWidth = 7.5
+        #colorLiteral(red: 0.568627451, green: 0.568627451, blue: 0.568627451, alpha: 1).setStroke()
+        rulerPath2.stroke()
+        
+        
+        // 919191 means
+        // Red = 0x91 = 9 * 16 + 1 = 145 = 0221 = 2 * 8^2 + 2 * 8 + 1
+        // Green = 0x91
+        // Blue = 0x91
+        // in base-16, we need 16 digits
+        // base-10: 0..9
+        // base-16: 0..9, A, B, C, D,
+        
     }
     
     func challenge5() {
