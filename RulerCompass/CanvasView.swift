@@ -9,7 +9,9 @@ class CanvasView: UIView {
         } else if drawFlag == 3 {
             triangle()
         } else if drawFlag == 4 {
-            rightAngle()
+            rightAngle1()
+        } else if drawFlag == 5 {
+            rightAngle2()
         }
         
     }
@@ -143,7 +145,7 @@ class CanvasView: UIView {
     
     
     
-    func rightAngle() {
+    func rightAngle1() {
         horizontalLineSegment()
         point1()
         circles4()
@@ -176,5 +178,74 @@ class CanvasView: UIView {
         aLine.lineWidth = 10
         #colorLiteral(red: 0.7342812419, green: 0.2369629443, blue: 0.6376581788, alpha: 1).setStroke()
         aLine.stroke()
+    }
+    
+    
+    
+    
+    func rightAngle2() {
+        horizontalLineSegment()
+        point2()
+        lines1()
+        circle2()
+        lines2()
+        aVerticalLine()
+    }
+    func point2() {
+        let p2 = UIBezierPath(arcCenter: CGPoint(x: 382, y: 231), radius: 10, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        p2.lineWidth = 10
+        p2.stroke()
+        p2.fill()
+    }
+    func circle2() {
+        let c6 = UIBezierPath(arcCenter: CGPoint(x: 382, y: 231), radius: 182, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        c6.lineWidth = 10
+        #colorLiteral(red: 0.3398539424, green: 0.6224563122, blue: 0.168690294, alpha: 1).setStroke()
+        c6.stroke()
+    }
+    func lines1() {
+        let l1 = UIBezierPath()
+        l1.move(to: CGPoint(x: 382, y: 231))
+        l1.addLine(to: CGPoint(x: 257, y: bounds.height * 0.5))
+        l1.lineWidth = 10
+        #colorLiteral(red: 0.3398539424, green: 0.6224563122, blue: 0.168690294, alpha: 1).setStroke()
+        l1.stroke()
+        
+        let l2 = UIBezierPath()
+        l2.move(to: CGPoint(x: 382, y: 231))
+        l2.addLine(to: CGPoint(x: 507, y: bounds.height * 0.5))
+        l2.lineWidth = 10
+        #colorLiteral(red: 0.3398539424, green: 0.6224563122, blue: 0.168690294, alpha: 1).setStroke()
+        l2.stroke()
+    }
+    func lines2() {
+        let l3 = UIBezierPath()
+        l3.move(to: CGPoint(x: 564, y: 231))
+        l3.addLine(to: CGPoint(x: 257, y: bounds.height * 0.5))
+        l3.lineWidth = 10
+        #colorLiteral(red: 0.3398539424, green: 0.6224563122, blue: 0.168690294, alpha: 1).setStroke()
+        l3.stroke()
+        
+        let l4 = UIBezierPath()
+        l4.move(to: CGPoint(x: 200, y: 231))
+        l4.addLine(to: CGPoint(x: 507, y: bounds.height * 0.5))
+        l4.lineWidth = 10
+        #colorLiteral(red: 0.3398539424, green: 0.6224563122, blue: 0.168690294, alpha: 1).setStroke()
+        l4.stroke()
+        
+        let l5 = UIBezierPath()
+        l5.move(to: CGPoint(x: 564, y: 231))
+        l5.addLine(to: CGPoint(x: 200, y: 231))
+        l5.lineWidth = 10
+        #colorLiteral(red: 0.3398539424, green: 0.6224563122, blue: 0.168690294, alpha: 1).setStroke()
+        l5.stroke()
+    }
+    func aVerticalLine() {
+        let line1 = UIBezierPath()
+        line1.move(to: CGPoint(x: 382, y: 0))
+        line1.addLine(to: CGPoint(x: 382, y: bounds.height))
+        line1.lineWidth = 10
+        #colorLiteral(red: 0.745601356, green: 0.2564220428, blue: 0.6603657603, alpha: 1).setStroke()
+        line1.stroke()
     }
 }
