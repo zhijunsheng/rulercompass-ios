@@ -27,5 +27,9 @@ class ViewController: UIViewController {
         canvasView.figureIndex = 3
         canvasView.setNeedsDisplay()
     }
+    
+    @IBAction func perpendicular2(_ sender: UIButton) {
+        canvasView.figureIndex = 4
+        canvasView.setNeedsDisplay()
+    }
 }
-

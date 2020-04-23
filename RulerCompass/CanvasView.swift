@@ -2,7 +2,7 @@ import UIKit
 
 class CanvasView: UIView {
     
-    var figureIndex = 3
+    var figureIndex = 4
     
     override func draw(_ rect: CGRect) {
         if figureIndex == 0 {
@@ -18,11 +18,51 @@ class CanvasView: UIView {
         }
         
         if figureIndex == 3 {
-            drawPerpendicularleBisector()
+            drawPerpendicular1()
+        }
+        
+        if figureIndex == 4 {
+            drawPerpendicular2()
         }
     }
     
-    func drawPerpendicularleBisector() {
+    func drawPerpendicular2() {
+        let pen = UIBezierPath()
+        pen.move(to: CGPoint(x: 100, y: 300))
+        pen.addLine(to: CGPoint(x: 600, y: 300))
+        pen.lineWidth = 3
+        pen.stroke()
+        
+        let marker = UIBezierPath()
+        marker.move(to: CGPoint(x: 290, y: 150))
+        marker.addLine(to: CGPoint(x: 310, y: 160))
+        marker.move(to: CGPoint(x: 310, y: 150))
+        marker.addLine(to: CGPoint(x: 290, y: 160))
+        #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1).setStroke()
+        marker.stroke()
+        
+        let circle1 = UIBezierPath(arcCenter: CGPoint(x: 300, y: 155), radius: 190, startAngle: CGFloat.pi * 0.2, endAngle: CGFloat.pi * 0.8, clockwise: true)
+        #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1).setStroke()
+        circle1.stroke()
+        
+        let circle2 = UIBezierPath(arcCenter: CGPoint(x: 177, y: 300), radius: 240, startAngle: CGFloat.pi * 0.2, endAngle: CGFloat.pi * 0.5, clockwise: true)
+        #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1).setStroke()
+        circle2.stroke()
+        
+        let circle3 = UIBezierPath(arcCenter: CGPoint(x: 421, y: 300), radius: 240, startAngle: CGFloat.pi * 0.5, endAngle: CGFloat.pi * 0.8, clockwise: true)
+        #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1).setStroke()
+        circle3.stroke()
+        
+        let pencil = UIBezierPath()
+        pencil.move(to: CGPoint(x: 300, y: 105))
+        pencil.addLine(to: CGPoint(x: 300, y: 570))
+        pencil.lineWidth = 3
+        #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1).setStroke()
+        pencil.stroke()
+        pencil.stroke()
+    }
+    
+    func drawPerpendicular1() {
         let pen = UIBezierPath()
         pen.move(to: CGPoint(x: 100, y: 300))
         pen.addLine(to: CGPoint(x: 600, y: 300))
