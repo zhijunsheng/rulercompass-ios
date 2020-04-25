@@ -67,6 +67,15 @@
                                     <action selector="perpendicularLines2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tAK-PP-cYT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCH-CM-aKY">
+                                <rect key="frame" x="464" y="884" width="212" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="DrawingParallelLine"/>
+                                <connections>
+                                    <action selector="parallelLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vin-2d-bwC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>

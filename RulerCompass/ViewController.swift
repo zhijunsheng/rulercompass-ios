@@ -33,7 +33,11 @@ class ViewController: UIViewController {
         canvasView.setNeedsDisplay()
     }
     
-
+    @IBAction func parallelLine(_ sender: Any) {
+        canvasView.flag = 7
+        canvasView.setNeedsDisplay()
+    }
+    
 }
 
 
