@@ -45,5 +45,10 @@ class ViewController: UIViewController {
         canvasView.setNeedsDisplay()
     }
     
+    @IBAction func showchallengeSeven(_ sender: Any) {
+        infoLabel.text = "make l parallel across 1 point"
+        canvasView.flag = 7
+        canvasView.setNeedsDisplay()
+    }
 }
 
