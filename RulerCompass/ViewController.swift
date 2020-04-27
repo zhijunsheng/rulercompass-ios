@@ -32,4 +32,9 @@ class ViewController: UIViewController {
         canvasView.figureIndex = 4
         canvasView.setNeedsDisplay()
     }
+    
+    @IBAction func parallel(_ sender: UIButton) {
+        canvasView.figureIndex = 5
+        canvasView.setNeedsDisplay()
+    }
 }
