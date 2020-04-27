@@ -9,7 +9,7 @@
 import UIKit
 
 class PaperView: UIView {
-    var pageNumber = 1
+    var pageNumber = 6
     
     override func draw(_ rect: CGRect) {
         switch pageNumber {
@@ -23,9 +23,30 @@ class PaperView: UIView {
             threeLinesThatMakeATriangle()
         case 5:
             perpendicularFromRandomPointOutsideOfLineToTheLine()
+        case 6:
+            contest02()
         default:
             break
         }
+        let points: [CGPoint] = [CGPoint(x: 130.5, y: 454.0),
+        CGPoint(x: 130.5, y: 546.5),
+        CGPoint(x: 189.5, y: 409.5),
+        CGPoint(x: 189.0, y: 594.5),
+        CGPoint(x: 247.5, y: 387.5),
+        CGPoint(x: 248.0, y: 616.5),
+        CGPoint(x: 304.0, y: 373.0),
+        CGPoint(x: 308.0, y: 627.0)]
+        for point in points {
+            let something = UIBezierPath()
+            something.addArc(withCenter: point, radius: 2, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+            something.fill()
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let first = touches.first!
+        let loc = first.location(in: self)
+        print(loc)
     }
     
     func lineSegmentBisector() {
@@ -129,5 +150,26 @@ class PaperView: UIView {
         rulerLine.move(to: CGPoint(x: bounds.width / 2, y: 50))
         rulerLine.addLine(to: CGPoint(x: bounds.width / 2, y: bounds.height - 50))
         rulerLine.stroke()
+    }
+    
+    func contest02() {
+        let rulerLine = UIBezierPath()
+        rulerLine.move(to: CGPoint(x: 50, y: 100))
+        rulerLine.addLine(to: CGPoint(x: bounds.width - 50, y: 100))
+        rulerLine.stroke()
+        for i in 1...5 {
+            let compassLine0 = UIBezierPath()
+            let compassLine1 = UIBezierPath()
+            compassLine0.addArc(withCenter: CGPoint(x: 150, y: 500), radius: CGFloat(i * 50), startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+            compassLine1.addArc(withCenter: CGPoint(x: bounds.width - 150, y: 500), radius: CGFloat(500 - (i * 50)), startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+            UIColor(red: 0, green: CGFloat(i), blue: 0, alpha: 1).setStroke()
+            compassLine0.stroke()
+            compassLine1.stroke()
+        }
+        let point = UIBezierPath(arcCenter: CGPoint(x: 150, y: 500), radius: 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        point.fill()
+        let point1 = UIBezierPath(arcCenter: CGPoint(x: bounds.width - 150, y: 500), radius: 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        
+        point1.fill()
     }
 }

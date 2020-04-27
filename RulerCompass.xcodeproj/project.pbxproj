@@ -84,11 +84,11 @@
 				E760D27A243354D7006D76DB /* AppDelegate.swift */,
 				E760D27C243354D7006D76DB /* SceneDelegate.swift */,
 				E760D27E243354D7006D76DB /* ViewController.swift */,
+				752D76982434312800BC0155 /* PaperView.swift */,
 				E760D280243354D7006D76DB /* Main.storyboard */,
 				E760D283243354DF006D76DB /* Assets.xcassets */,
 				E760D285243354DF006D76DB /* LaunchScreen.storyboard */,
 				E760D288243354DF006D76DB /* Info.plist */,
-				752D76982434312800BC0155 /* PaperView.swift */,
 			);
 			path = RulerCompass;
 			sourceTree = "<group>";
