@@ -43,12 +43,28 @@ class CanvasView: UIView {
         
         let dot = UIBezierPath(arcCenter: CGPoint(x: 305, y: 300), radius: 5, startAngle:  0 * CGFloat.pi, endAngle: 2 * CGFloat.pi, clockwise: true)
         dot.fill()
-       
+        
         let pencil1 = UIBezierPath()
         pencil1.move(to: CGPoint(x: 150, y: 600))
         pencil1.addLine(to: CGPoint(x: 407, y: 100))
-        #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1).setStroke()
         pencil1.stroke()
+        
+        let halfCircle2 = UIBezierPath(arcCenter: CGPoint(x: 200, y: 500), radius: 145, startAngle:  1.6 * CGFloat.pi, endAngle: 2.2 * CGFloat.pi, clockwise: true)
+        halfCircle2.stroke()
+        
+        let halfCircle3 = UIBezierPath(arcCenter: CGPoint(x: 307, y: 300), radius: 145, startAngle:  1.6 * CGFloat.pi, endAngle: 2.2 * CGFloat.pi, clockwise: true)
+        halfCircle3.stroke()
+        
+        
+        let halfCircle5 = UIBezierPath(arcCenter: CGPoint(x: 372, y: 172), radius: 150, startAngle:  1.85 * CGFloat.pi, endAngle: 2.5 * CGFloat.pi, clockwise: true)
+        halfCircle5.stroke()
+        
+        let pencil2 = UIBezierPath()
+       
+        pencil2.move(to: CGPoint(x: 150, y: 300))
+        pencil2.addLine(to: CGPoint(x: 607, y: 300))
+        #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()
+        pencil2.stroke()
     }
     func drawingPerpendicularLines2() {
         let pencil = UIBezierPath()
@@ -69,13 +85,14 @@ class CanvasView: UIView {
         halfCircle3.stroke()
         
         
-        let halfCircle5 = UIBezierPath(arcCenter: CGPoint(x: 150, y: 300), radius: 250, startAngle:  0.15 * CGFloat.pi, endAngle: 0.35 * CGFloat.pi, clockwise: true)
+        let halfCircle5 = UIBezierPath(arcCenter: CGPoint(x: 150, y: 300), radius: 250, startAngle:  0.15 * CGFloat.pi, endAngle: 0.35 * CGFloat.pi, clockwise: false)
         halfCircle5.lineWidth = 3
         halfCircle5.stroke()
         
         let halfCircle6 = UIBezierPath(arcCenter: CGPoint(x: 455, y: 300), radius: 250, startAngle:  0.55 * CGFloat.pi, endAngle: 0.75 * CGFloat.pi, clockwise: true)
         halfCircle6.lineWidth = 3
         halfCircle6.stroke()
+        
         let pencil1 = UIBezierPath()
         pencil1.move(to: CGPoint(x: 305, y: 20))
         pencil1.addLine(to: CGPoint(x: 305, y: 700))
@@ -100,7 +117,7 @@ class CanvasView: UIView {
         halfCircle3.lineWidth = 5
         halfCircle3.stroke()
         
-        let halfCircle5 = UIBezierPath(arcCenter: CGPoint(x: 637, y: 300), radius: 240, startAngle:  0.9 * CGFloat.pi, endAngle: 0.7 * CGFloat.pi, clockwise: false)
+        let halfCircle5 = UIBezierPath(arcCenter: CGPoint(x: 637, y: 300), radius: 240, startAngle:  0.9 * CGFloat.pi, endAngle: 0.7 * CGFloat.pi, clockwise: true)
         halfCircle5.lineWidth = 5
         halfCircle5.stroke()
         
