@@ -29,13 +29,23 @@ class PaperView: UIView {
             break
         }
         let points: [CGPoint] = [CGPoint(x: 130.5, y: 454.0),
-        CGPoint(x: 130.5, y: 546.5),
-        CGPoint(x: 189.5, y: 409.5),
-        CGPoint(x: 189.0, y: 594.5),
-        CGPoint(x: 247.5, y: 387.5),
-        CGPoint(x: 248.0, y: 616.5),
-        CGPoint(x: 304.0, y: 373.0),
-        CGPoint(x: 308.0, y: 627.0)]
+                                 CGPoint(x: 130.5, y: 546.5),
+                                 CGPoint(x: 189.5, y: 409.5),
+                                 CGPoint(x: 189.0, y: 594.5),
+                                 CGPoint(x: 247.5, y: 387.5),
+                                 CGPoint(x: 248.0, y: 616.5),
+                                 CGPoint(x: 304.0, y: 373.0),
+                                 CGPoint(x: 308.0, y: 627.0),
+                                 CGPoint(x: 364.0, y: 370.0),
+                                 CGPoint(x: 364.5, y: 630.5),
+                                 CGPoint(x: 425.0, y: 375.0),
+                                 CGPoint(x: 423.0, y: 628.5),
+                                 CGPoint(x: 481.0, y: 389.0),
+                                 CGPoint(x: 482.5, y: 619.0),
+                                 CGPoint(x: 541.0, y: 410.0),
+                                 CGPoint(x: 541.0, y: 595.0),
+                                 CGPoint(x: 599.0, y: 453.5),
+                                 CGPoint(x: 598.5, y: 548.5)]
         for point in points {
             let something = UIBezierPath()
             something.addArc(withCenter: point, radius: 2, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
@@ -157,7 +167,7 @@ class PaperView: UIView {
         rulerLine.move(to: CGPoint(x: 50, y: 100))
         rulerLine.addLine(to: CGPoint(x: bounds.width - 50, y: 100))
         rulerLine.stroke()
-        for i in 1...5 {
+        for i in 1...10 {
             let compassLine0 = UIBezierPath()
             let compassLine1 = UIBezierPath()
             compassLine0.addArc(withCenter: CGPoint(x: 150, y: 500), radius: CGFloat(i * 50), startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
