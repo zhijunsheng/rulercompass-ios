@@ -17,6 +17,12 @@ class CanvasView: UIView {
         contest02()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let first = touches.first!
+        let finger = first.location(in: self)
+        print("(\(finger.x), \(finger.y))")
+    }
+    
     func contest02() {
         let line = UIBezierPath()
         line.move(to: CGPoint(x: 100, y: 674))
@@ -29,16 +35,31 @@ class CanvasView: UIView {
         let point2 = UIBezierPath(arcCenter: CGPoint(x: 498, y: 313), radius: 5, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         point2.fill()
         
-        for i in 0 ..< 5 {
-            let circle1 = UIBezierPath(arcCenter: CGPoint(x: 313, y: 313), radius: CGFloat(200 - 10 * i), startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1).setStroke()
+        
+        for i in 0 ..< 6 {
+            let circle1 = UIBezierPath(arcCenter: CGPoint(x: 313, y: 313), radius: CGFloat(200 - 30 * i), startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+            
             circle1.stroke()
             
-            let circle2 = UIBezierPath(arcCenter: CGPoint(x: 498, y: 313), radius: CGFloat(100 + 10 * i), startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+            let circle2 = UIBezierPath(arcCenter: CGPoint(x: 498, y: 313), radius: CGFloat(100 + 30 * i), startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
             circle2.stroke()
         }
         
+        let dots: [CGPoint] = [
+            CGPoint(x: 486.5, y: 216.5),
+            CGPoint(x: 440, y: 200),
+            CGPoint(x: 389.5, y: 200),
+            CGPoint(x: 340, y: 210),
+            CGPoint(x: 440, y: 200),
+            CGPoint(x: 290, y: 240),
+            CGPoint(x: 256, y: 258),
+        ]
         
-        
+        for dot in dots {
+            let dot = UIBezierPath(arcCenter: dot, radius: 3, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+            dot.fill()
+        }
     }
     
     func drawCrosshair(x: CGFloat, y: CGFloat) {
