@@ -38,12 +38,17 @@ class CanvasView: UIView {
         #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1).setStroke()
         
         for i in 0 ..< 6 {
-            let circle1 = UIBezierPath(arcCenter: CGPoint(x: 313, y: 313), radius: CGFloat(200 - 30 * i), startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+            let circle1 = UIBezierPath(arcCenter: CGPoint(x: 313, y: 313), radius: CGFloat(230 - 30 * i), startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
             
             circle1.stroke()
             
-            let circle2 = UIBezierPath(arcCenter: CGPoint(x: 498, y: 313), radius: CGFloat(100 + 30 * i), startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+            let circle2 = UIBezierPath(arcCenter: CGPoint(x: 498, y: 313), radius: CGFloat(70 + 30 * i), startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
             circle2.stroke()
+            
+            let line = UIBezierPath()
+            line.move(to: CGPoint(x: 0, y: 313))
+            line.addLine(to: CGPoint(x: 700, y: 313))
+            line.stroke()
         }
         
         let dots: [CGPoint] = [
@@ -53,7 +58,19 @@ class CanvasView: UIView {
             CGPoint(x: 340, y: 210),
             CGPoint(x: 440, y: 200),
             CGPoint(x: 290, y: 240),
-            CGPoint(x: 256, y: 258),
+            CGPoint(x: 534, y: 258),
+            // (300 - 185) / 2  - 185 = 255.5
+            CGPoint(x: 255.5, y: 313),
+            
+            CGPoint(x: 488, y: 413),
+            CGPoint(x: 440, y: 430),
+            CGPoint(x: 389, y: 433),
+            CGPoint(x: 340, y: 421),
+            CGPoint(x: 291, y: 391),
+            CGPoint(x: 534, y: 374),
+            // (300 - 185) / 2  + 185 = 555.5
+            CGPoint(x: 555.5, y: 313),
+            
         ]
         
         for dot in dots {
