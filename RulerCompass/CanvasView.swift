@@ -9,7 +9,7 @@
 import UIKit
 
 class CanvasView: UIView {
-    var flag = 6
+    var flag = 7
     override func draw(_ rect: CGRect) {
         if flag == 1 {
             drawAngleBisector()
@@ -23,7 +23,41 @@ class CanvasView: UIView {
             perpendicular2()
         } else if flag == 6 {
             parallel()
+        }else if flag == 7 {
+             we2()
         }
+    }
+    
+    func we2() {
+        let pencil = UIBezierPath()
+        pencil.move(to: CGPoint(x: 120, y: 500))
+        pencil.addLine(to: CGPoint(x: 608, y: 500))
+        pencil.lineWidth = 5
+        pencil.stroke()
+        let aw = UIBezierPath(arcCenter: CGPoint(x: 364, y: 400), radius: 4, startAngle: 0 * CGFloat.pi, endAngle: 2 * CGFloat.pi, clockwise: false)
+        
+        aw.fill()
+        let awe = UIBezierPath(arcCenter: CGPoint(x: 364, y: 400), radius: 200, startAngle: 0 * CGFloat.pi, endAngle: 2 * CGFloat.pi, clockwise: false)
+        #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1).setStroke()
+        awe.stroke()
+        
+        let pencil1 = UIBezierPath()
+        pencil1.move(to: CGPoint(x: 364, y: 100))
+        pencil1.addLine(to: CGPoint(x: 364, y: 500))
+        pencil1.stroke()
+        
+        let pencil2 = UIBezierPath()
+        pencil2.move(to: CGPoint(x: 194, y: 300))
+        pencil2.addLine(to: CGPoint(x: 538, y: 300))
+        pencil2.stroke()
+        
+        let eee = UIBezierPath(arcCenter: CGPoint(x: 538, y: 300), radius: 3, startAngle: 0 * CGFloat.pi, endAngle: 2 * CGFloat.pi, clockwise: false)
+        #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setFill()
+        eee.fill()
+        
+        let ee1 = UIBezierPath(arcCenter: CGPoint(x: 193, y: 300), radius: 3, startAngle: 0 * CGFloat.pi, endAngle: 2 * CGFloat.pi, clockwise: false)
+        #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setFill()
+        ee1.fill()
     }
     
     func parallel()  {
@@ -82,7 +116,8 @@ class CanvasView: UIView {
         trueAnswer.lineWidth = 3
         #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1).setStroke()
         trueAnswer.stroke()
-                  
+         
+        
     }
     
     func perpendicular2() {

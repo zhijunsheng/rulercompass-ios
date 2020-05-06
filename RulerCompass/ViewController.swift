@@ -39,5 +39,10 @@ class ViewController: UIViewController {
         canvasView.flag = 6
         canvasView.setNeedsDisplay()
     }
+    
+    @IBAction func vvv(_ sender: Any) {
+        canvasView.flag = 7
+        canvasView.setNeedsDisplay()
+    }
 }
 
