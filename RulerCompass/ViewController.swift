@@ -38,8 +38,13 @@ class ViewController: UIViewController {
         canvasView.setNeedsDisplay()
     }
     
-    @IBAction func Circle(_ sender: UIButton) {
+    @IBAction func circle(_ sender: UIButton) {
         canvasView.figureIndex = 6
+        canvasView.setNeedsDisplay()
+    }
+    
+    @IBAction func circle2(_ sender: UIButton) {
+        canvasView.figureIndex = 7
         canvasView.setNeedsDisplay()
     }
 }

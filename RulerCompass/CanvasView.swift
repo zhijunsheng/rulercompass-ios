@@ -2,7 +2,7 @@ import UIKit
 
 class CanvasView: UIView {
     
-    var figureIndex = 6
+    var figureIndex = 7
     
     override func draw(_ rect: CGRect) {
         if figureIndex == 0 {
@@ -32,6 +32,62 @@ class CanvasView: UIView {
         if figureIndex == 6 {
             drawCircle()
         }
+        
+        if figureIndex == 7 {
+            drawCircle2()
+        }
+    }
+    
+    func drawCircle2() {
+        let marker = UIBezierPath()
+        marker.move(to: CGPoint(x: 240, y: 280))
+        marker.addLine(to: CGPoint(x: 260, y: 300))
+        marker.move(to: CGPoint(x: 260, y: 280))
+        marker.addLine(to: CGPoint(x: 240, y: 300))
+        
+        marker.move(to: CGPoint(x: 540, y: 280))
+        marker.addLine(to: CGPoint(x: 560, y: 300))
+        marker.move(to: CGPoint(x: 560, y: 280))
+        marker.addLine(to: CGPoint(x: 540, y: 300))
+        
+        marker.move(to: CGPoint(x: 340, y: 180))
+        marker.addLine(to: CGPoint(x: 360, y: 200))
+        marker.move(to: CGPoint(x: 360, y: 180))
+        marker.addLine(to: CGPoint(x: 340, y: 200))
+        marker.lineWidth = 3
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setStroke()
+        marker.stroke()
+        
+        let circle1 = UIBezierPath(arcCenter: CGPoint(x: 250, y: 290), radius: 180, startAngle: -CGFloat.pi / 2, endAngle: CGFloat.pi / 2, clockwise: true)
+        
+        #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1).setStroke()
+        circle1.stroke()
+        
+        let circle2 = UIBezierPath(arcCenter: CGPoint(x: 550, y: 290), radius: 180, startAngle: -CGFloat.pi / 2, endAngle: CGFloat.pi / 2, clockwise: false)
+        
+        #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1).setStroke()
+        circle2.stroke()
+        
+        let pencil = UIBezierPath()
+        pencil.move(to: CGPoint(x: 400, y: 150))
+        pencil.addLine(to: CGPoint(x: 400, y: 500))
+        #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1).setStroke()
+        pencil.stroke()
+        
+        let circle3 = UIBezierPath(arcCenter: CGPoint(x: 350, y: 190), radius: 180, startAngle: -CGFloat.pi / 2, endAngle: CGFloat.pi / 2, clockwise: true)
+        #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1).setStroke()
+        circle3.stroke()
+        
+        let pen = UIBezierPath()
+        pen.move(to: CGPoint(x: 513, y: 111))
+        pen.addLine(to: CGPoint(x: 389, y: 364))
+        #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1).setStroke()
+        pen.stroke()
+        
+        let circle4 = UIBezierPath(arcCenter: CGPoint(x: 400, y: 341), radius: 160, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        circle4.lineWidth = 3
+        #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()
+        circle4.stroke()
     }
     
     func drawCircle() {

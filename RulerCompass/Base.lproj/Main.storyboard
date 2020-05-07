@@ -94,7 +94,18 @@
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="Circle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WFN-uG-4mk"/>
+                                    <action selector="circle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WFN-uG-4mk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnh-Il-b3l">
+                                <rect key="frame" x="49" y="907" width="152" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="过三个点画圆">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="circle2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fir-vO-XdC"/>
                                 </connections>
                             </button>
                         </subviews>
