@@ -14,7 +14,8 @@ class CanvasView: UIView {
 //        drawLineSegmentBisector()
 //        drawAngleBisector()
 //        drawCrosshair(x: 280, y: 394)
-        contest02()
+        contest021()
+//        contest022()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -23,7 +24,33 @@ class CanvasView: UIView {
         print("(\(finger.x), \(finger.y))")
     }
     
-    func contest02() {
+    func contest021() {
+        let line = UIBezierPath()
+        line.move(to: CGPoint(x: 134, y: 650))
+        line.addLine(to: CGPoint(x: 646, y: 650))
+        line.stroke()
+        
+        let point = CGPoint(x: 350, y: 550)
+        
+        let point1 = UIBezierPath(arcCenter: point, radius: 5, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        point1.fill()
+        
+        let h: CGFloat = 650 - point.y
+        UIColor.red.setFill()
+        
+        for i in 0 ..<  20 {
+            let point2: CGPoint = CGPoint(x: point.x - 10 - CGFloat(i) * 20, y: 650)
+            let point3: CGPoint = CGPoint(x: point.x + 10 + CGFloat(i) * 20, y: 650)
+            let a: CGFloat = point.x - point2.x
+            let b = (a * a - h * h) / (2 * h)
+            let answerPoint = UIBezierPath(arcCenter: CGPoint(x: point2.x, y: 650 - h - b), radius: 5, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+            answerPoint.fill()
+            let answerPoint2 = UIBezierPath(arcCenter: CGPoint(x: point3.x, y: 650 - h - b), radius: 5, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+            answerPoint2.fill()
+        }
+    }
+    
+    func contest022() {
         let line = UIBezierPath()
         line.move(to: CGPoint(x: 100, y: 674))
         line.addLine(to: CGPoint(x: 400, y: 674))
