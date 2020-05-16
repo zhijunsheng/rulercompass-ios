@@ -12,7 +12,6 @@ class CanvasView: UIView {
     var flag = -1
     
     override func draw(_ rect: CGRect) {
-        drawingParallelLines()
         
         if flag == 1 {
             lineBisecting()
@@ -33,6 +32,7 @@ class CanvasView: UIView {
             drawingParallelLines()
         }
     }
+    
     func drawingParallelLines()  {
         let pencil = UIBezierPath()
         pencil.move(to: CGPoint(x: 50, y: 500))
@@ -60,7 +60,7 @@ class CanvasView: UIView {
         halfCircle5.stroke()
         
         let pencil2 = UIBezierPath()
-       
+        
         pencil2.move(to: CGPoint(x: 150, y: 300))
         pencil2.addLine(to: CGPoint(x: 607, y: 300))
         #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()

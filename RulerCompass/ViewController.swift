@@ -37,6 +37,10 @@ class ViewController: UIViewController {
         canvasView.flag = 7
         canvasView.setNeedsDisplay()
     }
+    @IBAction func contest2(_ sender: Any) {
+        canvasView.flag = 8
+        canvasView.setNeedsDisplay()
+    }
     
 }
 
