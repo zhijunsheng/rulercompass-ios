@@ -85,7 +85,7 @@ class CanvasView: UIView {
         halfCircle3.stroke()
         
         
-        let halfCircle5 = UIBezierPath(arcCenter: CGPoint(x: 150, y: 300), radius: 250, startAngle:  0.15 * CGFloat.pi, endAngle: 0.35 * CGFloat.pi, clockwise: false)
+        let halfCircle5 = UIBezierPath(arcCenter: CGPoint(x: 150, y: 300), radius: 250, startAngle:  0.15 * CGFloat.pi, endAngle: 0.35 * CGFloat.pi, clockwise: true)
         halfCircle5.lineWidth = 3
         halfCircle5.stroke()
         
