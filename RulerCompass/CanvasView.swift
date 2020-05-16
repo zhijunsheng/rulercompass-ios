@@ -100,6 +100,7 @@ class CanvasView: UIView {
         #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()
         pencil1.stroke()
     }
+    
     func drawingPerpendicularLines(){
         let pencil = UIBezierPath()
         pencil.move(to: CGPoint(x: 200, y: 300))
@@ -117,7 +118,7 @@ class CanvasView: UIView {
         halfCircle3.lineWidth = 5
         halfCircle3.stroke()
         
-        let halfCircle5 = UIBezierPath(arcCenter: CGPoint(x: 637, y: 300), radius: 240, startAngle:  0.9 * CGFloat.pi, endAngle: 0.7 * CGFloat.pi, clockwise: true)
+        let halfCircle5 = UIBezierPath(arcCenter: CGPoint(x: 637, y: 300), radius: 240, startAngle:  0.9 * CGFloat.pi, endAngle: 0.7 * CGFloat.pi, clockwise: false)
         halfCircle5.lineWidth = 5
         halfCircle5.stroke()
         
