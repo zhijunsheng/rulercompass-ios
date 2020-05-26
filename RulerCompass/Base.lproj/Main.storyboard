@@ -85,6 +85,15 @@
                                     <action selector="portionOfALine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="97L-Cc-xRM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDK-0g-8kZ">
+                                <rect key="frame" x="458" y="860" width="176" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Right Triangle"/>
+                                <connections>
+                                    <action selector="rightTriangle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QaE-ul-J3q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>

@@ -39,6 +39,19 @@ class CanvasView: UIView {
         if problemIndex == 7 {
             drawPortionOfALine()
         }
+        if problemIndex == 8 {
+            drawRightTriangle()
+        }
+    }
+    
+    func drawRightTriangle() {
+        let pencil = UIBezierPath()
+        
+        pencil.move(to: CGPoint(x: 200, y: 400))
+        pencil.addLine(to: CGPoint(x: 500, y: 400))
+        
+        pencil.stroke()
+        
     }
     
     func drawTriangleFrom3GivenLineSegments() {
@@ -348,4 +361,5 @@ class CanvasView: UIView {
         
         pencil16.stroke()
     }
+    
 }

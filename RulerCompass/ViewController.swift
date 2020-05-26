@@ -41,4 +41,9 @@ class ViewController: UIViewController {
         canvasView.setNeedsDisplay()
     }
     
+    @IBAction func rightTriangle(_ sender: Any) {
+        canvasView.problemIndex = 8
+        canvasView.setNeedsDisplay()
+    }
+    
 }
