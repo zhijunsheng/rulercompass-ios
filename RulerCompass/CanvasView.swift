@@ -9,7 +9,7 @@
 import UIKit
 
 class CanvasView: UIView {
-    var problemIndex = 0
+    var problemIndex = 8
     
     override func draw(_ rect: CGRect) {
         if problemIndex == 1 {
@@ -45,13 +45,55 @@ class CanvasView: UIView {
     }
     
     func drawRightTriangle() {
+        let problemPath = UIBezierPath()        
+        problemPath.move(to: CGPoint(x: 50, y: 100))
+        problemPath.addLine(to: CGPoint(x: 250, y: 100))
+        problemPath.move(to: CGPoint(x: 50, y: 200))
+        problemPath.addLine(to: CGPoint(x: 300, y: 200))
+        problemPath.lineWidth = 3
+        problemPath.stroke()
+        
+        // solution
+    
         let pencil = UIBezierPath()
         
-        pencil.move(to: CGPoint(x: 200, y: 400))
-        pencil.addLine(to: CGPoint(x: 500, y: 400))
+        #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1).setStroke()
         
+        pencil.move(to: CGPoint(x: 300, y: 500))
+        pencil.addLine(to: CGPoint(x: 500, y: 500))
+
+        let pencil2 = UIBezierPath(arcCenter: CGPoint(x: 300, y: 500), radius: 200, startAngle: CGFloat.pi * 1.1, endAngle: CGFloat.pi * 0.9, clockwise: false)
+        pencil2.stroke()
+        
+        let pencil3 = UIBezierPath(arcCenter: CGPoint(x: 300, y: 500), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        pencil3.fill()
+        
+        pencil.move(to: CGPoint(x: 50, y: 500))
+        pencil.addLine(to: CGPoint(x: 300, y: 500))
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setStroke()
         pencil.stroke()
         
+        #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1).setStroke()
+        let pencil4 = UIBezierPath(arcCenter: CGPoint(x: 100, y: 500), radius: 300, startAngle: CGFloat.pi * 1.6, endAngle: CGFloat.pi * 1.8, clockwise: true)
+        pencil4.stroke()
+
+        let pencil5 = UIBezierPath(arcCenter: CGPoint(x: 500, y: 500), radius: 300, startAngle: CGFloat.pi * 1.2, endAngle: CGFloat.pi * 1.4, clockwise: true)
+
+        pencil5.stroke()
+
+        let perpendicular = UIBezierPath()
+        perpendicular.move(to: CGPoint(x: 300, y: 225))
+        perpendicular.addLine(to: CGPoint(x: 300, y: 550))
+        #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1).setStroke()
+        perpendicular.stroke()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 500, y: 500), radius: 250, startAngle: CGFloat.pi * 1.3, endAngle: CGFloat.pi * 1.1, clockwise: false).stroke()
+        
+        let answerPath = UIBezierPath()
+        #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1).setStroke()
+        answerPath.move(to: CGPoint(x: 500, y: 500))
+        answerPath.addLine(to: CGPoint(x: 300, y: 350))
+        answerPath.stroke()
     }
     
     func drawTriangleFrom3GivenLineSegments() {
