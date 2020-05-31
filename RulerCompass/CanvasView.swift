@@ -45,11 +45,11 @@ class CanvasView: UIView {
     }
     
     func drawRightTriangle() {
-        let problemPath = UIBezierPath()        
+        let problemPath = UIBezierPath()
         problemPath.move(to: CGPoint(x: 50, y: 100))
         problemPath.addLine(to: CGPoint(x: 250, y: 100))
-        problemPath.move(to: CGPoint(x: 50, y: 200))
-        problemPath.addLine(to: CGPoint(x: 300, y: 200))
+        problemPath.move(to: CGPoint(x: 50, y: 150))
+        problemPath.addLine(to: CGPoint(x: 300, y: 150))
         problemPath.lineWidth = 3
         problemPath.stroke()
         
