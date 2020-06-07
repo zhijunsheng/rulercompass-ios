@@ -9,7 +9,7 @@
 import UIKit
 
 class CanvasView: UIView {
-    var problemIndex = 8
+    var problemIndex = 9
     
     override func draw(_ rect: CGRect) {
         if problemIndex == 1 {
@@ -42,6 +42,32 @@ class CanvasView: UIView {
         if problemIndex == 8 {
             drawRightTriangle()
         }
+        
+        if problemIndex == 9 {
+            drawCircleTouching2Points()
+        }
+    }
+    
+    func drawCircleTouching2Points() {
+        let pencil = UIBezierPath(arcCenter: CGPoint(x: 300, y: 300), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        pencil.fill()
+
+        let pencil2 = UIBezierPath(arcCenter: CGPoint(x: 500, y: 300), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        pencil2.fill()
+          
+        #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1).setStroke()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 300, y: 300), radius: 200, startAngle: CGFloat.pi * 0.2, endAngle: CGFloat.pi * 0.4, clockwise: true).stroke()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 500, y: 300), radius: 200, startAngle: CGFloat.pi * 0.6, endAngle: CGFloat.pi * 0.8, clockwise: true).stroke()
+        
+        #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1).setStroke()
+        
+        let pencil9 = UIBezierPath(arcCenter: CGPoint(x: 400, y: 475), radius: 200, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        
+        pencil9.lineWidth = 3
+        
+        pencil9.stroke()
     }
     
     func drawRightTriangle() {

@@ -46,4 +46,8 @@ class ViewController: UIViewController {
         canvasView.setNeedsDisplay()
     }
     
+    @IBAction func drawCircleTouching2Points(_ sender: Any) {
+        canvasView.problemIndex = 9
+        canvasView.setNeedsDisplay()
+    }
 }

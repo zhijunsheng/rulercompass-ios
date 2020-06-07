@@ -94,6 +94,15 @@
                                     <action selector="rightTriangle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QaE-ul-J3q"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4od-l5-ws6">
+                                <rect key="frame" x="385" y="910" width="383" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Draw Circle Touching 2 Points"/>
+                                <connections>
+                                    <action selector="drawCircleTouching2Points:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VZv-mI-Yfc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
