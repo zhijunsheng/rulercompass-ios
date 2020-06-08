@@ -2,9 +2,10 @@ import UIKit
 
 class CanvasView: UIView {
     
-    var figureIndex = 7
+    var figureIndex = 8
     
     override func draw(_ rect: CGRect) {
+        
         if figureIndex == 0 {
             drawLineSegmentBisector()
         }
@@ -36,6 +37,44 @@ class CanvasView: UIView {
         if figureIndex == 7 {
             drawCircle2()
         }
+        
+        if figureIndex == 8 {
+            画直角三角形()
+        }
+    }
+    
+    func 画直角三角形() {
+        let marker = UIBezierPath()
+        marker.move(to: CGPoint(x: 100, y: 100))
+        marker.addLine(to: CGPoint(x: 200, y: 100))
+        marker.move(to: CGPoint(x: 100, y: 200))
+        marker.addLine(to: CGPoint(x: 300, y: 200))
+        
+        marker.lineWidth = 3
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setStroke()
+        marker.stroke()
+        
+        let pencil = UIBezierPath()
+        pencil.move(to: CGPoint(x: 300, y: 600))
+        pencil.addLine(to: CGPoint(x: 400, y: 600))
+        
+        pencil.move(to: CGPoint(x: 300, y: 600))
+        pencil.addLine(to: CGPoint(x: 300, y: 300))
+
+        pencil.move(to: CGPoint(x: 400, y: 600))
+        pencil.addLine(to: CGPoint(x: 300, y: 426))
+        
+        pencil.move(to: CGPoint(x: 300, y: 580))
+        pencil.addLine(to: CGPoint(x: 320, y: 580))
+        pencil.addLine(to: CGPoint(x: 320, y: 600))
+        
+        #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1).setStroke()
+        pencil.stroke()
+        
+        let circle1 = UIBezierPath(arcCenter: CGPoint(x: 400, y: 600), radius: 200, startAngle: CGFloat.pi * 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        
+        #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1).setStroke()
+        circle1.stroke()
     }
     
     func drawCircle2() {
