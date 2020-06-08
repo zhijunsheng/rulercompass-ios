@@ -10,11 +10,16 @@ import UIKit
 
 class CanvasView: UIView {
 
+    var problemIndex: Int = -1
     
     override func draw(_ rect: CGRect) {
-//        drawAngleBisector()
-//        drawLineBisector()
-        drawScalTri()
+        if problemIndex == 0 {
+            drawLineBisector()
+        } else if problemIndex == 1 {
+            drawAngleBisector()
+        } else if problemIndex == 2 {
+            drawScalTri()
+        }
     }
     
     func drawScalTri() {
