@@ -12,10 +12,34 @@ class CanvasView: UIView {
 
     
     override func draw(_ rect: CGRect) {
-        drawAngleBisector()
+//        drawAngleBisector()
+//        drawLineBisector()
+        drawScalTri()
     }
     
-    
+    func drawScalTri() {
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: 50, y: 50))
+        path.addLine(to: CGPoint(x: 200, y: 50))
+        path.move(to: CGPoint(x: 50, y: 100))
+        path.addLine(to: CGPoint(x: 300, y: 100))
+        path.move(to: CGPoint(x: 50, y: 150))
+        path.addLine(to: CGPoint(x: 400, y: 150))
+        path.move(to: CGPoint(x: 300, y: 500))
+        path.addLine(to: CGPoint(x: 650, y: 500))
+        path.stroke()
+        #colorLiteral(red: 0.3127173781, green: 0.5584113598, blue: 0.001741587184, alpha: 1).setStroke()
+        UIBezierPath(arcCenter: (CGPoint(x: 300, y: 500)), radius: 150, startAngle: -0.25 * CGFloat.pi, endAngle: -0.15 * CGFloat.pi, clockwise: true).stroke()
+        
+        UIBezierPath(arcCenter: (CGPoint(x: 650, y: 500)), radius: 250, startAngle: -0.8 * CGFloat.pi, endAngle: -0.9 * CGFloat.pi, clockwise: false).stroke()
+        let answerPath = UIBezierPath()
+        #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1).setStroke()
+        answerPath.move(to: CGPoint(x: 300, y: 500))
+        answerPath.addLine(to: CGPoint(x: 419, y: 407))
+        answerPath.addLine(to: CGPoint(x: 650, y: 500))
+        answerPath.stroke()
+    }
+        
     
     func drawAngleBisector()  {
         let path = UIBezierPath()
