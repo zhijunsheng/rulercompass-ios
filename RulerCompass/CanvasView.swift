@@ -60,7 +60,7 @@ class CanvasView: UIView {
         let arc4 = UIBezierPath(arcCenter: CGPoint(x: 500, y: 512), radius: 230, startAngle: -0.25 * CGFloat.pi, endAngle: 0.01 * CGFloat.pi, clockwise: true)
         arc4.stroke()
         
-        let arc5 = UIBezierPath(arcCenter: CGPoint(x: 100, y: 400), radius: 415, startAngle: -0.1 * CGFloat.pi, endAngle: 0.1 * CGFloat.pi, clockwise: true)
+        let arc5 = UIBezierPath(arcCenter: CGPoint(x: 100, y: 400), radius: 415, startAngle: -0.2 * CGFloat.pi, endAngle: 0.2 * CGFloat.pi, clockwise: true)
         arc5.stroke()
         #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1).setStroke()
         let answerPath = UIBezierPath()

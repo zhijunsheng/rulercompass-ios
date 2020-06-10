@@ -14,5 +14,16 @@ class ViewController: UIViewController {
         canvasView.setNeedsDisplay()
     }
     
+    @IBAction func angleBisector(_ sender: Any) {
+        canvasView.problemIndex = 1
+        canvasView.setNeedsDisplay()
+    }
+    
+    @IBAction func scaleneTri(_ sender: Any) {
+        canvasView.problemIndex = 2
+        canvasView.setNeedsDisplay()
+    }
+    
 }
+
 
