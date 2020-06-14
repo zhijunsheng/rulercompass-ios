@@ -50,4 +50,9 @@ class ViewController: UIViewController {
         canvasView.problemIndex = 9
         canvasView.setNeedsDisplay()
     }
+    
+    @IBAction func drawCircleTouching3Points(_ sender: Any) {
+        canvasView.problemIndex = 10
+        canvasView.setNeedsDisplay()
+    }
 }

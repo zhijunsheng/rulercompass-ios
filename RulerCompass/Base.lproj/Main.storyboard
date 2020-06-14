@@ -103,6 +103,15 @@
                                     <action selector="drawCircleTouching2Points:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VZv-mI-Yfc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPM-dO-iWa">
+                                <rect key="frame" x="385" y="956" width="383" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Draw Circle Touching 3 Points"/>
+                                <connections>
+                                    <action selector="drawCircleTouching3Points:" destination="BYZ-38-t0r" eventType="touchUpInside" id="54V-RA-zse"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>

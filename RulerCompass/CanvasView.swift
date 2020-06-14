@@ -9,7 +9,7 @@
 import UIKit
 
 class CanvasView: UIView {
-    var problemIndex = 9
+    var problemIndex = 10
     
     override func draw(_ rect: CGRect) {
         if problemIndex == 1 {
@@ -46,6 +46,63 @@ class CanvasView: UIView {
         if problemIndex == 9 {
             drawCircleTouching2Points()
         }
+        
+        if problemIndex == 10 {
+            drawCircleTouching3Points()
+        }
+    }
+    
+    func drawCircleTouching3Points() {
+        
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setFill()
+        UIBezierPath(arcCenter: CGPoint(x: 200, y: 500), radius: 5, startAngle: CGFloat.pi * 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 500, y: 500), radius: 5, startAngle: CGFloat.pi * 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 300, y: 300), radius: 5, startAngle: CGFloat.pi * 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        
+        #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 200, y: 500), radius: 200, startAngle: CGFloat.pi * 1.7, endAngle: CGFloat.pi * 2, clockwise: true).stroke()
+
+        UIBezierPath(arcCenter: CGPoint(x: 500, y: 500), radius: 200, startAngle: CGFloat.pi * 1, endAngle: CGFloat.pi * 1.3, clockwise: true).stroke()
+
+        UIBezierPath(arcCenter: CGPoint(x: 200, y: 500), radius: 200, startAngle: CGFloat.pi * 0.1, endAngle: CGFloat.pi * 0.4, clockwise: true).stroke()
+
+        UIBezierPath(arcCenter: CGPoint(x: 500, y: 500), radius: 200, startAngle: CGFloat.pi * 0.6, endAngle: CGFloat.pi * 0.9, clockwise: true).stroke()
+               
+        let pencil8 = UIBezierPath()
+        pencil8.move(to: CGPoint(x: 350, y: 200))
+        pencil8.addLine(to: CGPoint(x: 350, y: 700))
+        pencil8.stroke()
+        
+        #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1).setStroke()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 500, y: 500), radius: 150, startAngle: CGFloat.pi * 1, endAngle: CGFloat.pi * 1.3, clockwise: true).stroke()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 300, y: 300), radius: 150, startAngle: CGFloat.pi * 0.2, endAngle: CGFloat.pi * 0.5, clockwise: true).stroke()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 300, y: 300), radius: 150, startAngle: CGFloat.pi * 0, endAngle: CGFloat.pi * 0.3, clockwise: true).stroke()
+        
+        let pencil12 = UIBezierPath(arcCenter: CGPoint(x: 500, y: 500), radius: 150, startAngle: CGFloat.pi * 1.2, endAngle: CGFloat.pi * 1.5, clockwise: true)
+
+        pencil12.stroke()
+        
+        let pencil13 = UIBezierPath()
+        
+        pencil13.move(to: CGPoint(x: 585, y: 220))
+        pencil13.addLine(to: CGPoint(x: 100, y: 690))
+        
+        pencil13.stroke()
+
+        #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()
+        
+        let answerPath = UIBezierPath(arcCenter: CGPoint(x: 350, y: 450), radius: 160, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        answerPath.lineWidth = 3
+        answerPath.stroke()
+        
+        #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setFill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 350, y: 450), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+
     }
     
     func drawCircleTouching2Points() {
