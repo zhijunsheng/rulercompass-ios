@@ -24,6 +24,12 @@ class ViewController: UIViewController {
         canvasView.setNeedsDisplay()
     }
     
+    
+    @IBAction func per(_ sender: Any) {
+        canvasView.problemIndex = 3
+        canvasView.setNeedsDisplay()
+    }
+    
 }
 
 
