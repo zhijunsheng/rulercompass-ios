@@ -39,6 +39,7 @@ class CanvasView: UIView {
         UIBezierPath(arcCenter: (CGPoint(x: 300, y: 500)), radius: 150, startAngle: -0.25 * CGFloat.pi, endAngle: -0.15 * CGFloat.pi, clockwise: true).stroke()
         
         UIBezierPath(arcCenter: (CGPoint(x: 650, y: 500)), radius: 250, startAngle: -0.8 * CGFloat.pi, endAngle: -0.9 * CGFloat.pi, clockwise: false).stroke()
+        
         let answerPath = UIBezierPath()
         #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1).setStroke()
         answerPath.move(to: CGPoint(x: 300, y: 500))
@@ -46,16 +47,15 @@ class CanvasView: UIView {
         answerPath.addLine(to: CGPoint(x: 650, y: 500))
         answerPath.stroke()
     }
-        
     
     func drawAngleBisector()  {
         let path = UIBezierPath()
-        
         path.move(to: CGPoint(x: 700, y: 200))
         path.addLine(to: CGPoint(x: 100, y: 400))
         path.addLine(to: CGPoint(x: 700, y: 600))
         path.stroke()
         #colorLiteral(red: 0.3127173781, green: 0.5584113598, blue: 0.001741587184, alpha: 1).setStroke()
+        
         let arc = UIBezierPath(arcCenter: CGPoint(x: 500, y: 285), radius: 230, startAngle: -0.01 * CGFloat.pi, endAngle: 0.25 * CGFloat.pi, clockwise: true)
         arc.stroke()
         
@@ -90,7 +90,6 @@ class CanvasView: UIView {
         let arc2 = UIBezierPath(arcCenter: CGPoint(x: 650, y: 350), radius: 350, startAngle: -0.65 * CGFloat.pi, endAngle: 0.65 * CGFloat.pi, clockwise: false)
         arc2.stroke()
         
-        
         let answerPath = UIBezierPath()
         #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1).setStroke()
         answerPath.lineWidth = 2
@@ -107,21 +106,23 @@ class CanvasView: UIView {
         path.addLine(to: CGPoint(x: 350, y: 375))
         path.move(to: CGPoint(x: 350, y: 350))
         path.addLine(to: CGPoint(x: 380, y: 375))
+        path.stroke()
         #colorLiteral(red: 0.3109099865, green: 0.5624674559, blue: 0, alpha: 1).setStroke()
+        
         let arc = UIBezierPath(arcCenter: CGPoint(x: 365, y: 357.5), radius: 300, startAngle: 2 * CGFloat.pi, endAngle: -1 * CGFloat.pi, clockwise: true)
         arc.stroke()
        
-        let arc2 = UIBezierPath(arcCenter: CGPoint(x: 200, y: 600), radius: 325, startAngle: -0.5 * CGFloat.pi, endAngle: 0 * CGFloat.pi, clockwise: true)
+        let arc2 = UIBezierPath(arcCenter: CGPoint(x: 200, y: 600), radius: 325, startAngle: -0.4 * CGFloat.pi, endAngle: -0.25 * CGFloat.pi, clockwise: true)
         arc2.stroke()
         
-        let arc3 = UIBezierPath(arcCenter: CGPoint(x: 535, y: 600), radius: 325, startAngle: 1 * CGFloat.pi, endAngle: -0.5 * CGFloat.pi, clockwise: true)
+        let arc3 = UIBezierPath(arcCenter: CGPoint(x: 535, y: 600), radius: 325, startAngle: -0.75 * CGFloat.pi, endAngle: -0.6 * CGFloat.pi, clockwise: true)
         arc3.stroke()
-        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setStroke()
-        path.move(to: CGPoint(x: 365, y: 350))
-        path.addLine(to: CGPoint(x: 365, y: 600))
         
-        path.stroke()
+        let answerPath = UIBezierPath()
+        #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1).setStroke()
+        answerPath.lineWidth = 2
+        answerPath.move(to: CGPoint(x: 365, y: 300))
+        answerPath.addLine(to: CGPoint(x: 365, y: 600))
+        answerPath.stroke()
     }
-    
-    
 }
