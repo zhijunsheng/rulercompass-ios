@@ -9,13 +9,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    var Qs: [Q] = []
     var body: some View {
-        Text("Hello, World!")
+        List(Qs) { q in
+            VStack(alignment: .leading) {
+                Text(q.title)
+                    .font(.title)
+                Text(q.sTitle)
+                    .font(.subheadline)
+                    .fontWeight(.thin)
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(Qs: testData)
     }
 }

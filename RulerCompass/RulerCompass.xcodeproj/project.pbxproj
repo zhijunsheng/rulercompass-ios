@@ -14,6 +14,7 @@
 		753EE89224A4E8670087B41C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 753EE89124A4E8670087B41C /* Preview Assets.xcassets */; };
 		753EE89524A4E8670087B41C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 753EE89324A4E8670087B41C /* LaunchScreen.storyboard */; };
 		753EE8A024A4E8680087B41C /* RulerCompassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753EE89F24A4E8680087B41C /* RulerCompassTests.swift */; };
+		753EE8AB24A4ED390087B41C /* Q.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753EE8AA24A4ED390087B41C /* Q.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		753EE89B24A4E8680087B41C /* RulerCompassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RulerCompassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		753EE89F24A4E8680087B41C /* RulerCompassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerCompassTests.swift; sourceTree = "<group>"; };
 		753EE8A124A4E8680087B41C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		753EE8AA24A4ED390087B41C /* Q.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				753EE88824A4E8640087B41C /* AppDelegate.swift */,
 				753EE88A24A4E8640087B41C /* SceneDelegate.swift */,
 				753EE88C24A4E8640087B41C /* ContentView.swift */,
+				753EE8AA24A4ED390087B41C /* Q.swift */,
 				753EE88E24A4E8670087B41C /* Assets.xcassets */,
 				753EE89324A4E8670087B41C /* LaunchScreen.storyboard */,
 				753EE89624A4E8670087B41C /* Info.plist */,
@@ -211,6 +214,7 @@
 				753EE88924A4E8640087B41C /* AppDelegate.swift in Sources */,
 				753EE88B24A4E8640087B41C /* SceneDelegate.swift in Sources */,
 				753EE88D24A4E8640087B41C /* ContentView.swift in Sources */,
+				753EE8AB24A4ED390087B41C /* Q.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
