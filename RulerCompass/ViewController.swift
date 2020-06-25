@@ -47,4 +47,9 @@ class ViewController: UIViewController {
         canvasView.figureIndex = 7
         canvasView.setNeedsDisplay()
     }
+    
+    @IBAction func 画直角三角形(_ sender: UIButton) {
+        canvasView.figureIndex = 8
+        canvasView.setNeedsDisplay()
+    }
 }
