@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  RulerCompass
 //
-//  Created by Peter Shi on 2020/3/31.
+//  Created by Peter Shi on 2020-06-25.
 //  Copyright © 2020 Peter Shi. All rights reserved.
 //
 
