@@ -16,9 +16,11 @@ struct Q: Identifiable {
 }
 
 let testData = [
-    Q(title: "Line bisector", sTitle: "What am I doing here?"),
-    Q(title: "Angle bisector", sTitle: "What am I doing here?"),
-    Q(title: "Perpendicular through a line", sTitle: "What am I doing here?"),
-    Q(title: "Perpendicular through a point outside of the line", sTitle: "What am I doing here?")
+    Q(title: "Line bisector", sTitle: "Very useful"),
+    Q(title: "Angle bisector", sTitle: "What the title says"),
+    Q(title: "Perpendicular through a line", sTitle: "Very useful"),
+    Q(title: "Perpendicular through a point outside of the line", sTitle: "Use this somewhere somehow"),
+    Q(title: "Triangle in semicircle", sTitle: "Demonstration and proof why it is always right"),
+    Q(title: "3 line segments to triangle", sTitle: "Might be useful if you always forget this solution")
 ]
 

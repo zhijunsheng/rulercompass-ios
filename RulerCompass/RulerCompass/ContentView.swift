@@ -11,14 +11,17 @@ import SwiftUI
 struct ContentView: View {
     var Qs: [Q] = []
     var body: some View {
-        List(Qs) { q in
-            VStack(alignment: .leading) {
-                Text(q.title)
-                    .font(.title)
-                Text(q.sTitle)
-                    .font(.subheadline)
-                    .fontWeight(.thin)
+        NavigationView {
+            List(Qs) { q in
+                VStack(alignment: .leading) {
+                    Text(q.title)
+                        .font(.title)
+                    Text(q.sTitle)
+                        .font(.subheadline)
+                        .fontWeight(.thin)
+                }
             }
+            .navigationBarTitle(Text("Ruler Compass Problem Solutions"))
         }
     }
 }
