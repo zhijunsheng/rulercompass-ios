@@ -13,12 +13,14 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(Qs) { q in
-                VStack(alignment: .leading) {
-                    Text(q.title)
-                        .font(.title)
-                    Text(q.sTitle)
-                        .font(.subheadline)
-                        .fontWeight(.thin)
+                NavigationLink(destination: DrawingStuff()) {
+                    VStack(alignment: .leading) {
+                        Text(q.title)
+                            .font(.title)
+                        Text(q.sTitle)
+                            .font(.subheadline)
+                            .fontWeight(.thin)
+                    }
                 }
             }
             .navigationBarTitle(Text("Ruler Compass Problem Solutions"))
