@@ -10,7 +10,29 @@ import UIKit
 
 class CanvasView: UIView {
     override func draw(_ rect: CGRect) {
+//        drawLineSegmentBisector()
+        drawAngleBisector()
+    }
+    
+    func drawAngleBisector() {
+        let line = UIBezierPath()
         
+        line.move(to: CGPoint(x: 100, y: 300))
+        line.addLine(to: CGPoint(x: 300, y: 200))
+        
+        line.move(to: CGPoint(x: 100, y: 300))
+        line.addLine(to: CGPoint(x: 300, y: 295))
+        
+        line.stroke()
+        
+        let circle = UIBezierPath(arcCenter: CGPoint(x: 100, y: 300), radius: 180, startAngle: CGFloat.pi * 0, endAngle: CGFloat.pi * 2, clockwise: false)
+        
+        UIColor.red.setStroke()
+        circle.lineWidth = 3
+        circle.stroke()
+    }
+    
+    func drawLineSegmentBisector() {
         let line1 = UIBezierPath()
 //        base line
         
@@ -45,9 +67,6 @@ class CanvasView: UIView {
         line2.lineWidth = 3
         UIColor.blue.setStroke()
         line2.stroke()
-        
     }
-    
-    
 }
 
