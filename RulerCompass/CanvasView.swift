@@ -11,8 +11,40 @@ import UIKit
 class CanvasView: UIView {
     override func draw(_ rect: CGRect) {
 //        drawLineSegmentBisector()
-        drawAngleBisector()
-        drawCrosshair(x: 311, y: 250)
+//        drawAngleBisector()
+        drawPerpendicularLine()
+//        drawCrosshair(x: 365, y: 300)
+    }
+    
+    func drawPerpendicularLine() {
+        let line = UIBezierPath()
+        
+        line.move(to: CGPoint(x: 200, y: 300))
+        line.addLine(to: CGPoint(x: 530, y: 300))
+        
+        line.stroke()
+        
+        let circle = UIBezierPath(arcCenter: CGPoint(x: 365, y: 300), radius: 7, startAngle: CGFloat.pi * 0, endAngle: CGFloat.pi * 2, clockwise: false)
+        circle.fill()
+        UIColor.red.setStroke()
+        
+        let circle1 = UIBezierPath(arcCenter: CGPoint(x: 365, y: 300), radius: 100, startAngle: CGFloat.pi * 0, endAngle: CGFloat.pi * 2, clockwise: false)
+        circle1.stroke()
+        
+        let circle2 = UIBezierPath(arcCenter: CGPoint(x: 265, y: 300), radius: 170, startAngle: CGFloat.pi * 0, endAngle: CGFloat.pi * 2, clockwise: false)
+        circle2.stroke()
+        
+        let circle3 = UIBezierPath(arcCenter: CGPoint(x: 465, y: 300), radius: 170, startAngle: CGFloat.pi * 0, endAngle: CGFloat.pi * 2, clockwise: false)
+        circle3.stroke()
+        
+        let line2 = UIBezierPath()
+        
+        line2.move(to: CGPoint(x: 365, y: 350))
+        line2.addLine(to: CGPoint(x: 365, y: 100))
+        
+        line2.lineWidth = 3
+        UIColor.blue.setStroke()
+        line2.stroke()
     }
     
     func drawAngleBisector() {
@@ -88,6 +120,7 @@ class CanvasView: UIView {
         UIColor.blue.setStroke()
         line2.stroke()
     }
+    
     func drawCrosshair(x: CGFloat, y: CGFloat) {
         let sniperThing = UIBezierPath()
         
