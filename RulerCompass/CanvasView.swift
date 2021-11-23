@@ -12,8 +12,9 @@ class CanvasView: UIView {
     override func draw(_ rect: CGRect) {
 //        drawLineSegmentBisector()
 //        drawAngleBisector()
-        drawPerpendicularLine()
-//        drawCrosshair(x: 365, y: 300)
+//        drawPerpendicularLine()
+//        drawCrosshair(x: 240, y: 300)
+        drawPerpendicularLineFromApointOutsideAnExistingLine()
     }
     
     func drawPerpendicularLine() {
@@ -133,6 +134,39 @@ class CanvasView: UIView {
         sniperThing.lineWidth = 2
         UIColor.red.setStroke()
         sniperThing.stroke()
+    }
+    
+    func drawPerpendicularLineFromApointOutsideAnExistingLine () {
+        let line = UIBezierPath()
+        
+        line.move(to: CGPoint(x: 100, y: 300))
+        line.addLine(to: CGPoint(x: 600, y: 300))
+        
+        line.stroke()
+        
+        let circle = UIBezierPath(arcCenter: CGPoint(x: 354, y: 100), radius: 5, startAngle: CGFloat.pi * 0, endAngle: CGFloat.pi * 2, clockwise: false)
+        
+        circle.lineWidth = 5
+        UIColor.blue.setStroke()
+        circle.stroke()
+        
+        let circle1 = UIBezierPath(arcCenter: CGPoint(x: 354, y: 100), radius: 230, startAngle: CGFloat.pi * 0, endAngle: CGFloat.pi * 2, clockwise: false)
+        circle1.stroke()
+        
+        let circle2 = UIBezierPath(arcCenter: CGPoint(x: 240, y: 300), radius: 250, startAngle: CGFloat.pi * 0, endAngle: CGFloat.pi * 2, clockwise: false)
+        circle2.stroke()
+        
+        let circle3 = UIBezierPath(arcCenter: CGPoint(x: 354 + 114, y: 300), radius: 250, startAngle: CGFloat.pi * 0, endAngle: CGFloat.pi * 2, clockwise: false)
+        circle3.stroke()
+        
+        let answerLine = UIBezierPath()
+        
+        answerLine.move(to: CGPoint(x: 354, y: 50))
+        answerLine.addLine(to: CGPoint(x: 354, y: 600))
+        
+        answerLine.lineWidth = 3
+        UIColor.red.setStroke()
+        answerLine.stroke()
     }
 }
 
