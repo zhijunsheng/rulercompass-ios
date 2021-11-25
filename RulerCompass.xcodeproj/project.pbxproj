@@ -81,14 +81,14 @@
 		E760D279243354D7006D76DB /* RulerCompass */ = {
 			isa = PBXGroup;
 			children = (
-				E760D27A243354D7006D76DB /* AppDelegate.swift */,
-				E760D27C243354D7006D76DB /* SceneDelegate.swift */,
+				9C851CC5273FE5B0008F70EC /* CanvasView.swift */,
 				E760D27E243354D7006D76DB /* ViewController.swift */,
 				E760D280243354D7006D76DB /* Main.storyboard */,
+				E760D27A243354D7006D76DB /* AppDelegate.swift */,
+				E760D27C243354D7006D76DB /* SceneDelegate.swift */,
 				E760D283243354DF006D76DB /* Assets.xcassets */,
 				E760D285243354DF006D76DB /* LaunchScreen.storyboard */,
 				E760D288243354DF006D76DB /* Info.plist */,
-				9C851CC5273FE5B0008F70EC /* CanvasView.swift */,
 			);
 			path = RulerCompass;
 			sourceTree = "<group>";

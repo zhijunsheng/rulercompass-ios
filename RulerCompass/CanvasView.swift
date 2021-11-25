@@ -9,11 +9,14 @@
 import UIKit
 
 class CanvasView: UIView {
+    var forAngleBisector: Bool = false
 
     override func draw(_ rect: CGRect) {
-//        drawLineSegmentBisector()
-        drawAngleBisector()
-//        drawCrosshair(x: 442, y: 348)
+        if forAngleBisector {
+            drawAngleBisector()
+        } else {
+            drawLineSegmentBisector()
+        }
     }
     
     func drawAngleBisector() {
