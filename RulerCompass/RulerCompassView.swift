@@ -9,11 +9,18 @@
 import UIKit
 
 class RulerCompassView: UIView {
-    override func draw(_ rect: CGRect) {
-//        lineSegmentCenter
-        angleBisector()
-    }
     
+    var problem = 0
+    
+    
+    override func draw(_ rect: CGRect) {
+        if problem == 1 {
+            lineSegmentCenter()
+        } else if problem == 2 {
+            angleBisector()
+        }
+    }
+
     func angleBisector() {
         let pencil1 = UIBezierPath()
         pencil1.move(to: CGPoint(x: 400, y: 400))
