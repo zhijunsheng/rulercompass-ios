@@ -10,7 +10,14 @@ import UIKit
 
 class RulerCompassView: UIView {
     
-    var problem = 0
+    var problem = 2
+    let aX: CGFloat = 100
+    let aY: CGFloat = 500
+    let angleSizeX: CGFloat = 600
+    let angleSizeY: CGFloat = 100
+    
+    
+    
     
     
     override func draw(_ rect: CGRect) {
@@ -22,37 +29,38 @@ class RulerCompassView: UIView {
     }
 
     func angleBisector() {
+        
         let pencil1 = UIBezierPath()
-        pencil1.move(to: CGPoint(x: 400, y: 400))
-        pencil1.addLine(to: CGPoint(x: 200, y: 400))
-        pencil1.addLine(to: CGPoint(x: 400, y: 300))
+        pencil1.move(to: CGPoint(x: angleSizeX, y: aY))
+        pencil1.addLine(to: CGPoint(x: aX, y: aY))
+        pencil1.addLine(to: CGPoint(x: angleSizeX, y: angleSizeY))
         pencil1.lineWidth = 5
         pencil1.stroke()
         
-        let arc1 = UIBezierPath(arcCenter: CGPoint(x: 200, y: 400), radius: 150, startAngle: 0.2, endAngle: -0.2 * CGFloat.pi, clockwise: false)
+        let arc1 = UIBezierPath(arcCenter: CGPoint(x: aX, y: aY), radius: 150, startAngle: 0.2, endAngle: -0.25 * CGFloat.pi, clockwise: false)
         UIColor.blue.setStroke()
         arc1.stroke()
         
-        let angl = atan(100.0/200.0)
+        let angl = atan((aY - angleSizeY) / (angleSizeX - aX))
         let h = sin(angl) * 150
         let b = cos(angl) * 150
-        let p1X = 200 + b
-        let p1Y = 400 - h
-        let p2X = 350
-        let p2Y = 400
+        let p1X = aX + b
+        let p1Y = aY - h
+        let p2X = aX + 150
+        let p2Y = aY
         
-        let arc2 = UIBezierPath(arcCenter: CGPoint(x: p2X, y: p2Y), radius: 75, startAngle: -0.35 * CGFloat.pi, endAngle: -0.1 * CGFloat.pi, clockwise: true)
+        let arc2 = UIBezierPath(arcCenter: CGPoint(x: p2X, y: p2Y), radius: 150, startAngle: -0.35 * CGFloat.pi, endAngle: -0.1 * CGFloat.pi, clockwise: true)
         arc2.stroke()
 
-        let arc3 = UIBezierPath(arcCenter: CGPoint(x: p1X, y: p1Y), radius: 75, startAngle: 0.2 * CGFloat.pi, endAngle: 0, clockwise: false)
+        let arc3 = UIBezierPath(arcCenter: CGPoint(x: p1X, y: p1Y), radius: 150, startAngle: 0.1 * CGFloat.pi, endAngle: -0.1 * CGFloat.pi, clockwise: false)
         arc3.stroke()
         
         let pencil2 = UIBezierPath()
         let angl2 = angl / 2
-        let p3X: CGFloat = 600
-        let p3Y = 400 - tan(angl2) * 400
+        let p3X: CGFloat = aX + 400
+        let p3Y = aY - tan(angl2) * 400
         
-        pencil2.move(to: CGPoint(x: 200, y: 400))
+        pencil2.move(to: CGPoint(x: aX, y: aY))
         pencil2.addLine(to: CGPoint(x: p3X, y: p3Y))
         
         UIColor.red.setStroke()
