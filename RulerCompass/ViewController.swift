@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         rulerCompassView.setNeedsDisplay()
     }
     
-
+    @IBAction func rightAngleTriangle(_ sender: Any) {
+        rulerCompassView.problem = 3
+        rulerCompassView.setNeedsDisplay()
+    }
+    
 }
 
