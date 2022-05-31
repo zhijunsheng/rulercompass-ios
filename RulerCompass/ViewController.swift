@@ -25,5 +25,9 @@ class ViewController: UIViewController {
         rulerCompassView.setNeedsDisplay()
     }
     
+    @IBAction func hypRightAngleTriangle(_ sender: Any) {
+        rulerCompassView.problem = 4
+        rulerCompassView.setNeedsDisplay()
+    }
 }
 
