@@ -29,5 +29,14 @@ class ViewController: UIViewController {
         rulerCompassView.problem = 4
         rulerCompassView.setNeedsDisplay()
     }
+    
+    @IBAction func parallelLines(_ sender: Any) {
+        rulerCompassView.problem = 5
+        rulerCompassView.setNeedsDisplay()
+    }
+    @IBAction func makeACircle(_ sender: Any) {
+        rulerCompassView.problem = 6
+        rulerCompassView.setNeedsDisplay()
+    }
 }
 

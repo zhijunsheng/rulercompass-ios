@@ -10,7 +10,7 @@ import UIKit
 
 class RulerCompassView: UIView {
     
-    var problem = 3
+    var problem = 6
     
     override func draw(_ rect: CGRect) {
         if problem == 1 {
@@ -21,7 +21,69 @@ class RulerCompassView: UIView {
             rightAngleTriangle()
         } else if problem == 4 {
             rightAngleTriangleHyp()
+        } else if problem == 5 {
+            parallelLine()
+        } else if problem == 6 {
+            
         }
+    }
+    
+    func <#name#>(<#parameters#>) -> <#return type#> {
+        <#function body#>
+    }
+
+    func parallelLine() {
+        
+        let dX: CGFloat = 350
+        let dY: CGFloat = 250
+        let distance: CGFloat = 150
+        
+        
+        let pencil1 = UIBezierPath()
+        pencil1.move(to: CGPoint(x: 0, y: dY + distance))
+        pencil1.addLine(to: CGPoint(x: 1000, y: dY + distance))
+        pencil1.lineWidth = 5
+        pencil1.stroke()
+        
+        let arc = UIBezierPath(arcCenter: CGPoint(x: dX, y: dY), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        arc.fill()
+        
+        let arc2 = UIBezierPath(arcCenter: CGPoint(x: dX, y: dY), radius: 200, startAngle: 0.2 * CGFloat.pi, endAngle: 0.8 * CGFloat.pi, clockwise: true)
+        UIColor.blue.setStroke()
+        arc2.stroke()
+    
+        let arcCenterX = sqrt(200 * 200 - (500 - dX) * (500 - dX))
+        let arc3 = UIBezierPath(arcCenter: CGPoint(x: arcCenterX + dX, y: dY + distance), radius: 200, startAngle: 0.6 * CGFloat.pi, endAngle: 0.9 * CGFloat.pi, clockwise: true)
+        UIColor.purple.setStroke()
+        arc3.stroke()
+        
+        let arc4 = UIBezierPath(arcCenter: CGPoint(x: dX - arcCenterX, y: dY + distance), radius: 200, startAngle: 0.1 * CGFloat.pi, endAngle: 0.4 * CGFloat.pi, clockwise: true)
+        arc4.stroke()
+        
+        let pencil2 = UIBezierPath()
+        pencil2.move(to: CGPoint(x: dX, y: 0))
+        pencil2.addLine(to: CGPoint(x: dX, y: 1000))
+        UIColor.orange.setStroke()
+        pencil2.stroke()
+        
+        let arc5 = UIBezierPath(arcCenter: CGPoint(x: dX, y: dY), radius: 50, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        UIColor.blue.setStroke()
+        arc5.stroke()
+        
+        let arc6 = UIBezierPath(arcCenter: CGPoint(x: dX, y: dY + 50), radius: 300, startAngle: -0.1 * CGFloat.pi, endAngle: 0, clockwise: true)
+        UIColor.purple.setStroke()
+        arc6.stroke()
+        
+        let arc7 = UIBezierPath(arcCenter: CGPoint(x: dX, y: dY - 50), radius: 300, startAngle: 0, endAngle: 0.1 * CGFloat.pi, clockwise: true)
+        arc7.stroke()
+        
+        let pencil3 = UIBezierPath()
+        pencil3.move(to: CGPoint(x: 0, y: dY))
+        pencil3.addLine(to: CGPoint(x: 1000, y: dY))
+        pencil3.lineWidth = 5
+        UIColor.red.setStroke()
+        pencil3.stroke()
+        
     }
     
     func rightAngleTriangleHyp() {
