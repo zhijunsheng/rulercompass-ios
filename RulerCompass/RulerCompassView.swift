@@ -24,12 +24,71 @@ class RulerCompassView: UIView {
         } else if problem == 5 {
             parallelLine()
         } else if problem == 6 {
-            
+            makeACircle()
         }
     }
     
-    func <#name#>(<#parameters#>) -> <#return type#> {
-        <#function body#>
+    func makeACircle() {
+        let dotR: CGFloat = 5
+        let arcR: CGFloat = 200
+        let dot1X: CGFloat = 590
+        let dot1Y: CGFloat = 500
+        let dot2X: CGFloat = 290
+        let dot2Y: CGFloat = 500
+        let dot3X: CGFloat = 190
+        let dot3Y: CGFloat = 300
+    
+        //dots
+        UIBezierPath(arcCenter: CGPoint(x: dot1X, y: dot1Y), radius: dotR, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: dot2X, y: dot2Y), radius: dotR, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: dot3X, y: dot3Y), radius: dotR, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        //arcs
+        UIColor.blue.setStroke()
+        UIBezierPath(arcCenter: CGPoint(x: dot1X, y: dot1Y), radius: arcR, startAngle: 1.15 * CGFloat.pi, endAngle: 1.3 * CGFloat.pi, clockwise: true).stroke()
+        UIBezierPath(arcCenter: CGPoint(x: dot2X, y: dot2Y), radius: arcR, startAngle: 1.7 * CGFloat.pi, endAngle: 1.85 * CGFloat.pi, clockwise: true).stroke()
+        UIBezierPath(arcCenter: CGPoint(x: dot2X, y: dot2Y), radius: arcR, startAngle: 0.15 * CGFloat.pi, endAngle: 0.3 * CGFloat.pi, clockwise: true).stroke()
+        UIBezierPath(arcCenter: CGPoint(x: dot1X, y: dot1Y), radius: arcR, startAngle: 0.7 * CGFloat.pi, endAngle: 0.85 * CGFloat.pi, clockwise: true).stroke()
+        
+        let pencil = UIBezierPath()
+        pencil.move(to: CGPoint(x: (dot1X + dot2X) / 2, y: 200))
+        pencil.addLine(to: CGPoint(x: (dot1X + dot2X) / 2, y: 1000))
+        UIColor.orange.setStroke()
+        pencil.stroke()
+        
+        UIColor.purple.setStroke()
+        UIBezierPath(arcCenter: CGPoint(x: dot3X, y: dot3Y), radius: arcR * 0.9, startAngle: 0, endAngle: 0.15 * CGFloat.pi, clockwise: true).stroke()
+        UIBezierPath(arcCenter: CGPoint(x: dot2X, y: dot2Y), radius: arcR * 0.9, startAngle: 1.55 * CGFloat.pi, endAngle: 1.725 * CGFloat.pi, clockwise: true).stroke()
+        UIBezierPath(arcCenter: CGPoint(x: dot3X, y: dot3Y), radius: arcR * 0.75, startAngle: 0.5 * CGFloat.pi, endAngle: 0.65 * CGFloat.pi, clockwise: true).stroke()
+        UIBezierPath(arcCenter: CGPoint(x: dot2X, y: dot2Y), radius: arcR * 0.75, startAngle: 1.05 * CGFloat.pi, endAngle: 1.2 * CGFloat.pi, clockwise: true).stroke()
+        
+        let pencil2 = UIBezierPath()
+        let hLeg1 = dot2X - dot3X
+        let vLeg1 = dot2Y - dot3Y
+        let angle1 = atan(vLeg1 / hLeg1)
+        let sLeg1 = sqrt(hLeg1 * hLeg1 + vLeg1 * vLeg1)
+        let sLeg2 = sLeg1 / 2
+        let hyp2 = sLeg2 / cos(angle1)
+         
+        let angle3 = 0.5 * CGFloat.pi - angle1
+        let hLeg3 = dot1X - (dot2X - hyp2)
+        let vLeg3 = tan(angle3) * hLeg3
+
+        pencil2.move(to: CGPoint(x: dot2X - hyp2, y: dot2Y))
+        pencil2.addLine(to: CGPoint(x: dot1X, y: dot1Y  - vLeg3))
+        UIColor.orange.setStroke()
+        pencil2.stroke()
+        
+        let middle = (dot1X + dot2X) / 2
+        let hLeg4 = middle - (dot2X - hyp2)
+        let circleCenterY = dot1Y - hLeg4 * tan(angle3)
+        let vLeg5 = hLeg4 * tan(angle3)
+        let hLeg5 = dot1X - middle
+        let radius = sqrt(vLeg5 * vLeg5 + hLeg5 * hLeg5)
+        
+        let circle = UIBezierPath(arcCenter: CGPoint(x: middle, y: circleCenterY), radius: radius, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        UIColor.red.setStroke()
+        circle.stroke()
     }
 
     func parallelLine() {
